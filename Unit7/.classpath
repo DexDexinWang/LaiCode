@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="Top K Frequent Words"/>
+	<classpathentry kind="src" path="Missing Number I"/>
+	<classpathentry kind="src" path="Common Numbers Of Two Sorted Arrays"/>
+	<classpathentry kind="src" path="Remove Adjacent Repeated Characters I"/>
+	<classpathentry kind="src" path="Remove Adjacent Repeated Characters IV"/>
+	<classpathentry kind="src" path="Determine If One String Is Another&apos;s Substring"/>
+	<classpathentry kind="src" path="Remove Spaces"/>
+	<classpathentry kind="src" path="Remove Certain Characters"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
