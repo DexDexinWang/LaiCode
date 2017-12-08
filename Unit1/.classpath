@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="src" path="Selection Sort"/>
+	<classpathentry kind="src" path="Merge Sort"/>
+	<classpathentry kind="src" path="Quick Sort"/>
+	<classpathentry kind="src" path="Rainbow Sort"/>
+	<classpathentry kind="src" path="Move 0s To The End I"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
