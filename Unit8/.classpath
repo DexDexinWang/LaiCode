@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="src" path="All Permutations II"/>
+	<classpathentry kind="src" path="Reverse Words In A Sentence I"/>
+	<classpathentry kind="src" path="String Replace"/>
+	<classpathentry kind="src" path="Decompress String II"/>
+	<classpathentry kind="src" path="ReOrder Array"/>
+	<classpathentry kind="src" path="Longest Substring Without Repeating Characters"/>
+	<classpathentry kind="src" path="Reverse String"/>
+	<classpathentry kind="src" path="Right Shift By N Characters"/>
+	<classpathentry kind="src" path="All Anagrams"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
