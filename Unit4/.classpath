@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="input"/>
+	<classpathentry kind="src" path="In-order Traversal Of Binary Tree"/>
+	<classpathentry kind="src" path="Pre-order Traversal Of Binary Tree"/>
+	<classpathentry kind="src" path="Post-order Traversal Of Binary Tree"/>
+	<classpathentry kind="src" path="Check If Binary Tree Is Balanced"/>
+	<classpathentry kind="src" path="Symmetric Binary Tree"/>
+	<classpathentry kind="src" path="Tweaked Identical Binary Trees"/>
+	<classpathentry kind="src" path="Is Binary Search Tree Or Not"/>
+	<classpathentry kind="src" path="Get Keys In Binary Search Tree In Given Range"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
