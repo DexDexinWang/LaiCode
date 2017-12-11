@@ -59,6 +59,8 @@ public class Solution9 {
 		return counter;
 		
 	}
+	//Time Complexity: O(n + m)
+	//Space Complexity: O(m)
 	
  	public static List<Integer> allAnagrams2(String s, String l) {
  	 	  List<Integer> res = new ArrayList<Integer>();

@@ -1,0 +1,29 @@
+import generator.TreeNode;
+public class Solution5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TreeNode root = new TreeNode(1);
+		root.left = new TreeNode(2);
+		root.right = new TreeNode(2);
+	}
+	//what: in each layer, to compare the left-subtree and right-subtree symmetrically
+	public boolean isSymmetric(TreeNode root) {
+		if (root == null) {
+			return true;
+		}
+		return isSymmetrict(root.left, root.right)
+	}
+	
+	public boolean isSymmetric(TreeNode one, TreeNode two) {
+		if (one == null && two == null) {
+			return true;
+		} else if (one == null || two == null) {
+			return false;
+		} else if (one.key != two.key) {
+			return false;
+		} 
+		return isSymmetric(one.left, two.right) &&
+				isSymmetric(one.right, two.left); 
+	}
+}

@@ -1,0 +1,32 @@
+
+public class Solution2 {
+
+	public static void main(String[] args) {
+		int[][] input = {{1,2,3,4}, {2,3,4,5}, {3,4,5,6},{4,5,6,7}};
+		System.out.println(kthSmallest(input, 6));
+	}
+
+	public int kthSmallest(int[][] matrix, int k) {
+		if (matrix != null || matrix.length == 0 || matrix[0].length == 0) {
+			return -1;
+		}
+	}
+ 
+	class cell implements Comparable<cell> {
+		int row;
+		int col;
+		int val;
+		public cell(int row, int col, int val){
+			this.row = row;
+			this.col = col;
+			this.val = val;
+		}
+		@Override 
+		public int compareTo(cell another) {
+			if (this.val == another.val) {
+				return 0;
+			}
+			return this.val < another.val ? -1: 1;
+		}
+	}
+}

@@ -49,6 +49,7 @@ public class Solution7 {
 				Math.abs(array[right] - target) ?
 						left : right;
 	}
- 
+	//Time Complexity: O(logn)
+	//Space Complexity: O(k)
 	
 }

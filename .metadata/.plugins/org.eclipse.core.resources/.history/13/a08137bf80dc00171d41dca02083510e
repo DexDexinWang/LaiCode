@@ -1,0 +1,20 @@
+import generator.LinkedListRandom;
+import generator.ListNode;
+
+public class Solution6 {
+
+	public static void main(String[] args) {
+		ListNode input = LinkedListRandom.LLGen(5, 0, 10);
+		input.print();
+		System.out.println();
+		ListNode output  = reorder(input);
+		output.print();
+	}
+	
+	//what: to separate the listnode in two part and merge them into one listnode. 
+	public static ListNode reorder(ListNode head) {
+		if (head == null || head.next == null) {
+			return head;
+		}
+	}
+}

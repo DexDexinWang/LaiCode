@@ -1,0 +1,13 @@
+import generator.LinkedListRandom;
+import generator.ListNode;
+public class Solution1 {
+
+	public static void main(String[] args) {
+		ListNode input = LinkedListRandom.LLGen(5, 0, 10);
+	}
+
+	public ListNode reverse(ListNode head) {
+		
+	}
+
+}

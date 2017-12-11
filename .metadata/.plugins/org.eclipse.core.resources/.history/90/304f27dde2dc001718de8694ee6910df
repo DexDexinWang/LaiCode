@@ -1,0 +1,56 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+import generator.TreeNode;
+import generator.TreeRandom;
+
+public class Solution1 {
+	
+	public static void main(String[] args) {
+		TreeNode input = TreeRandom.treeGenRange(3, null, 0, 10);
+		input.print();
+		System.out.println(inOrder(input));
+	}
+
+	//what: traversed order should be left sub-tree, root, right sub-tree for each level.
+	public static List<Integer> inOrder(TreeNode root) {
+		//How: 1. corner case.
+		List<Integer> res = new ArrayList<Integer>();
+		if (root == null) {
+			return res;
+		}
+		inOrder(root,res);
+		return res;
+	}
+	//2. traverse the whole tree.
+	public static void inOrder(TreeNode root, List<Integer> res) {
+		if (root == null) {
+			return;
+		}
+		//2.1 traverse left sub-tree 
+		inOrder(root.left, res);
+		//2.2 add the key of the current node into the ArrayList.
+		res.add(root.key);
+		//2.3 traverse right sub-tree
+		inOrder(root.right, res);
+	}
+
+	public static List<Integer> inOrder1(TreeNode root) {
+		//How: 1. corner case.
+		List<Integer> res = new ArrayList<Integer>();
+		if (root == null) {
+			return res;
+		}
+		Queue<TreeNode> que = new LinkedList<TreeNode>();
+		TreeNode cur = root;
+		while (cur != null || !que.isEmpty()) {
+			while (cur != null) {
+				que.add(cur);
+				cur = cur.left;
+			}
+		}
+		return res;
+	}
+}

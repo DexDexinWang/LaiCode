@@ -1,0 +1,15 @@
+import generator.TreeNode;
+import generator.TreeRandom;
+
+public class Solution8 {
+
+	public static void main(String[] args) {
+		TreeNode input = TreeRandom.treeGenRange(3, null, 0, 10);
+		input.print();
+		System.out.println(isBST(input));
+	}
+	
+	public List<Integer> getRange(TreeNode root, int min, int max) {
+
+
+}

@@ -1,0 +1,12 @@
+
+public class Solution2 {
+
+	public Solution2() {
+		
+	}
+	
+	public int pop() {
+		return 0;
+	}
+
+}

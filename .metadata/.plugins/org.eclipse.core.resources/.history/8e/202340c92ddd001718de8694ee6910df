@@ -1,0 +1,66 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+import generator.TreeNode;
+public class Solution {
+
+	public static void main(String[] args) {
+		TreeNode root = new TreeNode(10);
+		root.left = new TreeNode(5);
+		root.left.left = new TreeNode(3);
+		root.left.right = new TreeNode(4);
+		root.right = new TreeNode(2);
+		root.right.left = new TreeNode(7);
+		root.right.right = new TreeNode(8);
+		root.print();
+		TreeNode c1 = root.left;
+		TreeNode c2 = root.left.right;
+		System.out.println(findConsin(root,c1,c2));
+	}
+	
+	public static boolean findConsin (TreeNode root, TreeNode c1, TreeNode c2) {
+		if (root == null) {
+			return false;
+		}
+		Queue<TreeNode> que = new LinkedList<TreeNode>();
+		Queue<TreeNode> queParent = new LinkedList<TreeNode>();
+		que.offer(root); 
+		queParent.offer(root);
+		while (!que.isEmpty()) {
+			int size = que.size();
+			boolean t1 = false;
+			boolean t2 = false;
+			for (int i = 0; i < size ; i++) {
+				TreeNode curParent = queParent.poll();
+				TreeNode cur = que.poll();
+				TreeNode temp1 = null;
+				TreeNode temp2 = null;
+				if (cur == c1) {
+					t1 = true;
+					temp1	= curParent; 
+				}
+				if (cur == c2) {
+					t2 = true;
+					temp2 = curParent;
+				}
+				if (t1 && t2) {
+					if (temp1 == temp2) {
+						return false;
+					}
+				}
+				if (cur.left != null) {
+					que.offer(cur.left);
+					queParent.offer(cur);	
+				}
+				if (cur.right != null) {
+					que.offer(cur.right);	
+					queParent.offer(cur);
+				}
+			}
+			if (t1 && t2) {
+				return true;
+			}
+		}
+		return false;
+	}
+}

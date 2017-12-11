@@ -31,5 +31,6 @@ public class Solution6 {
 			   Math.abs(array[right] - target) ?
 			   left : right;
 	}
-
+	//Time Complexity: O(logn)
+	//Space Complexity: O(1)
 }

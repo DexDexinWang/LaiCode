@@ -1,0 +1,33 @@
+import generator.LinkedListRandom;
+import generator.ListNode;
+
+public class Solution6 {
+
+	public static void main(String[] args) {
+		ListNode input = LinkedListRandom.LLGen(5, 0, 10);
+		input.print();
+		System.out.println();
+		ListNode output  = reorder(input);
+		output.print();
+	}
+	
+	//what: to separate the ListNode in two part and merge them into one ListNode. 
+	public static ListNode reorder(ListNode head) {
+		//how: 1. corner case 
+		if (head == null || head.next == null) {
+			return head;
+		}
+		//2. separate one ListNode into two parts.
+		ListNode slow = head;
+		ListNode fast = head;
+		while (fast.next != null & fast.next.next != null) {
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		
+		ListNode reverse = slow.next;
+		slow.next = null;
+		
+		
+	}
+}

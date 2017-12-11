@@ -1,0 +1,37 @@
+
+public class Solution3 {
+
+	public static void main(String[] args) {
+		String input1 = "dodododo";
+		String input2 = "dod";
+		String input3 = "T";
+		System.out.println(replace(input1,input2,input3));
+	}
+
+	public static String replace(String input, String s, String t) {
+		char[] array = input.toCharArray();
+		if (s.length() < t.length()) {
+			return replaceShorter(array, s, t);
+		} else {
+			return replaceLonger(array, s, t);
+		}
+	}
+	
+	public static String replaceShorter(char[] input, String s, String t) {
+		int slow = 0; 
+		int fast = 0;
+		while (fast < input.length) {
+			if (fast <=input.length - s.length() && equalSubString(input, fast, s)) {
+				
+			}
+		}
+	}
+	
+	public static String replaceLonger(char[] input, String s, String t) {
+		
+	}
+	
+	private static boolean equalSubString(char[] input, int x, String s) {
+		
+	}
+}

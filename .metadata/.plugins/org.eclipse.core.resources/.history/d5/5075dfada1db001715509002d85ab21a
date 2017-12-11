@@ -1,0 +1,63 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Solution9 {
+
+	public static void main(String[] args) {
+		String input1 = "abcbac";
+		String input2 = "ab";
+		System.out.println(allAnagrams(input1,input2));
+	}
+	//what: find each string permutation in s that is equal to l and get the index of the begining of the permutation.	
+	public static List<Integer> allAnagrams(String s, String l) {
+		List<Integer> res = new ArrayList<Integer>();
+		//how: 1. corner case
+		if (l.length() > s.length()) {
+			return res;
+		}
+		//2. put all characters from l into hashmap and create a counter
+		Map<Character, Integer> map = new HashMap<Character, Integer>();
+		for (Character c: l.toCharArray()) {
+			map.put(c, map.getOrDefault(c, 0) + 1);
+		}
+		int counter = map.size();
+		//3. check each character for s 
+		for (int i = 0; i < s.length(); i++) {
+			char temp = s.charAt(i);
+			counter = computer(map, temp, counter, false);
+			
+			if(i >=s.length()) {
+				temp = l.charAt(i-s.length());
+				counter = computer(map,temp,counter,true);
+			}
+			
+			if(counter == 0) {
+				res.add(i - s.length() + 1);
+			}
+		}
+		return res;
+	}
+	private static int computer(Map<Character, Integer> map, char temp, int counter, boolean isAdd) {
+		Integer count = map.get(temp);
+		if (count != null)
+		{
+			if(isAdd) {
+				map.put(temp, count - 1);
+				if(count == 1) {
+					counter--;
+				}
+			} else {
+				map.put(temp, count + 1);
+				if(count == 0) {
+					counter++;
+				}
+			}
+		}
+		return counter;
+		
+	}
+
+
+}

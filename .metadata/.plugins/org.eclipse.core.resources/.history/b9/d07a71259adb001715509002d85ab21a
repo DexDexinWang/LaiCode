@@ -1,0 +1,13 @@
+
+public class Solution7 {
+
+	public static void main(String[] args) {
+		String input = "abc";
+	}
+
+	public static String reverse(String input) {
+		if (input == null) {
+			
+		}
+	}
+}

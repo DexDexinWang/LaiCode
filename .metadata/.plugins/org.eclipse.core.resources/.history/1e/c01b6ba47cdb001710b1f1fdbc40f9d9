@@ -1,0 +1,13 @@
+
+public class Solution1 {
+
+	public static void main(String[] args) {
+		String input = "abcda";
+		
+	}
+
+	public List<String> permutations(String set) {
+		
+	}
+
+}

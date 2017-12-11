@@ -1,0 +1,48 @@
+import generator.LinkedListRandom;
+import generator.ListNode;
+
+public class Solution5 {
+
+	public static void main(String[] args) {
+		ListNode input1 = new ListNode(1);
+		input1.next = new ListNode(3);
+		ListNode input2 = new ListNode(2);
+		input2.next = new ListNode(4);
+		ListNode output  = merge(input1, input2);
+		output.print();
+	}
+	
+	public static ListNode merge(ListNode one, ListNode two) {
+		if (one == null) {
+			return two;
+		}
+		if (two == null) {
+			return one;
+		}
+		
+		ListNode newHead = new ListNode(-1);
+		ListNode cur = newHead;
+		while(one != null && two != null) {
+			if (one.value < two.value) {
+				cur.next = one;
+				one = one.next;
+			} else {
+				cur.next = two;
+				two = two.next;
+			}
+			cur = cur.next;
+		}
+		while(one != null) {
+			cur.next = one;
+			cur = cur.next;
+			one = one.next;
+		}
+		while(two != null) {
+			cur.next = two;
+			cur = cur.next;
+			two = two.next;
+		}
+		return newHead.next;
+	}
+
+}

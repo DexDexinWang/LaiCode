@@ -1,0 +1,12 @@
+
+public class Solution6 {
+
+	public static void main(String[] args) {
+		String input = "123123a123";
+		System.out.println(input);
+	}
+	
+	public static int longest(String input) {
+		
+	}
+}

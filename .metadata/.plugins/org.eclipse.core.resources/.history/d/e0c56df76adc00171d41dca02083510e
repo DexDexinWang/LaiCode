@@ -1,0 +1,25 @@
+import generator.LinkedListRandom;
+import generator.ListNode;
+
+public class Solution2 {
+
+	public static void main(String[] args) {
+		ListNode input = LinkedListRandom.LLGen(5, 0, 10);
+		input.print();
+		System.out.println();
+		ListNode output  = middleNode(input);
+		output.print();
+	}
+
+	public ListNode middleNode(ListNode head) {
+		if (head == null || head.next == null) {
+			return head;
+		}
+		ListNode slow = head;
+		ListNode fast = head;
+		while (fast.next !=null && fast.next.next !=null) {
+			
+		}
+	}
+
+}

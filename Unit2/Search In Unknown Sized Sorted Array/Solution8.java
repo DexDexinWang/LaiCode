@@ -47,6 +47,9 @@ A = {1, 2, 5, 9, 12, ......}, T = 7, return -1
 	interface Dictionary {
 		public Integer get(int index);
 	}
+	
+	//Time Complexity: O(logn)
+	//Space Complexity: O(1)
 }
 
 

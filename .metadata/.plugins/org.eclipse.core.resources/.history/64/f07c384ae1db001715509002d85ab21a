@@ -1,0 +1,45 @@
+import java.util.Arrays;
+
+public class Solution3 {
+	public static void main(String[] args) {
+		int[] input = {2,3,4,3,5,6};
+		System.out.println(Arrays.toString(quickSort(input)));
+	}
+	
+	//what: quicksort is to randomly choose a number as pivot and to divide the array into two sub-arrays
+	public static int[] quickSort(int[] array) {
+		
+	}
+	
+	private static void divide (int[] array, int left, int right) {
+		if (left > right) {
+			return ;
+		}
+	}
+	
+	private static int privot(int[] array, int left, int right) {
+		int pivotIdx = left + (int)Math.random() * (right - left + 1);
+		int pivot = array[pivotIdx];
+		swap(array, pivot, right);
+		int i = left;
+		int j = right - 1;
+		while (i <= j ) {
+			if (array[i] < pivot) {
+				i++;
+			} else if (array[j] >= pivot){
+				j++;
+			} else {
+				swap(array, i, j);
+			}
+		}
+		swap(array, i, right);
+		return i;
+	}
+	
+	private static void swap(int[] array, int i, int j)
+	{
+		int temp = array[i];
+		array[i] = array[j];
+	  	array[j] = temp;
+	}
+}

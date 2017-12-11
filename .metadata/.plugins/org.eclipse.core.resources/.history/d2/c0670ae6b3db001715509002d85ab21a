@@ -1,0 +1,14 @@
+
+public class Solution3 {
+
+	public static void main(String[] args) {
+		String input1 = "dodododo";
+		String input2 = "dod";
+		String input3 = "T";
+	}
+
+	public String replace(String input, String s, String t) {
+		
+	}
+
+}

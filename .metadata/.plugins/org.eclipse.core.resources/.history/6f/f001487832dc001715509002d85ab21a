@@ -1,0 +1,40 @@
+import java.util.Arrays;
+
+public class Solution3 {
+	public static void main(String[] args) {
+		int[] input = {2,3,4,3,5,6};
+		System.out.println(Arrays.toString(quickSort(input)));
+	}
+	
+	//what: quicksort is to randomly choose a number as pivot and to divide the array into two sub-arrays
+	public static int[] quickSort(int[] array) {
+		if (array == null || array.length == 0) {
+			return array;
+		}
+		
+		return array;
+	}
+
+	private static void divide(int[] array, int left, int right) {
+		if (left >= right) {
+			return ;
+		}
+		int mid = pivot(array, left, right);
+		divide(array, left, mid - 1);
+		divide(array, mid + 1, right);
+	}
+	//how: 1. find the pivot number and put all smaller numbers on left side and all bigger numbers on right side 
+	private static int pivot(int[] array, int left, int right) {
+		int pivotIdx = left + (int) Math.random() * (right - left + 1);
+		int pivot = array[pivotIdx];
+		swap(array, pivotIdx, right);
+		
+	}
+	
+	private static void swap(int[] array, int i, int j)
+	{
+		int temp = array[i];
+		array[i] = array[j];
+	  	array[j] = temp;
+	}
+}

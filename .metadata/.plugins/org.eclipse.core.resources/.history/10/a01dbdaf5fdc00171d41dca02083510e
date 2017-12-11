@@ -1,0 +1,13 @@
+
+public class Solution8 {
+
+	public static void main(String[] args) {
+
+	}
+
+	Interface Dictionary {
+		public Integer get(int index);
+	}
+}
+
+

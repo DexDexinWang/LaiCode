@@ -1,0 +1,18 @@
+
+public class Solution2 {
+
+	public static void main(String[] args) {
+		String input = "Google love I";
+		System.out.println(reverseWords(input));
+	}
+
+	public static String reverseWords(String input) {
+		
+	}
+	
+	private static void swap (char[] array, int i, int j) {
+		char temp = array[i];
+		array[i] = array[j]; 
+		array[j] = temp;
+	}
+}

@@ -1,0 +1,14 @@
+import generator.LinkedListRandom;
+import generator.ListNode;
+
+public class Solution6 {
+
+	public static void main(String[] args) {
+		ListNode input = LinkedListRandom.LLGen(5, 0, 10);
+		input.print();
+		System.out.println();
+		ListNode output  = reverse(input);
+		output.print();
+	}
+
+}

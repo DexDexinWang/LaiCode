@@ -1,0 +1,12 @@
+
+public class Solution2 {
+
+	public static void main(String[] args) {
+		System.out.println(power(2,0));
+	}
+	
+	public static long power(int a, int b) {
+		
+	}
+
+}

@@ -1,0 +1,24 @@
+import java.util.Arrays;
+
+public class Solution4 {
+
+	public static void main(String[] args) {
+		int[] input = {0,1,1,1,-1,-1,1,0};
+		System.out.println(Arrays.toString(rainbowSort(input)));
+	}
+
+	//what:  find -1s put in left side, find 1s and put them in right side. others in mid. 
+	public static int[] rainbowSort(int[] array) { 
+		if (array == null || array.length <= 1) {
+			return array;
+		}
+	}
+
+	
+	private static void swap(int[] array, int i, int j)
+	{
+		int temp = array[i];
+		array[i] = array[j];
+	  	array[j] = temp;
+	}
+}

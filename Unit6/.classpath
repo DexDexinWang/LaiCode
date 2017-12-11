@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="All Subsets I"/>
 	<classpathentry kind="src" path="All Permutations I"/>
 	<classpathentry kind="src" path="All Valid Permutations Of Parentheses I"/>

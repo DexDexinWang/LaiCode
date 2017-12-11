@@ -1,0 +1,30 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+import generator.TreeNode;
+import generator.TreeRandom;
+public class Solution3 {
+
+	public static void main(String[] args) {
+		TreeNode input = TreeRandom.treeGenLeftRange(3, null, 0, 10);
+		System.out.println(isCompleted(input));
+	}
+	//what: Try to traverse the whole tree with BFS and check whether there is at least two bubbles. Yes, False; No, False;
+	public static boolean isCompleted(TreeNode root) {
+		//how: 1. corner case
+		if (root == null) {
+			return true;
+		}
+		//2. create a queue in order to check in BFS way and a flag to check bubbles.
+		Queue<TreeNode> que = new LinkedList<TreeNode>();
+		que.offer(root);
+		boolean flag  = false;
+		//3. traverse the tree.
+		while (!que.isEmpty()) {
+			TreeNode cur = que.poll();
+		}
+		
+	}
+	
+
+}

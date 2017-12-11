@@ -1,0 +1,16 @@
+import generator.TreeNode;
+import generator.TreeRandom;
+
+public class Solution7 {
+
+	public static void main(String[] args) {
+		TreeNode input = TreeRandom.treeGenRange(3, null, 0, 10);
+		input.print();
+		System.out.println(isBST(input));
+	}
+
+	public static boolean isBST(TreeNode root) {
+		
+	}
+
+}

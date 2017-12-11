@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="K Smallest In Unsorted Array"/>
+	<classpathentry kind="src" path="Kth Smallest Number In Sorted Matrix"/>
+	<classpathentry kind="src" path="Check If Binary Tree Is Completed"/>
+	<classpathentry kind="src" path="Bipartite"/>
+	<classpathentry kind="src" path="Get Keys In Binary Tree Layer By Layer"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="input"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

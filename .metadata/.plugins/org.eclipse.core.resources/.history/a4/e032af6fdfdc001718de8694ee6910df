@@ -1,0 +1,31 @@
+import generator.LinkedListRandom;
+import generator.ListNode;
+import generator.TreeNode;
+import generator.TreeRandom;
+
+public class Solution1 {
+
+	public static void main(String[] args) {
+		ListNode input = LinkedListRandom.LLGen(5, 0, 10);
+		input.print();
+		System.out.println();
+		ListNode output  = middleNode(input);
+		output.print();
+	}
+	 public ListNode reverseInPairs(ListNode head) {
+		    if(head == null || head.next == null) {
+		      return head;
+		    }
+		    ListNode dummy = new ListNode(-1);
+		    dummy.next = head;
+		    ListNode current = dummy;
+		    while(current.next != null || current.next.next !=null) {
+		      ListNode temp = current.next.next;
+		      current.next.next =temp;
+		      temp.next =current.next;
+		      current.next = temp;
+		      current = temp.next;
+		    }
+		    return dummy.next;
+	}
+}

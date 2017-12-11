@@ -1,0 +1,40 @@
+import generator.LinkedListRandom;
+import generator.ListNode;
+
+public class Solution5 {
+
+	public static void main(String[] args) {
+		ListNode input1 = LinkedListRandom.LLGen(5, 0, 10);
+		ListNode input2 = LinkedListRandom.LLGen(5, 0, 10);
+		System.out.println();
+		ListNode output  = merge(input1, input2);
+		output.print();
+	}
+	
+	public static ListNode merge(ListNode one, ListNode two) {
+		if (one == null) {
+			return two;
+		}
+		if (two == null) {
+			return one;
+		}
+		
+		ListNode newHead = new ListNode(-1);
+		while(one != null && two != null) {
+			if (one.value < two.value) {
+				newHead.next = one;
+				newHead =newHead.next;
+				one = one.next;
+			} else {
+				newHead.next = two;
+				newHead =newHead.next;
+				two = two.next;
+			}
+		}
+		while (one != null) {
+			newHead.next =one;
+			
+		}
+	}
+
+}

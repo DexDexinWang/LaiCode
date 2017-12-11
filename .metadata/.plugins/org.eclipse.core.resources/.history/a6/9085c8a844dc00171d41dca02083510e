@@ -1,0 +1,13 @@
+
+public class Solution6 {
+
+	public static void main(String[] args) {
+		int[] input = {1,1,3,3,3,3,3,4,5};
+		System.out.println(LastOccur(input, 3));
+	}
+
+	public int closest(int[] array, int target) {
+		
+	}
+
+}
