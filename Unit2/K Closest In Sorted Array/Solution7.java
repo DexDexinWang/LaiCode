@@ -13,9 +13,6 @@ public class Solution7 {
 		if (array == null || array.length == 0) {
 			return new int[0];
 		}
-		if (k >= array.length) {
-			return array;
-		}
 		//2. find the cloest position;
 		int left = closest(array,target);
 		int right = left + 1;

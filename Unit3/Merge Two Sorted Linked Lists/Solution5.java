@@ -34,15 +34,11 @@ public class Solution5 {
 			cur = cur.next;
 		}
 		//4. find the remaining from one or two.
-		while(one != null) {
+		if (one != null) {
 			cur.next = one;
-			cur = cur.next;
-			one = one.next;
 		}
-		while(two != null) {
+		if (two != null) {
 			cur.next = two;
-			cur = cur.next;
-			two = two.next;
 		}
 		return newHead.next;
 	}

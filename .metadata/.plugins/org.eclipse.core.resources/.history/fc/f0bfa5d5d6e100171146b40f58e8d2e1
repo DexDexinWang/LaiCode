@@ -1,0 +1,14 @@
+import generator.ListNode;
+import generator.LinkedListRandom;
+public class Solution3 {
+
+	public static void main(String[] args) {
+		ListNode input = LinkedListRandom.LLGen(10, 0, 1);
+		System.out.println(length(input));
+	}
+	
+	private int length(LinkedList node) {
+		
+	}
+
+}

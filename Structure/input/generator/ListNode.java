@@ -42,6 +42,7 @@ public class ListNode {
 		}
 	}
 	
+	
 	public void print()
 	{
 		System.out.print(value);

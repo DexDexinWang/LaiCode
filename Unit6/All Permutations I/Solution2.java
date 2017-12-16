@@ -44,5 +44,5 @@ public class Solution2 {
 		array[j] = temp;
 	}
 	//Time Complexity: O(n!);
-	//Time Complexity: O(1) in-place;
+	//Time Complexity: O(n^2) in-place;
 }

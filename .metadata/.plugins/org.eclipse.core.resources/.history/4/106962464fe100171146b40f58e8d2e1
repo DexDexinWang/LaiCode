@@ -1,0 +1,10 @@
+import java.util.PriorityQueue;
+
+public class Solution999 {
+
+	public static void main(String[] args) {
+		PriorityQueue<Integer> test = new PriorityQueue<Integer>();
+		System.out.print(test.size());
+	}
+
+}

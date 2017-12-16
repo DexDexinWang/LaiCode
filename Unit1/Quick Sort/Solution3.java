@@ -6,7 +6,7 @@ public class Solution3 {
 		System.out.println(Arrays.toString(quickSort(input)));
 	}
 	
-	//what: quicksort is to randomly choose a number as pivot and to divide the array into two sub-arrays
+	//what: quicksort is to choose a random number as pivot and to divide the array into two sub-arrays
 	public static int[] quickSort(int[] array) {
 		//how: 1. corner case
 		if (array == null || array.length == 0) {
@@ -25,7 +25,7 @@ public class Solution3 {
 		divide(array, left, mid - 1);
 		divide(array, mid + 1, right);
 	}
-	//2. find the pivot number and put all smaller numbers on left side and all bigger numbers on right side 
+	//2. randomly choose one number as a pivot number and put all smaller and equal numbers on left side and all bigger numbers on right side 
 	private static int pivot(int[] array, int left, int right) {
 		//2.1 randomly find the pivot and put it at the end position.
 		int pivotIdx = left + (int) Math.random() * (right - left + 1);

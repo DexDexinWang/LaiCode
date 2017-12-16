@@ -7,7 +7,10 @@ public class Solution5 {
 		System.out.println(Arrays.toString(moveZero(input)));
 	}
 	
-	//what: find the non-zeros and put it in the left side and find the zeros put it right.
+	//what: find the non-zeros and put them in the left side and find the zeros put it in the right side.
+	//approach: 
+	//1. to define two pointers on both side. when find the non-zeros put swap it with the left side pointer to keep data integrity.Then move the pointer. Also do the similar process with zeros.
+	//2. when two pointers cross over, termin 
 	public static int[] moveZero(int[] array) {
 		//how: 1. corner case
 		if (array == null || array.length <= 1) {

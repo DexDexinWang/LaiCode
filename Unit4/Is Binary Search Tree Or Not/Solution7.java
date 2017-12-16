@@ -23,7 +23,7 @@ public class Solution7 {
 		if (root == null) {
 			return true;
 		}
-		if(root.key < min && root.key > max) {
+		if(root.key < min || root.key > max) {
 			return false;
 		}
 		return isBST(root.left, min, root.key -1) && isBST(root.right, root.key - 1, max);

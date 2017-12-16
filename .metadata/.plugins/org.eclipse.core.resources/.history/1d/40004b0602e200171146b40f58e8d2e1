@@ -1,0 +1,22 @@
+import generator.ListNode;
+public class Solution5 {
+	ListNode head;
+	ListNode tail;
+	public Solution5() {
+		head = null;
+		tail = null;
+	}
+	
+	public Integer poll() {
+		
+	}
+	
+	public Integer peek() {
+		
+	}
+	
+	public void push(Integer ele) {
+		
+	}
+	
+}

@@ -8,6 +8,14 @@ public class Solution4 {
 	}
 
 	//what:  find -1s put in left side, find 1s and put them in right side. others in mid. 
+	//approach: 
+	// 1. define tree pointers(x,y,z), two left sides and one right side. 
+	// 2. iteratively check each number. 
+	// 2.1. when -1, swap x and -1, then move x forward.
+	// 2.2. when 0, swap y and 0, then move y forward.
+	// 2.3. when 1, swap z and 1, then move z backward.
+	// 3.3. terminate it when y and z cross over.
+
 	public static int[] rainbowSort(int[] array) {
 		//how: 1. corner case
 		if (array == null || array.length <= 1) {

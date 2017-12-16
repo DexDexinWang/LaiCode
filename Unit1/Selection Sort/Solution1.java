@@ -6,7 +6,7 @@ public class Solution1 {
 		int[] input = {2,3,4,3,5,6};
 		System.out.println(Arrays.toString(solve(input)));
 	}
-	//what: to find the correct position for each number from 0 to n;
+	//what: to find the correct position for each number from 0 to n iteratively;
 	public static int[] solve(int[] array) {
 		//how: 1. corner case
 		if (array == null || array.length == 0) {

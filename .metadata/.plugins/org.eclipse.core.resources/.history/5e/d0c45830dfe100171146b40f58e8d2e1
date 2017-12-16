@@ -1,0 +1,32 @@
+import java.util.Deque;
+import java.util.LinkedList;
+
+public class Solution1 {
+	Deque<Integer> in;
+	Deque<Integer> out;
+	public Solution1() {
+		in= new LinkedList<Integer>();
+		out= new LinkedList<Integer>();
+	}
+	
+	public Integer poll() {
+		
+	}
+	
+	public void offer(int element) {
+		in.offerFirst(element);
+	}
+	
+	public Integer peek() {
+		return 0;
+	}
+	
+	public int size() {
+		return in.size() + out.size();
+	}
+	
+	public boolean isEmpty() {
+		return in.size() + out.size() == 0?
+	}
+	
+}

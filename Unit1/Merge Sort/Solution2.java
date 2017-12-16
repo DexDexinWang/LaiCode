@@ -3,18 +3,18 @@ import java.util.Arrays;
 public class Solution2 {
 
 	public static void main(String[] args) {
-		int[] input = {2,3,4,3,5,6};
+		int[] input = {2,3,4,3,5,6,3};
 		System.out.println(Arrays.toString(mergeSort(input)));
 	}
 	//what: to sort all numbers with merge sort: divide + merge
 	public static int[] mergeSort(int[] array) {
-		if (array == null || array.length == 0) {
+		if (array == null || array.length <= 1) {
 			return array;
 		}
 		divide(array, 0, array.length - 1);
 		return array;
 	}
-	//how: 1. divide all numbers until only one number
+	//how: 1. divide all numbers into sub-groups recursively until the each sub-group only has one number from high level to lower level.
 	public static void divide(int[] array, int left, int right){
 		if (left >= right) {
 			return;
@@ -24,7 +24,7 @@ public class Solution2 {
 		divide(array, mid + 1, right);
 		merge(array, left, mid, right);
 	}
-	//2. merge all number subsets 
+	//2. merge all subsets from low level to high level.
 	public static void merge(int[] array, int left, int mid, int right) {
 		//2.1 define sub arrays 
 		int len1 = mid - left + 1;
@@ -37,7 +37,7 @@ public class Solution2 {
 		for (int j = 0 ; j < len2 ; j++) {
 			r[j] =array[mid + j + 1];
 		}
-		//2.2. find the each mins to sort all numbers
+		//2.2. find the each minimum number to sort all numbers
 		int i = 0;
 		int j = 0;
 		int index = left;
