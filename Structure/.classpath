@@ -10,5 +10,9 @@
 	<classpathentry kind="src" path="Stack By LinkedNode"/>
 	<classpathentry kind="src" path="Quewue By Two ListNodes"/>
 	<classpathentry kind="src" path="BoundedQueue By Array"/>
+	<classpathentry kind="src" path="MinHeap"/>
+	<classpathentry kind="src" path="ArrayList by Array"/>
+	<classpathentry kind="src" path="KMP"/>
+	<classpathentry kind="src" path="MyHashMap"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

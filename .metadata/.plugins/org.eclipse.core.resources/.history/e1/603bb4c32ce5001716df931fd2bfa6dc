@@ -1,0 +1,7 @@
+
+public class ArrayList {
+	int[] array;
+	public ArrayList() {
+		array = new int[100];
+	}
+}

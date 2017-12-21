@@ -1,0 +1,10 @@
+
+public class Solution2 {
+
+	public static void main(String[] args) {
+		System.out.println(diffBits(16, 8_);
+	}
+
+	public static int diffBits(int a, int b) {
+
+}

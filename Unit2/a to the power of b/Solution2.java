@@ -16,6 +16,6 @@ public class Solution2 {
 		long half = power (a, b/2);
 		return b % 2 == 0 ? half * half : half * half * a; 
 	}
-	//Time Complexity: log(b)
-	//Space Complexity: O(1)
+	//Time Complexity: O(logb)
+	//Space Complexity: O(logn)
 }

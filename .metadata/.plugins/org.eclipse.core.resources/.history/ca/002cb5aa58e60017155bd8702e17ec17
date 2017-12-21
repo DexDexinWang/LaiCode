@@ -1,0 +1,20 @@
+
+public class MyHashMap<K,V> {
+	public static final int DEFAULT_CAPACITY = 10;
+	public static final float DEFAULT_LOAD_FACTOR = 0.75f; 
+	int size;
+	Node<K,V>[] array;
+	
+	public MyHashMap() {
+		this(DEFAULT_CAPACITY, DEFAULT_LOAD_FACTOR);
+	}
+	
+	public MyHashMap(int cap, float loadFactor) {
+		if (cap <= 0) {
+			
+		}
+		this.array  = (Node<K,V>[]) (new Node[cap]); //
+		this.size = 0;
+		this.
+	}
+}

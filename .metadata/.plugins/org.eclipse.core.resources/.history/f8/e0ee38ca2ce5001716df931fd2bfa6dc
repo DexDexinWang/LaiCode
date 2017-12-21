@@ -1,0 +1,11 @@
+
+public class ArrayList {
+	int[] array;
+	public ArrayList() {
+		array = new int[100];
+	}
+	
+	public void add(int ele) {
+		
+	}
+}

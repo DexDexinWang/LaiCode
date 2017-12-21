@@ -1,0 +1,13 @@
+
+public class MyHashMap<K,V> {
+	int size;
+	Node<K,V>[] array;
+	public MyHashMap(int cap, float loadFactor) {
+		if (cap <= 0) {
+			
+		}
+		this.array  = (Node<K,V>[]) (new Node[cap]); //
+		this.size = 0;
+		this.
+	}
+}

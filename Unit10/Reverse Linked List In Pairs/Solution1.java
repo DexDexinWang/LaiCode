@@ -8,8 +8,8 @@ public class Solution1 {
 		ListNode input = LinkedListRandom.LLGen(5, 0, 10);
 		input.print();
 		System.out.println();
-		ListNode output  = reverseInPairs(input);
-		output.print();
+		ListNode output1  = reverseInPairs1(input);
+		output1.print();
 	}
 	//what: make a stable header and swap each pair of nodes 
 	 public static ListNode reverseInPairs(ListNode head) {
@@ -33,4 +33,16 @@ public class Solution1 {
 	}
 	// Time Complexity: O(n)
 	// Space Complexity: O(1)
+	 
+	 public static ListNode reverseInPairs1(ListNode head) {
+		 if (head == null || head.next == null) {
+			 return head;
+		 }
+		 ListNode temp = head.next;
+		 head.next = reverseInPairs1(temp.next);
+		 temp.next =head;
+		 return temp;
+	 }
+	// Time Complexity: O(n)
+	// Space Complexity: O(n)
 }

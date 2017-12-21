@@ -1,0 +1,18 @@
+
+public class ArrayList {
+	int[] array;
+	int size;
+	public ArrayList() {
+		array = new int[100];
+		size = 0;
+	}
+	
+	public void add(int ele) {
+		if (size == array.length) {
+			int[] newArray = new int[(int)(array.length * 1.5))];
+			copy(array, newArray);
+			array = newArray;
+		}
+		array[size] = ele; 
+	}
+}

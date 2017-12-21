@@ -1,0 +1,22 @@
+
+public class Solution3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static boolean allUnique(String word) {
+		int[] array = new int[256];
+		for (Character ch : word.toCharArray()){
+			if(array[ch] == 1) {
+				return false;
+			} else {
+				array[ch] = 1;
+			}
+		}
+		return true;
+	}
+	//Time Complexity: O(1)
+	//Space Complexity: O(1);
+}

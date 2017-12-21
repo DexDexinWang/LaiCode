@@ -13,10 +13,6 @@ public class Solution3 {
 	//what: find all possible pairs where the the number of left parentheses is more then the number of right parenthese 
 	public static List<String> validParentheses(int n) {
 		List<String> res = new LinkedList<String>();
-		//how: 1. corner case
-		if (n <= 0) {
-			return res;
-		}
 		//2. create temporary space to save pair values;
 		char[] temp = new char[2*n];
 		helper(n, n, 0, temp, res);

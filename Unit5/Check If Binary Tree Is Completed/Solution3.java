@@ -26,6 +26,7 @@ public class Solution3 {
 			TreeNode cur = que.poll();
 			//3.1 check left node;
 			if (cur.left == null) {
+				//do not need to care the next level.
 				flag = true;
 			} else if (flag) {
 				return false;

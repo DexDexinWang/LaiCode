@@ -1,0 +1,9 @@
+
+public class Node<K,V> {
+	final K key;
+	V value;
+	Node<K, V> next;
+	Node<K key, V value> { 
+		
+	}
+}

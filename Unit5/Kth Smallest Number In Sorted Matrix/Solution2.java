@@ -27,9 +27,6 @@ public class Solution2 {
 				visited[cur.row][cur.col + 1] = 1;
 			}
 		}
-		for (int i = 0; i < k - 2 ; i++) {
-			minHeap.poll();
-		}
 		return minHeap.poll().val;
 	}
  
@@ -49,5 +46,8 @@ public class Solution2 {
 			}
 			return this.val < another.val ? -1: 1;
 		}
+
 	}
+	//Time Complexity: O(klog(k))
+	//Space Complexity: O(sk)
 }

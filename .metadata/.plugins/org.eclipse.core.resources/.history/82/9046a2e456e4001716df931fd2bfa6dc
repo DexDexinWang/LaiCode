@@ -1,0 +1,65 @@
+
+public class Solution7 {
+	private int[] array;
+	private int size;
+	
+	public Solution7(int[] array) {
+		if (array == null || array.length == 0) {
+			throw new IllegalArgumentException("input array cannot be null or empty");
+		}
+		this.array = array;
+		size =array.length;
+		heapify();
+	}
+	
+	private void heapify() {
+		for (int i = size/2 - 1; i >= 0; i--) {
+			percolateDown(i);
+		}
+	}
+	
+	public Solution7(int cap) {
+		if (cap <= 0) {
+			throw new IllegalArgumentException("input array cannot be null or empty");
+		}
+		array = new int[cap];
+		size = 0;
+	}
+	
+	public int size() {
+		return size;
+	}
+	
+	public boolean isEmpty() {
+		return size == 0;
+	}
+	
+	public boolean isFull() {
+		return size == array.length;
+	}
+	
+	private void percolateUp(int index) {
+		
+	}
+	
+	private void percolateDown(int index) {
+		
+	}
+	public int peek() {
+		return array[0];
+	}
+	
+	public int poll() {
+		int min = array[0];
+		array[0] = array[size - 1];
+		array[size - 1] = 0;
+		size--;
+		return min;
+	}
+	
+	public void offer(int ele) {
+		array[size] = ele;
+		percolateUp(size);
+		size++;
+	}
+}

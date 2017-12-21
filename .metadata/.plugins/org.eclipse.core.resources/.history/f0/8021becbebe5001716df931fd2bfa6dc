@@ -1,0 +1,23 @@
+
+public class Solution4 {
+
+	public static void main(String[] args) {
+		System.out.println(hex(16));
+	}
+	
+	public static String hex(int number) {
+		if (number == 0) {
+			return "0x0";
+		}
+		StringBuilder sb = new StringBuilder();
+		while (number > 0) {
+			int rem = number % 16 ;
+			if (rem < 10) {
+				sb.append((char)('0' + rem));
+			} else {
+				sb.append((char)('A' + rem - 10));
+			}
+			number = number /16;
+		}
+	}
+}

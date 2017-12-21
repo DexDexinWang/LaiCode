@@ -57,5 +57,5 @@ public class Solution3 {
 	// Time complexity: 
 	// Divide: O(1) + O(2) + O(4) + ... + O(2logn) = O(n)
 	// pivot: O(n) + O(n-1) + O(n-2) + ... O(1) = O(n*(n-1)/2) = O(n^2)
-	// Space Complexity: O(1)  in-place
+	// Space Complexity: O(logn)  in-place
 }
