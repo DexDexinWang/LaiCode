@@ -1,0 +1,56 @@
+import java.util.Stack;
+public class DequeByStacks {
+	Stack<Integer> left;
+	Stack<Integer> right;
+	int size;
+	public DequeByStacks() {
+		left = new Stack<Integer>();
+		right = new Stack<Integer>();
+	}
+	
+	public void pushFirst(Integer ele) {
+		move(right, left);
+		left.push(ele);
+	}
+	
+	public void pushLast(Integer ele) {
+		move(left, right);
+		right.push(ele);
+	}
+	
+	public Integer popFirst() {
+		if (size == 0)
+		move(right, left);
+		return left.pop();
+	}
+	
+	public Integer popLast() {
+		move(left, right);
+		return right.pop();
+	}
+	
+	public Integer peekFirst() {
+		move(right, left);
+		return left.peek();
+	}
+	
+	public Integer peekLast() {
+		move(left, right);
+		return right.peek();
+	}
+	
+	public boolean isEmpty() {
+		return size == 0;
+	}
+	
+	public int size() {
+		return size;
+	}
+	
+	private void move(Stack<Integer> s1 ,Stack<Integer> s2) {
+		while (!s1.isEmpty()) {
+			s2.push(s1.pop());
+		}
+	}
+
+}

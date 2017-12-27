@@ -1,10 +1,12 @@
+import java.util.Set;
 import java.util.Stack;
 
 public class Solution2 {
-	Stack<Integer> set = new Stack<Integer>();
-	Stack<Integer> minSet = new Stack<Integer>();
+	Stack<Integer> set;
+	Stack<Integer> minSet;
 	public Solution2() {
-		
+		set = new Stack<Integer>();
+		minSet = new Stack<Integer>();
 	}
 	
 	public int pop() {
@@ -37,5 +39,42 @@ public class Solution2 {
 			return -1;
 		}
 		return set.peek();
+	}
+	
+	public void sort() {
+		int size = set.size();
+		if (size == 0) {
+			return;
+		}
+		Stack<Integer> temp = new Stack<Integer>();
+		int max = Integer.MIN_VALUE;
+		while (temp.size() != size) {
+			max = set.pop();
+			while (!temp.isEmpty() && temp.peek() > max) {
+				set.push(temp.pop());
+			}
+			temp.push(max);
+		}
+		while (!temp.isEmpty()) {
+			set.push(temp.pop());
+		}
+	}
+	
+	public void print() {
+		System.out.print("[");
+		Stack<Integer> temp = new Stack<Integer>();
+		while (!set.isEmpty()) {
+			int num = set.pop();
+			if (set.size() !=0) {
+				System.out.print(num + ", ");
+			} else {
+				System.out.print(num);
+			}
+			temp.push(num);
+		}
+		System.out.println("]");
+		while (!temp.isEmpty()) {
+			set.push(temp.pop());
+		}
 	}
 }

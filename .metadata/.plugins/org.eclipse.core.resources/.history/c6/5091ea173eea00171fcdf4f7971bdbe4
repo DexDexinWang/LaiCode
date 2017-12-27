@@ -1,0 +1,19 @@
+
+public class Solution8 {
+
+	public static void main(String[] args) {
+		String input1 = "b2k";
+		String input2 = "book";
+		System.out.println(match(input1,input2));
+	}
+	
+	public static boolean match(String input, String pattern) {
+		return match(0, 0, input, pattern);
+	}
+	
+	private static boolean match(int p1, int p2, String input, String pattern) {
+		
+		return true;
+	}
+
+}

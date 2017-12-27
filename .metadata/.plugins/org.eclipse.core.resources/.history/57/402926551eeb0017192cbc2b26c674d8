@@ -1,0 +1,12 @@
+import java.util.Stack;
+public class DequeByStacks {
+	Stack<Integer> left;
+	Stack<Integer> right;
+	
+	public DequeByStacks() {
+		left = new Stack<Integer>();
+		right = new Stack<Integer>();
+	}
+	
+
+}

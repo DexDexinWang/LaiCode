@@ -1,0 +1,20 @@
+
+public class Solution5 {
+
+	public static void main(String[] args) {
+		System.out.println(spiralGenerate(4,5));
+	}
+	
+	public static int[][] spiralGenerate(int m, int n) {
+		int[][] matrix = new int[m][n];
+		if (m == 0) {
+			return matrix;
+		}
+		spiralGenerate(matrix, 0, m - 1, 0, n - 1, 1);
+		return matrix;
+	}
+
+	private static void spiralGenerate(int[][] matrix, int up, int down, int left, int right, int counter) {
+		
+	}
+}

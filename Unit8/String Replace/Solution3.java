@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Solution3 {
 
 	public static void main(String[] args) {
@@ -10,6 +8,17 @@ public class Solution3 {
 	}
 
 	public static String replace(String input, String s, String t) {
-		return "";
+		StringBuilder sb = new StringBuilder();
+		int fromIndex = 0;
+		int matchedIndex = input.indexOf(s, fromIndex);
+		while (matchedIndex != -1) {
+			sb.append(input, fromIndex, matchedIndex).append(t);
+			fromIndex = matchedIndex + s.length();
+			matchedIndex = input.indexOf(s, fromIndex);
+		}
+		sb.append(input, fromIndex, input.length());
+		return sb.toString();
 	}
+	// Time Complexity: O(n) 
+	// space Complexity: O(n)
 }

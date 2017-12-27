@@ -1,0 +1,12 @@
+
+public class Solution5 {
+
+	public static void main(String[] args) {
+		System.out.println(spiralgenerate(4,5));
+	}
+	
+	public int[][] spiralGenerate(int m, int n) {
+		
+	}
+
+}

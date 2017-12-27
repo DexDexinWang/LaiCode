@@ -1,0 +1,27 @@
+
+public class Solution999 {
+
+	public static void main(String[] args) {
+		DequeByStacks test = new DequeByStacks();
+		test.push(2);
+		test.push(2);
+		test.push(4);
+		test.push(6);
+		test.push(1);
+		test.print();
+		test.sort();
+		test.print();
+	}
+	
+	public static void test(Integer x) {
+		Solution2 test = new Solution2();
+		test.push(2);
+		test.push(2);
+		test.push(4);
+		test.push(6);
+		test.push(1);
+		test.print();
+		test.sort();
+		test.print();
+	}
+}

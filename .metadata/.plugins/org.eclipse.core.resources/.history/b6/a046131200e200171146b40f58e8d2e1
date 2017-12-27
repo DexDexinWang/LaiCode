@@ -1,8 +1,0 @@
-
-public class Solution4 {
-	private ListNode head;
-	public Solution4() {
-		
-	}
-}
-

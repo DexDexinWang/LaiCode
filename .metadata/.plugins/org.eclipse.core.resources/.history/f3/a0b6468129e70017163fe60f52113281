@@ -1,0 +1,13 @@
+
+public class Solution999 {
+
+	public static void main(String[] args) {
+		int x = 4; 
+		addOne(x);
+		System.out.println(x);
+	}
+	
+	public static void addOne(Integer x) {
+		x = x + 1;
+	}
+}

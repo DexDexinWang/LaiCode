@@ -1,9 +1,0 @@
-import generator.ListNode;
-import generator.LinkedListRandom;
-public class Solution3 {
-
-	public static void main(String[] args) {
-		ListNode node = LinkedListRandom.LLGen(10, 0, 1);
-	}
-
-}

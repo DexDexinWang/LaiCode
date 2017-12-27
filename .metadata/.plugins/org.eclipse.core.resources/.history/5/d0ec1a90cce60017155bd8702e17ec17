@@ -1,0 +1,16 @@
+
+public class Solution4 {
+
+	public static void main(String[] args) {
+		System.out.println(decompress("a2b3e4"));
+	}
+
+	public static String decompress(String input) {
+		StringBuilder sb  = new StringBuilder();
+		int index = 0; 
+		while (index < input.length()) {
+			
+		}
+		return sb.toString();
+	}
+}

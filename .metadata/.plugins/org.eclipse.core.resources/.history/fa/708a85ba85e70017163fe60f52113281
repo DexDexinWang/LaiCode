@@ -1,0 +1,12 @@
+import generator.TreeNode;
+import generator.TreeRandom;
+public class Solution6 {
+
+	public static void main(String[] args) {
+		TreeNode input = TreeRandom.treeGenRange(4, null, 1, 6);
+	}
+	
+	public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode one, TreeNode two) { 
+		
+	}
+}

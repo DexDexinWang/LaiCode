@@ -13,14 +13,14 @@ public class Solution1 {
 		return number > 0  && count1(number) == 1;
 	}
 	
-	private static int count(int number) {
-		int counter = 0;
-		for (int i = 0 ; i < 31 ; i++) {
-			counter += (number & 1);
-			number = number >> 1;
-		}
-		return  counter;
-	}
+//	private static int count(int number) {
+//		int counter = 0;
+//		for (int i = 0 ; i < 31 ; i++) {
+//			counter += (number & 1);
+//			number = number >> 1;
+//		}
+//		return  counter;
+//	}
 	//count 1s only for positive number. could finish early.
 	private static int count1(int number) {
 		int counter = 0;

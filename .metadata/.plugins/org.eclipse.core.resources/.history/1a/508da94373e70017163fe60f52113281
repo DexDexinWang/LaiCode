@@ -1,0 +1,15 @@
+import java.util.Arrays;
+
+public class Solution4 {
+
+	public static void main(String[] args) {
+		System.out.println(Arrays.deepToString(spiralGenerate(4)));
+	}
+
+	public static int[][] spiralGenerate(int n) {
+		int[][] matrix = new int[n][n];
+		if (n == 0) {
+			return matrix;
+		}
+	}
+}

@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="Reverse Linked List In Pairs"/>
+	<classpathentry kind="src" path="Spiral Order Traverse I"/>
+	<classpathentry kind="src" path="Spiral Order Traverse II"/>
+	<classpathentry kind="src" path="Spiral Order Generate I"/>
+	<classpathentry kind="src" path="Spiral Order Generate II"/>
+	<classpathentry kind="src" path="Lowest Common Ancestor I"/>
+	<classpathentry kind="src" path="N Queens"/>
+	<classpathentry kind="src" path="String Abbreviation Matching"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="input"/>
 	<classpathentry kind="output" path="bin"/>

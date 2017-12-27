@@ -14,5 +14,7 @@
 	<classpathentry kind="src" path="ArrayList by Array"/>
 	<classpathentry kind="src" path="KMP"/>
 	<classpathentry kind="src" path="MyHashMap"/>
+	<classpathentry kind="src" path="BinarySearchTree Operations"/>
+	<classpathentry kind="src" path="Deque By Stacks"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

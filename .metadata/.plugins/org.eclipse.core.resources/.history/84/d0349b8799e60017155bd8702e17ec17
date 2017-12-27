@@ -1,0 +1,22 @@
+
+public class Solution5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public int[] reorder(int[] array) {
+		if (array.length % 2 == 0) {
+			reorder(array, 0, array.length -1);
+		} else {
+			reorder(array, 0, array.length - 2);
+		}
+		return array;
+	}
+	
+	private void reorder(int[] array, int left, int right) {
+		
+	}
+
+}

@@ -1,0 +1,45 @@
+
+public class Solution8 {
+
+	public static void main(String[] args) {
+		String input1 = "b2k";
+		String input2 = "book";
+		System.out.println(match(input1,input2));
+	}
+	
+	public static boolean match(String input, String pattern) {
+		return match(0, 0, input, pattern);
+	}
+	
+	//what: recursively check each character and each number from input to pattern.
+	private static boolean match(int p1, int p2, String input, String pattern) {
+		//1. how: base case 
+		if (p1 == input.length() && p2 == pattern.length()) {
+			return true;
+		} else if (p1 >= input.length() || p2 >=input.length()) {
+			return false;
+		}
+		//2.1 check characters 
+		if (input.charAt(p1) < '0' || input.charAt(p2) > '9') {
+			if (input.charAt(p1) == pattern.charAt(p2)) {
+				return match(p1 + 1, p2 + 1, input, pattern);
+			}
+			return false;
+		}
+		//2.2 check numbers.
+		int count = 0; 
+		while (p1 < input.length() && input.charAt(p1) >= '0' && input.charAt(p1) <=9) {
+			count = count * 10 + (input.charAt(p1) - '0');
+			p1++;
+		}
+		return match(p1, p2 + count, input,pattern);
+	}
+	//Time complexity: O(n);
+	//Space complexity: O(n) call stacks;
+
+	private static boolean match(String input, String pattern) {
+		
+	}
+
+	
+}
