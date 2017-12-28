@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class Solution1 {
 
 	public static void main(String[] args) {
-		int[] input = {2,3,4,3,5,6};
+		int[] input = {2,3,4,3,5,5};
 		System.out.println(Arrays.toString(solve(input)));
 	}
 	//what: to find the correct position for each number from 0 to n iteratively;
