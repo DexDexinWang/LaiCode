@@ -1,0 +1,45 @@
+
+public class MinStack {
+	static class Pair() {
+		private Integer num;
+		private int counter;
+			public pair(Integer num) {
+				this.num = num;
+				counter = 1;
+			}
+			public Integer getNum() {
+				return num;
+			}
+			public int getCounter() {
+				return counter;
+			}
+			public void counterAdd() {
+				counter++;
+			}
+		public void counterMin() {
+				counter--;
+			}
+		}
+
+}
+
+static class Pair() {
+	private Integer num;
+	private int counter;
+		public pair(Integer num) {
+			this.num = num;
+			counter = 1;
+		}
+		public Integer getNum() {
+			return num;
+		}
+		public int getCounter() {
+			return counter;
+		}
+		public void counterAdd() {
+			counter++;
+		}
+	public void counterMin() {
+			counter--;
+		}
+	}

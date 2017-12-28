@@ -1,0 +1,15 @@
+import generator.ListNode;
+import generator.LinkedListRandom;
+public class Solution3 {
+
+	public static void main(String[] args) {
+		ListNode input = LinkedListRandom.LLGen(10, 0, 1);
+		System.out.println(length(input));
+		System.out.println(get(input,5));
+		System.out.println(appendHead(input,new ListNode(11)));
+		System.out.println(appendTail(input,new ListNode(11)));
+		System.out.println(remove(input,new ListNode(5)));
+	}
+	
+
+}

@@ -1,4 +1,3 @@
-import generator.TreeRandom;
 import generator.TreeNode;
 
 public class BinarySearchTreeOperations {
@@ -17,13 +16,7 @@ public class BinarySearchTreeOperations {
 		System.out.println(iterativeSearch(input, 3));
 		recursiveSearchNode(input, 3).print();
 		System.out.println();
-		iterativeSearchNode(input, 3).print();
-		System.out.println();
-		recursiveInsertNode(input, 1).print();
-		System.out.println();
-		iterativeInsertNode(input, 10).print();
-		System.out.println();
-		iterativeDeleteNode(input, 9).print();
+		iterativeSearchNode(input, 3).print();	
 	}
 
 	//4 search methods
@@ -177,8 +170,7 @@ public class BinarySearchTreeOperations {
 			return root;
 		}
 		TreeNode cur = root;
-		TreeNode pre = new TreeNode(-1);
-		pre.left = cur;
+		TreeNode pre = null;
 		boolean flag = false;
 		while (cur != null && cur.key != target) {
 			pre = cur;
@@ -216,18 +208,12 @@ public class BinarySearchTreeOperations {
 					smallest.left = cur.left;
 					smallest.right = cur.right;
 				}
-				if (flag) {
-					pre.right = smallest;
-				} else {
-					pre.left = smallest;
+				if (root.key == target) {
+					return smallest;
 				}
 			}
 		}
-		if (pre.key == -1) {
-			return pre.left;
-		} else {
-			return root;
-		}
+		return root;
 	}
 
 }

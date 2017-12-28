@@ -2,6 +2,20 @@
 public class Solution999 {
 
 	public static void main(String[] args) {
+
+	}
+	
+	public static void testBoundedQueueByArray() {
+		BoundedQueueByArray test = new BoundedQueueByArray();
+		test.offer(1);
+		test.offer(2);
+		test.offer(3);
+		test.print();
+		test.poll();
+		test.print();
+	}
+	
+	public static void testDeque() {
 		DequeByStacks test = new DequeByStacks();
 		System.out.println(test.pollFirst());
 		System.out.println(test.pollLast());
@@ -19,8 +33,8 @@ public class Solution999 {
 		test.print();
 	}
 	
-	public static void testMinStack(Integer x) {
-		Solution2 test = new Solution2();
+	public static void testMinStack() {
+		MinStack test = new MinStack();
 		test.push(2);
 		test.push(2);
 		test.push(4);
@@ -29,5 +43,41 @@ public class Solution999 {
 		test.print();
 		test.sort();
 		test.print();
+		
+		MinStack test1 = new MinStack();
+		test1.push(5);
+		test1.push(5);
+		test1.push(4);
+		test1.push(5);
+		test1.push(6);
+		System.out.println(test1.min());
+		test1.pop();
+		System.out.println(test1.min());
+		test1.pop();
+		System.out.println(test1.min());
+		test1.pop();
+		System.out.println(test1.min());
+		test1.pop();
+		System.out.println(test1.min());
+		test1.pop();
+		System.out.println(test1.min());
 	}
+	
+	public static void testStackByLinkedNode() {
+		StackByLinkedNode test = new StackByLinkedNode();
+		test.push(5);
+		test.push(4);
+		test.push(3);
+		test.print();
+	}
+	
+	public static void testQueueByListNodes() {
+		QueueByListNodes test = new QueueByListNodes();
+		test.offer(5);
+		test.offer(4);
+		test.offer(3);
+		test.offer(2);
+		test.print();
+	}
+
 }

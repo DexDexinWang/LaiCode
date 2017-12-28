@@ -126,7 +126,7 @@ public class HashMap1<K, V> {
 	public V revmoe(K key) {
 		int index = getIndex(key);
 		Node<K,V> node = array[index];
-		if (node != null) {
+		if (node == null) {
 			return null;
 		} else if (equalsKey(node.key, key)) {
 			V temp = node.value;
