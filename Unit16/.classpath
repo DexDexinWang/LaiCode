@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Perfect Shuffle"/>
+	<classpathentry kind="src" path="Reservoir Sampling"/>
+	<classpathentry kind="src" path="Random7 Using Random5"/>
+	<classpathentry kind="src" path="Random1000 Using Random5"/>
+	<classpathentry kind="src" path="Median Tracker"/>
+	<classpathentry kind="src" path="95 Percentile"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

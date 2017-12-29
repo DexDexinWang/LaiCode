@@ -170,7 +170,8 @@ public class BinarySearchTreeOperations {
 			return root;
 		}
 		TreeNode cur = root;
-		TreeNode pre = null;
+		TreeNode pre = new TreeNode(-1);
+		pre.left = root;
 		boolean flag = false;
 		while (cur != null && cur.key != target) {
 			pre = cur;
@@ -208,12 +209,18 @@ public class BinarySearchTreeOperations {
 					smallest.left = cur.left;
 					smallest.right = cur.right;
 				}
-				if (root.key == target) {
-					return smallest;
+				if (flag) {
+					pre.right = smallest;
+				} else {
+					pre.left = smallest;
 				}
 			}
 		}
-		return root;
+		if (root.key == target) {
+			return pre.left;
+		} else {
+			return root;
+		}
 	}
 
 }

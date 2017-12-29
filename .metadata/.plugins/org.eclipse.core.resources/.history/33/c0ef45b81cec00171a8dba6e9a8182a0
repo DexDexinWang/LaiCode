@@ -1,0 +1,16 @@
+
+public class Solution5 {
+
+	public Solution5(){
+		
+	}
+	
+	public void read(int value) {
+		
+	}
+	
+	public Double median() {
+		
+	}
+	
+}

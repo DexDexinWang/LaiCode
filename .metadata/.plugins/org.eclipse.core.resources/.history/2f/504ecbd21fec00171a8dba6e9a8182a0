@@ -1,0 +1,14 @@
+
+public class Solution6 {
+
+	public static void main(String[] args) {
+		List<Integer> input = new ArrayList<Integer>();
+		System.out.println(percentile95(input));
+	}
+	
+	public int percentile95(List<Integer> lengths) {
+		
+		return 0;
+	}
+
+}

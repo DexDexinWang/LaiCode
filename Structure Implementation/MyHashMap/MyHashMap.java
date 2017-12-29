@@ -45,10 +45,6 @@ public class MyHashMap<K,V> {
 		return hash(key) % array.length;
 	}
 	
-	private int getIndex(K key, Node<K,V>[] newArray) {
-		return hash(key) % newArray.length;
-	}
-	
 	private boolean equalsValue(V v1, V v2) {
 		return v1 != null && v1.equals(v2) || v1 == v2;
 	}
@@ -119,23 +115,6 @@ public class MyHashMap<K,V> {
 		return null;
 	}
 	
-	public V put(K key, V value, Node<K, V>[] newArray) {
-		int index = getIndex(key,newArray);
-		Node<K, V> head = newArray[index];
-		Node<K, V> node = head;
-		while (node !=null) {
-			if (equalsKey(node.key, key)) {
-				V result = node.value;
-				node.value = value;
-				return result;
-			}
-			node = node.next;
-		}
-		Node<K, V> newNode = new Node(key, value);
-		newNode.next = head;
-		newArray[index] = newNode;
-		return null;
-	}
 	
 	private boolean needRehashing() {
 		float ratio = (size + 0.0f) / array.length;
@@ -144,17 +123,16 @@ public class MyHashMap<K,V> {
 	
 	private void rehashing() {
 		@SuppressWarnings("unchecked")
-		Node<K,V>[] newArray =(Node<K, V>[]) new Node[(int)(array.length * 1.5)];
-		int newSize = 0;
-		for (Node<K, V> node : array) {
+		Node<K,V>[] newArray = (Node<K, V>[]) new Node[(int)(array.length * 1.5)];
+		Node<K,V>[] oldArray = array;
+		this.array = newArray;
+		this.size = 0;
+		for (Node<K, V> node : oldArray) {
 			while (node != null) {
-				put(node.getKey(), node.getValue(), newArray);
-				newSize++;
+				put(node.getKey(), node.getValue());
 				node = node.next;
 			}
 		}
-		this.array = newArray;
-		this.size = newSize;
 	}
 	
 	public V remove(K key) {
@@ -164,6 +142,7 @@ public class MyHashMap<K,V> {
 			return null;
 		} else if (equalsKey(node.key, key)) {
 			array[index] = node.next;
+			node.next = null;
 			return node.value;
 		} else {
 			while (node.next != null) {

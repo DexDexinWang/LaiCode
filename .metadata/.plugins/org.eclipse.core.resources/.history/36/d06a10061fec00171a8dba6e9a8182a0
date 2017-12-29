@@ -1,0 +1,43 @@
+import java.util.Collections;
+import java.util.PriorityQueue;
+
+public class Solution5 {
+
+	PriorityQueue<Integer> small;
+	PriorityQueue<Integer> large;
+	Double median;
+	public Solution5(){
+		small = new PriorityQueue<Integer>(Collections.reverseOrder());
+		large = new PriorityQueue<Integer>();
+	}
+	
+	public void read(int value) {
+		if (small.size() == 0 && large.size() == 0) {
+			small.offer(value);
+		}
+		//find the correct PQ for the number.
+		int smaller = small.peek();
+		if (value <= smaller) {
+			small.offer(value);
+		} else {
+			large.offer(value);
+		}
+		//balance queue.
+		if (small.size() > large.size() + 1) {
+			large.offer(small.poll());
+		} else if (small.size() < large.size()) {
+			small.offer(large.poll());
+		}
+		//return value.
+		if (small.size() == large.size()) {
+			median = (0.0 + small.peek() + large.peek()) /2;
+		} else {
+			median = (double)small.peek();
+		}
+	}
+	
+	public Double median() {
+		return median;
+	}
+	
+}

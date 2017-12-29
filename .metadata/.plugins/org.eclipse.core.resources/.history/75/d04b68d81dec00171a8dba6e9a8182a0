@@ -1,0 +1,23 @@
+import java.util.Collections;
+import java.util.PriorityQueue;
+
+public class Solution5 {
+
+	PriorityQueue<Integer> small;
+	PriorityQueue<Integer> large;
+	Double median;
+	public Solution5(){
+		small = new PriorityQueue<Integer>();
+		large = new PriorityQueue<Integer>(Collections.reverseOrder());
+	}
+	
+	public void read(int value) {
+		int smaller = small.peek();
+		int larger = large.peek();
+	}
+	
+	public Double median() {
+		
+	}
+	
+}

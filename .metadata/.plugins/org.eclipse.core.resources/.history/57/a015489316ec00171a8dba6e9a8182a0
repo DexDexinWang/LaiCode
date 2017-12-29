@@ -1,0 +1,11 @@
+public class Solution2 {
+	int count;
+	Integer sample;
+	
+	public Solution2() {
+		count = 0;
+		sample = null;
+	}
+	
+	
+}
