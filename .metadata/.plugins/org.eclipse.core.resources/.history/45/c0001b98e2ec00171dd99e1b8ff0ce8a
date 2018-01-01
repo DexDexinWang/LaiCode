@@ -1,0 +1,12 @@
+
+public class Solution2 {
+
+	public static void main(String[] args) {
+		System.out.println(maxProduct(5));
+	}
+
+	public static int maxProduct(int length) {
+		// Write your solution here.
+		return 0;
+	}
+}

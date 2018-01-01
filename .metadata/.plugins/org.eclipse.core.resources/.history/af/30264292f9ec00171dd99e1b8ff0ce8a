@@ -1,0 +1,12 @@
+
+public class Solution2 {
+
+	public static void main(String[] args) {
+		int[] input = {4,2,1,2,0,0};
+		System.out.println(minJump(input));
+	}
+	
+	public boolean canBreak(String input, String[] dict) {
+		
+	}
+}

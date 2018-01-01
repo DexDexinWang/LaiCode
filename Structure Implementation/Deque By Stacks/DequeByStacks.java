@@ -1,113 +1,101 @@
-import java.util.Stack;
+import java.util.Deque;
+import java.util.LinkedList;
+
 public class DequeByStacks {
-	Stack<Integer> left;
-	Stack<Integer> right;
-	int size;
+	Deque<Integer> left;
+	Deque<Integer> right;
 	public DequeByStacks() {
-		left = new Stack<Integer>();
-		right = new Stack<Integer>();
+		left = new LinkedList<Integer>();
+		right = new LinkedList<Integer>();
 	}
-	
+
 	public void offerFirst(Integer ele) {
-		move(right, left);
-		left.push(ele);
-		size++;
+		left.offerFirst(ele);
 	}
-	
+
 	public void offerLast(Integer ele) {
-		move(left, right);
-		right.push(ele);
-		size++;
+		right.offerFirst(ele);
 	}
-	
-	public Integer pollFirst() {
-		if (size == 0) {
-			return null;
-		}
-		if (left.size() == 0) {
-			moveHalf(right, left);
-		}
-		size--;
-		return left.pop();
-	}
-	
-	public Integer pollLast() {
-		if (size == 0) {
-			return null;
-		}
-		if (right.size() == 0) {
-			moveHalf(left, right);
-		}
-		size--;
-		return right.pop();
-	}
-	
+
 	public Integer peekFirst() {
-		if (size == 0) {
+		if(left.size() + right.size() == 0) {
 			return null;
 		}
 		if (left.size() == 0) {
-			moveHalf(right, left);
+		moveHalf(right,left);
 		}
-		return left.peek();
+		return left.peekFirst();
 	}
 	
 	public Integer peekLast() {
-		if (size == 0) {
+			if(left.size() + right.size() == 0) {
+				return null;
+			}
+			if (right.size() == 0) {
+			moveHalf(left,right);
+	}
+		return right.peekFirst();
+	}
+	
+	public Integer pollFirst() {
+		if(left.size() + right.size() == 0) {
+			return null;
+		}
+		if (left.size() == 0) {
+			moveHalf(right,left);
+		}
+		return left.pollFirst();
+	}
+	
+	public Integer pollLast() {
+		if(left.size() + right.size() == 0) {
 			return null;
 		}
 		if (right.size() == 0) {
-			moveHalf(left, right);
+			moveHalf(right,left);
 		}
-		return right.peek();
+		return right.pollFirst();
 	}
 	
-	public boolean isEmpty() {
-		return size == 0;
-	}
-	
-	public int size() {
-		return size;
-	}
-	
-	private void move(Stack<Integer> s1 ,Stack<Integer> s2) {
-		while (!s1.isEmpty()) {
-			s2.push(s1.pop());
-		}
-	}
-
-	private void moveHalf(Stack<Integer> s1 ,Stack<Integer> s2) {
-		if (size == 0) {
-			return;
-		}
-		int nRight = (s1.size()) / 2;
-		Stack<Integer> temp = new Stack<Integer>();
-		while (nRight > 0) {
-			temp.push(s1.pop());
-			nRight--;
-		}
-		int nLeft = s1.size() - nRight;
-		while (nLeft > 0) {
-			s2.push(s1.pop());
-			nLeft--;
-		}
+	private void moveHalf(Deque<Integer> s1, Deque<Integer> s2) {
+		Deque<Integer> temp = new LinkedList<Integer>();
+		int moveSize = (s1.size() +1) / 2;
+		int backSize = s1.size() - moveSize;
+		for(int i = 0 ; i < backSize ; i++) {
+			temp.offerFirst(s1.pollFirst());
+			}
+		for(int i = 0 ; i < moveSize ; i++) {
+			s2.offerFirst(s1.pollFirst());
+		} 
 		while (!temp.isEmpty()) {
-			s1.push(temp.pop());
+			s1.offerFirst(temp.pollFirst());
 		}
 	}
+	
 	
 	public void print() {
 		System.out.print("[");
-		move(right,left);
+		Deque<Integer> temp = new LinkedList<Integer>();
+		while (!right.isEmpty()) {
+			temp.offerFirst(right.pollFirst());
+		}
 		while (!left.isEmpty()) {
-			int num = left.pop();
-			if (left.size() == 0) {
+			right.offerFirst(left.pollFirst());
+		}
+		while (!right.isEmpty()) {
+			temp.offerFirst(right.pollFirst());
+		}
+		Integer num = null;
+		while (!temp.isEmpty()) {
+			num = temp.pollFirst();
+			if (temp.size() == 0) {
 				System.out.print(num);
 			} else {
-				System.out.print(num + ", ");
+				System.out.print(num + ",");
 			}
-			right.push(num);
+			right.offerFirst(num);
 		}
 		System.out.println("]");
 	}
+	
 }

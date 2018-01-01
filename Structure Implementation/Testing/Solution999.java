@@ -2,7 +2,18 @@
 public class Solution999 {
 
 	public static void main(String[] args) {
-
+		String a = "123";
+		System.out.println(a.substring(0, 1));
+	}
+	
+	public static void testMinHeap() {
+		MinHeap test = new MinHeap();
+		for(int i = 20; i >= 0; i--) {
+			test.offer(i);
+		}
+		test.print();
+		test.poll();
+		test.print();
 	}
 	
 	public static void testBoundedQueueByArray() {
@@ -16,7 +27,7 @@ public class Solution999 {
 	}
 	
 	public static void testDeque() {
-		DequeByStacks test = new DequeByStacks();
+		DequeByStacks1 test = new DequeByStacks1();
 		System.out.println(test.pollFirst());
 		System.out.println(test.pollLast());
 		test.offerFirst(6);

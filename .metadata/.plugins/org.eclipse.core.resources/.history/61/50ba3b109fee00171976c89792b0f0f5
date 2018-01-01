@@ -1,0 +1,24 @@
+
+public class Solution2 {
+
+	public static void main(String[] args) {
+		int[] input = {0,1,1,1,0,1,0,1,0,1,1};
+		System.out.println(longest(input));
+	}
+	
+	/**
+	 * 
+	 * @param array
+	 * @return
+	 */
+	public static int longest(int[] array) {
+		if (array.length == 0) {
+			return 0;
+		}
+		int prev = 0;
+		int max = 0;
+		for(int i = 0 ; i < array.length ; i++) {
+			
+		}
+	}
+}

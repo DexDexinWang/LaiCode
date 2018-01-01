@@ -1,0 +1,42 @@
+import generator.ListNode;
+import generator.LinkedListRandom;
+public class Solution1 {
+
+	public static void main(String[] args) {
+		ListNode input = LinkedListRandom.LLGen(10, 0, 11);
+		input.print();
+		System.out.println();
+		selectionSort(input).print();
+	}
+	
+	public static ListNode selectionSort(ListNode head) {
+		//handle the head pointer
+		ListNode dummy = new ListNode(-1);
+		dummy.next = head;
+		//headle the current pointer
+		ListNode outPointer= dummy;
+		while(outLoopHead.next != null) {
+			ListNode min = outLoopHead.next;
+			ListNode inLoopHead = min.next;
+			while(inLoopHead.next != null) {
+				if (inLoopHead.next.value < min.value) {
+					swap(inLoopHead, min);
+				}
+			}
+			swap(outLoopHead, min);
+		}
+		
+	}
+	
+	private static void swap(ListNode loopPrevious, ListNode minPrevious) {
+		ListNode temp1 = loopPrevious.next;
+		ListNode temp2 = minPrevious.next;
+		loopPrevious.next = temp2;
+		minPrevious.next = temp1;
+		temp1 = temp1.next;
+		temp2 = temp2.next;
+		loopPrevious.next.next = temp1.next;
+		minPrevious.next.next = temp2.next;
+	}
+
+}

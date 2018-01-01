@@ -1,0 +1,14 @@
+import generator.ListNode;
+import generator.LinkedListRandom;
+public class Solution1 {
+
+	public static void main(String[] args) {
+		ListNode input = LinkedListRandom.LLGen(10, 0, 11);
+		selectionSort(input).print();
+	}
+	
+	public static ListNode selectionSort(ListNode head) {
+		
+	}
+
+}

@@ -1,0 +1,6 @@
+
+public class Solution2 {
+	
+	public ListNode mergeSort(ListNode head) {
+	}
+}

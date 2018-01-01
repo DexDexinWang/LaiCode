@@ -1,0 +1,34 @@
+
+public class Solution3 {
+
+	public static void main(String[] args) {
+		int[] input = {1,4,5,1,2,4,1,4,7};
+		System.out.println(canJump(input));
+	}
+	
+	/**
+	 * Base case: M[n] = true;
+	 * Induction Rule: 
+	 * 1. M[i] = represents whether the current directly or indirectly jump to the last element from ith to nth.
+	 * 2. M[i] = true 			where the ith element could jump to jth element and jth element is true;
+	 * 	  	   = false 			otherwise
+	 * @param array
+	 * @return
+	 */
+	public static boolean canJump(int[] array) {
+		if (array.length <= 1) {
+			return true;
+		}
+		boolean[] record = new boolean[array.length];
+		record[array.length - 1] = true;
+		for (int i = array.length - 2 ; i >= 0 ; i--) {
+			check
+		}
+		return false;
+	}
+	
+	private static boolean checkNextIth(int[] array, next) {
+		
+	}
+
+}

@@ -1,0 +1,15 @@
+
+public class Solution2 {
+
+	public static void main(String[] args) {
+		int[] input = {0,1,1,1,0,1,0,1,0,1,1};
+		System.out.println(longest(input));
+	}
+	
+	public static int longest(int[] array) {
+		if (array == 0) {
+			return 0;
+		}
+		
+	}
+}
