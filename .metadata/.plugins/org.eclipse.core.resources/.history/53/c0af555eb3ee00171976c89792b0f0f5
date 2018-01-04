@@ -1,0 +1,36 @@
+
+public class Solution8 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	/**
+	 * base case: 
+	 * dp[0] = array[0]
+	 * Induction rule:
+	 * dp[i] presents the maximum profit from 0th to ith;
+	 * dp[i] = array[i] - minPrice 	where array[i] >= minPrice
+	 * dp[i] = array[i] 			otherwise
+	 * @param array
+	 * @return
+	 */
+	public int maxProfit(int[] array) {
+		if (array.length == 0) {
+			return 0;
+		}
+		int[] dp = new int[array.length];
+		dp[0] = array[0];
+		int minPrice = array[0];
+		int maxProfit = dp[0] - minPrice;
+		for (int i = 1; i < array.length ; i++) {
+			if (array[i] >= minPrice) {
+				dp[i] = array[i] - minPrice;
+				maxProfit = Math.max(maxProfit, dp[i]);
+			} else {
+				dp[i] = array[i];
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+
+public class Solution17 {
+
+	public static void main(String[] args) {
+		System.out.println(isomorphic("aba","aaa"));
+	}
+	public static boolean isomorphic(String s, String t) {
+		
+	}
+}

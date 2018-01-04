@@ -1,0 +1,9 @@
+
+public class Solution23 {
+
+	public static void main(String[] args) {
+		int[] intput = {3, 5, 6, 1, 2};
+		System.out.println(x);
+	}
+
+}

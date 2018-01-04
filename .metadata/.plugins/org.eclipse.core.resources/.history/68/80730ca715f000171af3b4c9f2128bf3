@@ -1,0 +1,26 @@
+
+public class Solution20 {
+
+	public static void main(String[] args) {
+		System.out.println(reverseWords(" I  love  Google  "));
+	}
+	
+	//what: reverse the words in a sentence and ignore the heading/trailing/duplicate space. 
+	public static String reverseWords(String input) {
+		if (input == null || input.length() == 0) {
+			return input;
+		}
+		char[] array = input.toCharArray();
+		int slow = 0;
+		int fast = 0;
+		int back = input.length() - 1;
+		while(fast < back) {
+			
+		}
+	}
+	
+	private int swap(char[] array, int i, int j) {
+		
+	}
+
+}

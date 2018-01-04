@@ -1,0 +1,14 @@
+import java.util.List;
+
+public class Solution31 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static List<Integer> common(List<Integer> a, List<Integer> b) {
+		
+	}
+
+}

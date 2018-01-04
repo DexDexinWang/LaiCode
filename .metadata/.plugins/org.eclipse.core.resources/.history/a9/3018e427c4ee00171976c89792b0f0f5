@@ -1,0 +1,24 @@
+
+public class Solution15 {
+
+	public static void main(String[] args) {
+		System.out.println(numOfTrees(5));
+	}
+
+	/**
+	 * Base Case:
+	 * dp[0] = 1;
+	 * dp[1] = 1;
+	 * 
+	 * Induction Rule:
+	 * dp[i] = represent the maximum number of different BST generated for i;
+	 * dp[i] = sum(dp[j]) 		where (i/2) <= j < i; where n is even
+	 * 		 = sum(dp[j]) + dp[i-(i+1/2)]	where (
+	 * @param n
+	 * @return
+	 */
+	public static int numOfTrees(int n) {
+	
+	}
+
+}

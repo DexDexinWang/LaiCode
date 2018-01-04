@@ -1,0 +1,17 @@
+
+public class Solution18 {
+
+	public static void main(String[] args) {
+		System.out.println(reverse("reverse"));
+	}
+	
+	public static String reverse(String input) {
+		if (input == null || input.length() <= 1) {
+			return input;
+		}
+		char[] array = new char[input.length()];
+		
+		return 
+	}
+
+}

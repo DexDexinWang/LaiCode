@@ -1,0 +1,13 @@
+
+public class Solution16 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public int stairs(int n) {
+		
+	}
+
+
+}

@@ -1,0 +1,10 @@
+
+public class Solution13 {
+	public static void main(String[] args) {
+		double[] input = public static void main(String[] args) {
+			double[] input = {2.0, -0.1, 4, -2, -1.5};
+			System.out.println(largestProduct(input));
+		};
+		System.out.println(largestProduct(input));
+	}
+}

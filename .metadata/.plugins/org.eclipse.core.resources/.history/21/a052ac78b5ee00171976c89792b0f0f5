@@ -1,0 +1,13 @@
+
+public class Solution9 {
+
+	public static void main(String[] args) {
+		int[] input = {3,4,1,2,7,6};
+		System.out.println(maxProfit(input));
+	}
+
+	public static int maxProfit(int[] array) {
+		
+	}
+
+}

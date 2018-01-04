@@ -1,0 +1,12 @@
+import generator.TreeNode;
+public class Solution28 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public boolean isIdentical(TreeNode one, TreeNode two) {
+	}
+
+}

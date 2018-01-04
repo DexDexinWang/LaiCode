@@ -1,0 +1,9 @@
+
+public class Solution33 {
+
+	public static void main(String[] args) {
+		String input = "google/q?flo wer market";
+		System.out.println(encode(input));
+	}
+
+}

@@ -1,0 +1,15 @@
+
+public class Solution14 {
+	public static void main(String[] args) {
+		float[][] input = { {1, -0.2, -1},
+
+				  {1, -1.5,  1},
+
+				  {0,     0,  1} };
+		System.out.println(deDup(input));
+	}
+	
+	public double largest(double[][] matrix) {
+		
+	}
+}

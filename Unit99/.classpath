@@ -11,6 +11,31 @@
 	<classpathentry kind="src" path="Buy Stock II"/>
 	<classpathentry kind="src" path="Buy Stock III"/>
 	<classpathentry kind="src" path="Buy Stock IV"/>
+	<classpathentry kind="src" path="Largest SubArray Product"/>
+	<classpathentry kind="src" path="Largest Rectangle Of 1s"/>
+	<classpathentry kind="src" path="Largest SubMatrix Product"/>
+	<classpathentry kind="src" path="Find Number of BSTs Generated"/>
+	<classpathentry kind="src" path="Climbing Stairs"/>
+	<classpathentry kind="src" path="Isomorphic String I"/>
+	<classpathentry kind="src" path="Reverse Only Vowels"/>
+	<classpathentry kind="src" path="Replacements Of A And B"/>
+	<classpathentry kind="src" path="Reverse Words In A Sentence II"/>
+	<classpathentry kind="src" path="Rainbow Sort II"/>
+	<classpathentry kind="src" path="Rainbow Sort III"/>
+	<classpathentry kind="src" path="Search In Shifted Sorted Array I"/>
+	<classpathentry kind="src" path="Search In Shifted Sorted Array II"/>
+	<classpathentry kind="src" path="Shift Position"/>
+	<classpathentry kind="src" path="Total Occurrence"/>
+	<classpathentry kind="src" path="Kth Smallest Sum In Two Sorted Arrays"/>
+	<classpathentry kind="src" path="Identical Binary Tree"/>
+	<classpathentry kind="src" path="Height of Binary Tree"/>
+	<classpathentry kind="src" path="Missing Number II"/>
+	<classpathentry kind="src" path="Common Numbers Of Two Arrays I"/>
+	<classpathentry kind="src" path="Common Numbers Of Two Arrays II"/>
+	<classpathentry kind="src" path="Encode Space"/>
+	<classpathentry kind="src" path="Remove Adjacent Repeated Characters II"/>
+	<classpathentry kind="src" path="Remove Adjacent Repeated Characters III"/>
+	<classpathentry kind="src" path="Lowest Common Ancestor III"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="input"/>
 	<classpathentry kind="output" path="bin"/>

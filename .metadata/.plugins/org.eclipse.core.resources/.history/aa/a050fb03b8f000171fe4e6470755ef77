@@ -1,0 +1,28 @@
+import generator.TreeRandom;
+import generator.TreeNode;
+public class Solution29 {
+
+	public static void main(String[] args) {
+		TreeNode input = TreeRandom.treeGenLeftRange(3, null, 0, 10);
+		System.out.println(findHeight(input));
+	}
+	
+	//recursively check the height;
+	public static int findHeight(TreeNode root) {
+		if (root == null) {
+			return 0;
+		} 
+		int leftHeight = findHeight(root.left);
+		int rightHeight = findHeight(root.right);
+		return Math.max(leftHeight, rightHeight) + 1;
+	}
+	//Time Complexity:O(n);
+	//Space complexity:O(logn);
+	//recursively check the height;
+	public static int findHeight1(TreeNode root) {
+		if (root == null) {
+			return 0; 
+		}
+		Queue<TreeNode> que = new LinkedList<>();
+	}
+}

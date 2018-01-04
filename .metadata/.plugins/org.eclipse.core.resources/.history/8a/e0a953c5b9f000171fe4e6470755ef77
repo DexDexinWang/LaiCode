@@ -1,0 +1,19 @@
+import java.util.List;
+
+public class Solution31 {
+
+	public static void main(String[] args) {
+		List<Integer> input1 = new ArrayList<Integer>();
+		List<Integer> input2 = {3,1,4};
+		System.out.println(common(input1, input2));
+	}
+	/* Find all numbers that appear in both of the two unsorted arrays, 
+	 * return the common numbers in increasing order.
+	 */
+
+	public static List<Integer> common(List<Integer> a, List<Integer> b) {
+		return b;
+		
+	}
+
+}

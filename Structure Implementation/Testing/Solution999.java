@@ -1,9 +1,12 @@
+import java.util.Arrays;
 
 public class Solution999 {
 
 	public static void main(String[] args) {
-		String a = "123";
-		System.out.println(a.substring(0, 1));
+		int[] a = {1,2,3};
+		int[] b = a;
+		b[1] = 3;
+		System.out.println(Arrays.toString(a));
 	}
 	
 	public static void testMinHeap() {

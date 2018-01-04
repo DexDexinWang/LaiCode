@@ -1,0 +1,28 @@
+
+public class Solution12 {
+
+	public static void main(String[] args) {
+		double[] input = {2.0, -0.1, 4, -2, -1.5};
+		System.out.println(largestProduct(input));
+	}
+	
+	/*
+	 * Base case: 
+	 * dp[0] = 1;
+	 * Induction Rule: 
+	 * dp[i] = do[j] * dp[j+1] * ... dp[i] where dp[j] is the previous double number that is smaller than 1  
+	 */
+	public static double largestProduct(double[] array) {
+	
+	}
+	
+	static class Unit implements Comparable<Unit> {
+		double max;
+		boolean positive;
+		int start;
+		int end;
+		public Unit(double max, boolean positive, int start, int end) {
+			
+		}
+	}
+}

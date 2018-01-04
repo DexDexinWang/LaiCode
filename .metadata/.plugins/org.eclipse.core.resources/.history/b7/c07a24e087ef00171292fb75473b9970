@@ -1,0 +1,16 @@
+import java.util.Map;
+
+public class Solution17 {
+
+	public static void main(String[] args) {
+		System.out.println(isomorphic("aba","aaa"));
+	}
+	public static boolean isomorphic(String s, String t) {
+		if (s.length() != t.length()) {
+			return false;
+		}
+		Map<Character, Character> map = HashMap<Character, Character>();
+		
+		return true;
+	}
+}

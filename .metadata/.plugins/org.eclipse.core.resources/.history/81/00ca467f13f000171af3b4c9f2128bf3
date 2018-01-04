@@ -1,0 +1,12 @@
+
+public class Solution20 {
+
+	public static void main(String[] args) {
+		System.out.println(reverseWords("I  love  Google  "));
+	}
+	
+	public static String reverseWords(String input) {
+		
+	}
+
+}

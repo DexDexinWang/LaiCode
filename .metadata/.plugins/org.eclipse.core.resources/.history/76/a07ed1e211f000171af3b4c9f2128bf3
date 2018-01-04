@@ -1,0 +1,13 @@
+
+public class Solution19 {
+
+	public static void main(String[] args) {
+		System.out.println(minReplacements("abaab"));
+	}
+	
+	public int minReplacements(String input) {
+		
+	}
+
+
+}
