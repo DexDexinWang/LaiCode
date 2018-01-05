@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution44 {
+
+	public static void main(String[] args) {
+		int[] input = {1, 4, 7, 13};
+		System.out.println(closest(input, 7));
+	}
+
+	public static List<Integer> closest(int[] array, int target) {
+		return new ArrayList<Integer>();
+	}
+
+}

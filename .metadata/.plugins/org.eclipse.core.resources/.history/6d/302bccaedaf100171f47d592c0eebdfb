@@ -1,0 +1,12 @@
+
+public class Solution45 {
+
+	public static void main(String[] args) {
+		int[] input = {3, 4, 0, -1, 2, 0, 5};
+		System.out.println(smallerPairs(input, 7));
+	}
+	public static int smallerPairs(int[] array, int target) {
+		    // write your solution here
+		return 0;
+	}
+}

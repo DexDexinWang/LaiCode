@@ -1,0 +1,19 @@
+
+public class Solution37 {
+
+	public static void main(String[] args) {
+		
+	}
+	public static SkipListNode copy(SkipListNode head) {
+		return null;
+	}
+
+	class SkipListNode {
+		public int value;
+		public SkipListNode next;
+		public SkipListNode forward;
+		public SkipListNode(int value) {
+			this.value = value;
+		}
+	}
+}

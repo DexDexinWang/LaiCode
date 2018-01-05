@@ -1,0 +1,37 @@
+
+public class Solution41 {
+
+	public static void main(String[] args) {
+		System.out.println(sqrt(10));
+	}
+	
+	public static int sqrt(int x) {
+		int i = 0;
+		while (i * i <= x) {
+			i++;
+		}
+		return i * i == x ? i : i - 1;
+	}
+	
+	public static int sqrt1(int x) {
+		int left = 0; 
+		int right = x;
+		while (left + 1 < right) {
+			int mid = left + (right - left) / 2;
+			if (mid * mid == x) {
+				return mid;
+			} else if (mid * mid < x) {
+				left = mid;
+			} else {
+				right = mid;
+			}
+		}
+		if (right * right <= mid) {
+			return (int) right;
+		} else {
+			return (int) left;
+		}
+		
+	}
+
+}

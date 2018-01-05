@@ -2,7 +2,7 @@
 public class Solution35 {
 
 	public static void main(String[] args) {
-		String input = "aaaabbbc";
+		String input = "abbc";
 		System.out.println(deDup(input));
 	}
 	
@@ -17,15 +17,20 @@ public class Solution35 {
 			return input;
 		}
 		char[] array = input.toCharArray();
-		int i = 0;
-		int j = 1;
+		int i = -1;
+		int j = 0;
 		while (j < array.length) {
-			if (i == -1 || array[i] != array[j]) {
+			if (i == - 1 || array[i] != array[j]) {
 				array[++i] = array[j++];
 			} else {
-				i--;
-				while(j + 1 < array.length && array[j + 1] == array[j]) {
+				//use a count to record whether i should go back.
+				int count = 2;
+				while(i + 1 < array.length && array[j] == array[j + 1 ]) {
+					count++;
 					j++;
+				}
+				if (count >= 2) {
+					i--;
 				}
 				j++;
 			}

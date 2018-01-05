@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution40 {
+	private final int k;
+	public Solution40(int k) {
+		this.k = k;
+	}
+		  
+	public void read(int value) {
+		
+	}
+		  
+	public List<Integer> sample() {
+		return new ArrayList<Integer>();
+	}
+}

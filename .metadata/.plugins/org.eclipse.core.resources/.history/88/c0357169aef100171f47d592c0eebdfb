@@ -1,0 +1,13 @@
+
+public class Solution51 {
+
+	public static void main(String[] args) {
+		int[] input = {1,2,1,2,1};
+		System.out.println(majority(input));
+	}
+	
+	public List<Integer> majority(int[] array) {
+		return new ArrayList<Integer>();
+	}
+
+}

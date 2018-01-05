@@ -1,0 +1,17 @@
+
+public class Solution58 {
+
+	public static void main(String[] args) {
+		int[] input = {1,2,2,3,3,3};
+		System.out.println(dedup(input));
+	}
+	
+	public static int[] dedup(int[] array) {
+		if (array.length <= 2) {
+			return array;
+		}
+		
+		return array;
+	}
+
+}

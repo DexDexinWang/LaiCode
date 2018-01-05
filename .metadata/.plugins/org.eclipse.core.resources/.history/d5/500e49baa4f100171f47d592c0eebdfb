@@ -1,0 +1,21 @@
+import generator.TreeNode;
+public class Solution38 {
+
+	public static void main(String[] args) {
+		
+	}
+	public TreeNode recover(TreeNode root) {
+		
+		return root;
+	}
+		  
+	public void inorderTraverse(TreeNode root, TreeNode first, TreeNode second, TreeNode prev) {
+		if (root == null) {
+			return null;
+		}
+		inorderTraverse(root.left);
+		if(firstElement == null || && prev.val >= root.val) {
+			
+		}
+	} 
+}

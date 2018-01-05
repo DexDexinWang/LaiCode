@@ -1,0 +1,16 @@
+
+public class Solution40 {
+	private final int k;
+	public Solution40(int k) {
+		    // Complete the constructor if necessary.
+		this.k = k;
+	}
+		  
+	public void read(int value) {
+	// Write your implementation here.
+	}
+		  
+	public List<Integer> sample() {
+		return new ArrayList<Integer>();
+	}
+}

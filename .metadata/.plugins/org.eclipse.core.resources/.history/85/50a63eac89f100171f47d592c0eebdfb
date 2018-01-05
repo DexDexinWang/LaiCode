@@ -1,0 +1,13 @@
+import java.util.List;
+
+public class Solution44 {
+
+	public static void main(String[] args) {
+		
+	}
+
+	public static List<Integer> closest(int[] array, int target) {
+		
+	}
+
+}

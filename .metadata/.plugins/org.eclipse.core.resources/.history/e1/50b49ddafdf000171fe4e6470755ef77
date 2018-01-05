@@ -1,0 +1,11 @@
+
+public class Solution39 {
+
+	public static void main(String[] args) {
+		
+	}
+
+	public int diameter(TreeNode root) {
+		return null;
+	}
+}

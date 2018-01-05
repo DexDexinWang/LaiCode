@@ -1,0 +1,12 @@
+
+public class Solution43 {
+	
+	public static void main(String[] args) {
+		String input = "acb2c4";
+		System.out.println(decompress(input));
+	}
+	
+	public static String decompress(String input) {
+		if()
+	}
+}

@@ -1,0 +1,33 @@
+import generator.TreeNode;
+public class Solution38 {
+
+	public static void main(String[] args) {
+		
+	}
+	public TreeNode recover(TreeNode root) {
+		if (root == null) {
+			return root;
+		}
+		TreeNode[] parent = new TreeNode[2];
+		boolean[] left = new boolean[2];
+		int min = Integer.MIN_VALUE;
+		int max = Integer.MAX_VALUE;
+		if (root.left != null) {
+			isBST(root, min, root.key, parent, isLeft);
+		} 
+		if (root.right != null) {
+			isBST(root, root.key, max, parent, isLeft);
+		}
+		if(parent[0] != null && parent[1] != null) {
+			TreeNode temp = parent.
+		}
+		return root;
+	}
+		  
+	public void isBST(TreeNode root, int min, int max, TreeNode[] parent, boolean[] isLeft) {
+		if (root.left != null) {
+			int value = root.left.val;
+			if (vale >= min, )
+		}
+	} 
+}

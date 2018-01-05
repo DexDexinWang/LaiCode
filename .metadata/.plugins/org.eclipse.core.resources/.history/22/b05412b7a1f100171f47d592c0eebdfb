@@ -1,0 +1,22 @@
+import generator.TreeNode;
+public class Solution38 {
+
+	public static void main(String[] args) {
+		
+	}
+	public TreeNode recover(TreeNode root) {
+		TreeNode[] parent = new TreeNode[2];
+		int min = Integer.MIN_VALUE;
+		int max = Integer.MAX_VALUE;
+		
+		
+		return root;
+	}
+		  
+	public void isBST(TreeNode root, int min, int max, TreeNode[] parent) {
+		if (root.left != null) {
+			int value = root.left.val;
+			if (vale >= min, )
+		}
+	} 
+}

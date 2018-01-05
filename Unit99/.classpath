@@ -36,6 +36,28 @@
 	<classpathentry kind="src" path="Remove Adjacent Repeated Characters II"/>
 	<classpathentry kind="src" path="Remove Adjacent Repeated Characters III"/>
 	<classpathentry kind="src" path="Lowest Common Ancestor III"/>
+	<classpathentry kind="src" path="Deep Copy Skip List"/>
+	<classpathentry kind="src" path="Recover Binary Search Tree"/>
+	<classpathentry kind="src" path="Binary Tree Diameter"/>
+	<classpathentry kind="src" path="Generalized Reservoir Sampling"/>
+	<classpathentry kind="src" path="Square Root I"/>
+	<classpathentry kind="src" path="Compress String"/>
+	<classpathentry kind="src" path="Decompress String I"/>
+	<classpathentry kind="src" path="2 Sum Closest"/>
+	<classpathentry kind="src" path="2 Sum Smaller"/>
+	<classpathentry kind="src" path="2 Sum 2 Arrays"/>
+	<classpathentry kind="src" path="3 Sum 3 Arrays"/>
+	<classpathentry kind="src" path="Kth Smallest With Only 2, 3 As Factors"/>
+	<classpathentry kind="src" path="Place To Put The Chair II"/>
+	<classpathentry kind="src" path="Largest Container"/>
+	<classpathentry kind="src" path="Majority Number II"/>
+	<classpathentry kind="src" path="Majority Number III"/>
+	<classpathentry kind="src" path="Reconstruct Binary Search Tree With Preorder Traversal"/>
+	<classpathentry kind="src" path="Reconstruct Binary Search Tree With Level Order Traversal"/>
+	<classpathentry kind="src" path="Reconstruct Binary Tree With Postorder And Inorder"/>
+	<classpathentry kind="src" path="Disjoint White Objects"/>
+	<classpathentry kind="src" path="Count and Say"/>
+	<classpathentry kind="src" path="Array Deduplication V"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="input"/>
 	<classpathentry kind="output" path="bin"/>

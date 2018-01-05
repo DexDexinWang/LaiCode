@@ -1,0 +1,35 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class Solution37 {
+
+	public static void main(String[] args) {
+		
+	}
+	public static SkipListNode copy(SkipListNode head) {
+		Map<SkipListNode,SkipListNode> map = new HashMap<>();
+		SkipListNode current = head;
+		while(current != null) {
+			SkipListNode node = new SkipListNode(current.value)
+			map.put(current, new SkipListNode(current.value));
+			current = current.next;
+		}
+		
+		current = head;
+		while(current != null) {
+			map.get(current).next = map.get(current.next);
+			map.get(current).forward = map.get(current.forward);
+		}
+		return map.get(head);
+		
+	}
+
+	class SkipListNode {
+		public int value;
+		public SkipListNode next;
+		public SkipListNode forward;
+		public SkipListNode(int value) {
+			this.value = value;
+		}
+	}
+}

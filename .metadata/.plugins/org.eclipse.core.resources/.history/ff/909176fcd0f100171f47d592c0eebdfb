@@ -1,0 +1,13 @@
+import java.util.Arrays;
+
+public class Solution1 {
+	public static void main(String[] args) {
+		int[] input = {2,3,4,3,5,5};
+		System.out.println(Arrays.toString(existSum(input,6)));
+	}
+	
+	public static boolean existSum(int[] array, int target) {
+		
+	}
+
+}
