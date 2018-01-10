@@ -3,7 +3,7 @@
 public class Solution34 {
 
 	public static void main(String[] args) {
-		String input = "aaaabbbbc";
+		String input = "aabbaac";
 		System.out.println(deDup(input));
 	}
 	
@@ -12,8 +12,22 @@ public class Solution34 {
 	 * leaving only two characters for each group of such characters. 
 	 * The characters in the string are sorted in ascending order.
 	 */
-	//what: 
 	public static String deDup(String input) {
+		if (input == null || input.length() <= 2) {
+			return input;
+		}
+		char[] array = input.toCharArray();
+		int slow = 2;
+		for (int fast = 2; fast < array.length ; fast++) {
+			if (array[fast] == array[slow - 1] && array[fast] == array[slow - 2]){
+				continue;
+			}
+			array[slow++] = array[fast];
+		}
+		return new String(array, 0, slow);
+	}
+	
+	public static String deDup1(String input) {
 		if (input == null || input.length() <= 2) {
 			return input;
 		}
@@ -35,5 +49,4 @@ public class Solution34 {
 	}
 	//Time Complexity: O(n)
 	//Space Complexity: O(n)
-
 }

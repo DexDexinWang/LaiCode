@@ -1,0 +1,22 @@
+
+public class Solution3 {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	public static TreeNodeP lowestCommonAncestor(TreeNodeP one, TreeNodeP two) {
+		
+	}
+
+	static class TreeNodeP {
+		public int key;
+		public TreeNodeP left;
+		public TreeNodeP right;
+		public TreeNodeP parent;
+		public TreeNodeP(int key, TreeNodeP parent) {
+			this.key = key;
+			this.parent = parent;
+		}
+	}
+}

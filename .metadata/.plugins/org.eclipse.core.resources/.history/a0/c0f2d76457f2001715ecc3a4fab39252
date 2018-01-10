@@ -1,0 +1,17 @@
+
+public class Solution3 {
+
+	public static void main(String[] args) {
+		String input = "bcbcd";
+		System.out.println(longestPalindrome(input));
+	}
+	
+	public static String longestPalindrome(String s) {
+		
+	}
+
+	public static String longestPalindrome(String s, int i, int j) {
+		
+	}
+
+}

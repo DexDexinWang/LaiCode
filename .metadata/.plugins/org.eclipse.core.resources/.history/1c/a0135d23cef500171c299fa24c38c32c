@@ -1,0 +1,30 @@
+import generator.TreeNode;
+public class Solution2 {
+
+	public static void main(String[] args) {
+		TreeNode input = new TreeNode(1);
+		System.out.println(maxPathSum(input));
+	}
+	  //approach: Tree + DFS + Recursive
+	  //Tree levels: n
+	  //Tree branches: [0 2]
+	  //child: get the maximum path from the child root to the leaf
+	  //current level: find the maximum path from leaf to leaf
+	  //return: 
+	  //1. left, right are not null. the maximum path from root to leaf. 
+	  //2. others, return root.key + left + right
+	  static int max = Integer.MIN_VALUE;
+	  public static int maxPathSum(TreeNode root) {
+	    //corner case
+	    if (root == null) {
+	      return 0;
+	    }
+	    int left = maxPathSum(root.left);
+	    int right = maxPathSum(root.right);
+	    if (root.left != null && root.right != null) {
+	      max = Math.max(max, root.key + left + right);
+	      return Math.max(left, right) + root.key;
+	    } 
+	    return root.left == null ? right + root.key: left + root.key;
+	  }
+}

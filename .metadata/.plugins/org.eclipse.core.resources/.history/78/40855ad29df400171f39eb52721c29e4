@@ -1,0 +1,17 @@
+import generator.LinkedListRandom;
+import generator.ListNode;
+
+public class Solution10 {
+
+	public static void main(String[] args) {
+		ListNode input1 = LinkedListRandom.LLGen(3, 0, 9);
+		input.print();
+		System.out.println("");
+		ListNode input2 = LinkedListRandom.LLGen(3, 0, 9);
+		System.out.println("");
+		addTwoNumbers(input1,input2).print();
+	}
+	
+	public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+
+}

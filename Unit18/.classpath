@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="Array Deduplication I"/>
+	<classpathentry kind="src" path="Array Deduplication II"/>
+	<classpathentry kind="src" path="Array Deduplication III"/>
+	<classpathentry kind="src" path="Array Deduplication IV"/>
+	<classpathentry kind="src" path="Largest And Smallest"/>
+	<classpathentry kind="src" path="Get Keys In Binary Tree Layer By Layer Zig-Zag Order"/>
+	<classpathentry kind="src" path="Largest And Second Largest"/>
+	<classpathentry kind="src" path="Rotate Matrix"/>
+	<classpathentry kind="src" path="Lowest Common Ancestor II"/>
+	<classpathentry kind="src" path="Lowest Common Ancestor IV"/>
+	<classpathentry kind="src" path="Move 0s To The End II"/>
+	<classpathentry kind="src" path="Sort In Specified Order"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="input"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

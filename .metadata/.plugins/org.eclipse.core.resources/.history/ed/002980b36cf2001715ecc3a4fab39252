@@ -1,0 +1,42 @@
+import java.util.Arrays;
+
+public class Solution4 {
+
+	public static void main(String[] args) {
+		int[] input = {3,1,-2,5,1,6};
+		System.out.println(minDifference(input));
+	}
+	
+	/**
+	 * base case: 
+	 * dp[0] = 0;
+	 */
+	static int min = 0;
+	public static int minDifference(int[] array) {
+		if (array == null || array.length == 0) {
+			return 0;
+		}
+		minDifference(array, 0, 0,0);
+		return min;
+	}
+	
+	public static void minDifference(int[] array, int i, int sumA, int sumB) {
+		if (i == array.length - 1) {
+			min = Math.min(diff(sumA + array[i], sumB), diff(sumA, sumB + array[i])); 
+		} else if (i > array.length - 1) {
+			min = Math.min(max,diff(sumA, sumB));
+		}else {
+			minDifference(array, i + 2, sumA + array[i], sumB +array[i + 1]);
+			minDifference(array, i + 2, sumA + array[i + 1], sumB +array[i]);
+		}
+	}
+	
+	private static int diff(int i , int j) {
+		if (i >= j) {
+			return i - j;
+		} else {
+			return j - i;
+		}
+	}
+	
+}

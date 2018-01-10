@@ -17,6 +17,9 @@ public class BinarySearchTreeOperations {
 		recursiveSearchNode(input, 3).print();
 		System.out.println();
 		iterativeSearchNode(input, 3).print();	
+		System.out.println();
+		iterativeDeleteNode(input, 3).print();	
+		System.out.println();
 	}
 
 	//4 search methods
@@ -165,62 +168,77 @@ public class BinarySearchTreeOperations {
 	
 	
 	private static TreeNode iterativeDeleteNode(TreeNode root, int target) {
-		//corner case
 		if (root == null) {
-			return root;
+			return null;
 		}
 		TreeNode cur = root;
-		TreeNode pre = new TreeNode(-1);
-		pre.left = root;
-		boolean flag = false;
-		while (cur != null && cur.key != target) {
-			pre = cur;
-			if (cur.key > target) {
-				cur = cur.left;
-				flag = false;
-			} else {
-				cur = cur.right;
-				flag = true;
-			}
+		TreeNode previous = new TreeNode(-1);
+		previous.left = root;
+		boolean isLeft = true;
+		while(cur != null) {
+		  if (cur.key < target) {
+		    if (cur.right != null) {
+		      previous = cur;
+		      isLeft = false;
+		      cur = cur.right;
+		      continue;
+		    } else {
+		      break;
+		    }
+		  } else if (cur.key > target) {
+		    if (cur.left != null) {
+		      previous = cur;
+		      cur = cur.left;
+		      isLeft = true;
+		      continue;
+		    } else {
+		      break;
+		    }
+		  }
+		  
+		  if (cur.left == null) {
+		    if (isLeft){
+		      previous.left = cur.right;
+		    } else {
+		      previous.right = cur.right;
+		    }
+		    break;
+		  } else if (cur.right == null) {
+		    if (isLeft){
+		      previous.left = cur.left;
+		    } else {
+		      previous.right = cur.left;
+		    }
+		    break;
+		  }
+		  
+		  if (cur.right.left == null) {
+		    cur.right.left = cur.left;
+		    if (isLeft) {
+		      previous.left = cur.right;
+		    } else {
+		      previous.right = cur.right;
+		    }
+		    break;
+		  }
+		  
+		  TreeNode smallest = deleteSmallest(cur.right);
+		  smallest.left = cur.left;
+		  smallest.right = cur.right;
+		  if (previous.left != null && previous.left == root) {
+		    return smallest;
+		  }
+		  if(isLeft) {
+		    previous.left = smallest;
+		  } else {
+		    previous.right = smallest;
+		  }
+		  break;
 		}
-		
-		if (cur == null) {
-			return root;
-		} else {
-			if (cur.left == null) {
-				if (flag){
-					pre.right = cur.right;
-				} else {
-					pre.left = cur.right;
-				}
-			} else if (cur.right == null) {
-				if (flag){
-					pre.right = cur.left;
-				} else {
-					pre.left = cur.left;
-				}
-			} else {
-				TreeNode smallest; 
-				if (cur.right.left == null) {
-					cur.right.left = cur.left;
-					smallest = cur.right;
-				}else {
-					smallest = deleteSmallest(cur.right);
-					smallest.left = cur.left;
-					smallest.right = cur.right;
-				}
-				if (flag) {
-					pre.right = smallest;
-				} else {
-					pre.left = smallest;
-				}
-			}
+		if (previous.key == -1) {
+			return previous.left;
 		}
-		if (root.key == target) {
-			return pre.left;
-		} else {
-			return root;
-		}
+		return root;
 	}
 
 }

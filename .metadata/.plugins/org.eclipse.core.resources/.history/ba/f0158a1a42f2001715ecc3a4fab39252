@@ -1,0 +1,38 @@
+
+public class Solution1 {
+
+	public static void main(String[] args) {
+		System.out.println(uniquePaths(3,4));
+	}
+
+	/**
+	 * Base case:
+	 * dp_Left[0][0] = 2	others 
+	 * dp_Left[0][0] = 1	cols == 1 || rows == 1;
+	 * dp_Left[0][j] = 
+	 * dp_Up[0][0] = 2		others
+	 * dp_Up[0][0] = 1 		cols == 1 || rows == 1;
+	 * Induction case:
+	 * dp_Left[i][j] = dp [i][j - 1] * 2 
+	 * @param m
+	 * @param n
+	 * @return
+	 */
+	public static int uniquePaths(int m, int n) {
+		int[][] matrix = new int[m][n];
+		for (int i = 0 ; i < m ; i++) {
+			for (int j = 0 ; j < n ; j++) {
+				if (i == 0 && j == 0) {
+					matrix[i][j] = 0;
+				} else if (i == 0) {
+					matrix[i][j] = matrix[i][j - 1] * 2;
+				} else if (j == 0) {
+					matrix[i][j] = matrix[i- 1][j] * 2;
+				} else {
+					matrix[i][j] = matrix[i - 1][j] * matrix[i][j - 1] * 2;
+				}
+			}
+		}
+	}
+
+}

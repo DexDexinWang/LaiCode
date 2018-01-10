@@ -1,0 +1,44 @@
+import java.util.Deque;
+import java.util.LinkedList;
+
+import generator.LinkedListRandom;
+import generator.ListNode;
+
+public class Solution5 {
+
+	public static void main(String[] args) {
+		ListNode input = LinkedListRandom.LLGen(7, 0, 3);
+		input.print();
+		input = removeDup(input);
+		System.out.println("");
+		input.print();
+	}
+	
+	/*
+	Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
+
+	Input:  1->2->3->3->4->4->5
+	
+	Output: 1->2->5    
+	
+	Input:  1->1->1
+	
+	Output: NULL
+	 */
+	//what: to make stack pointer.
+	public static ListNode removeDup(ListNode head){
+		if (head == null || head.next == null) {
+			return head;
+		}
+		Deque<ListNode> stack = new LinkedList<ListNode>();
+		stack.offerFirst(head);
+		head = head.next;
+		while (head != null) {
+			if (head.value == stack.peekFirst().value) {
+				stack.offerFirst(head);
+			}
+		}
+		
+	}
+
+}

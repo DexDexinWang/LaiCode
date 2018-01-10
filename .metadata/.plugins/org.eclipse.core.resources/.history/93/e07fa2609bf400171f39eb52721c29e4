@@ -1,0 +1,18 @@
+import generator.LinkedListRandom;
+import generator.ListNode;
+
+public class Solution8 {
+
+	public static void main(String[] args) {
+		ListNode input = LinkedListRandom.LLGen(3, 0, 10);
+		input.print();
+		input = reverseAlternate(input);
+		System.out.println("");
+		input.print();
+	}
+
+	public static ListNode reverseAlternate(ListNode head) {
+		
+	}
+
+}

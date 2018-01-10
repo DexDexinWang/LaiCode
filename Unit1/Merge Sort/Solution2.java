@@ -11,10 +11,11 @@ public class Solution2 {
 		if (array == null || array.length <= 1) {
 			return array;
 		}
+		//divide separate set into two subset until each subset has only one element.
 		divide(array, 0, array.length - 1);
 		return array;
 	}
-	//how: 1. divide all numbers into sub-groups recursively until the each sub-group only has one number from high level to lower level.
+	//divide all numbers into sub-groups recursively until the each sub-group only has one number from high level to lower level.
 	public static void divide(int[] array, int left, int right){
 		if (left >= right) {
 			return;

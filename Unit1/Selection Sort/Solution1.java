@@ -6,22 +6,23 @@ public class Solution1 {
 		int[] input = {2,3,4,3,5,5};
 		System.out.println(Arrays.toString(solve(input)));
 	}
-	//what: to find the correct position for each number from 0 to n iteratively;
+	//what: to find the correct position for each number from 0 to n with swap method iteratively;
 	public static int[] solve(int[] array) {
-		//how: 1. corner case
+		//corner case
 		if (array == null || array.length == 0) {
 			return array;
 		}
-		//2. iterative check each number from 0 to n;
+		//outer loop, how many iterations.
 		for (int i = 0 ; i < array.length - 1 ; i++) {
 			int min = i; 
-			//2.1. compare i and other numbers, j. to find the min positon
+			//inner loop, to find the global min from the rest element.
 			for(int j = i + 1 ; j < array.length; j++) {
 				if (array[j] < array[min]) {
+					//record the index of the min element.
 					min = j;
 				}
 			}
-			//2.2 put the min number in the front side. 
+			//swap, to put min number in the correct position.
 			swap(array, i, min);
 		}
 		return array;
@@ -33,5 +34,5 @@ public class Solution1 {
 		array[j] = temp;
 	}
 	//Time Complexity: O(n-1) + O(n-2) + ... O(1) = O(n(n-1)/2) = O(n^2)
-	//Time Space: O(1);
+	//Time Space: O(1); //in place
 }

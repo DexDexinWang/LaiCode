@@ -1,0 +1,13 @@
+
+public class Solution2 {
+
+	public static void main(String[] args) {
+		System.out.println(match("abc","?*"));
+
+	}
+	public static boolean match(String input, String pattern) {
+		if(pattern.length() > input.length() - 1) {
+			return false;
+		}
+	}
+}

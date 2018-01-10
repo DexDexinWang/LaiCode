@@ -1,0 +1,18 @@
+import generator.LinkedListRandom;
+import generator.ListNode;
+
+public class Solution6 {
+
+	public static void main(String[] args) {
+		ListNode input = LinkedListRandom.LLGen(7, 0, 2);
+		input.print();
+		input = removeDup(input);
+		System.out.println("");
+		input.print();
+	}
+
+	public ListNode removeDup(ListNode head) {
+		
+	}
+
+}

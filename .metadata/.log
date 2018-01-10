@@ -482,3 +482,311 @@ org.eclipse.recommenders.utils.Logs$LogTraceException
 	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
 	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
 	at java.lang.Thread.run(Unknown Source)
+!SESSION 2018-01-05 09:24:16.872 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-01-05 09:24:25.588
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Edgar'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.recommenders.rcp 4 18 2018-01-05 10:15:32.288
+!MESSAGE Failed to resolve selection in ‘=Dynamic Programming/Wildcard Matching<{Solution2.java’ at offset 110.
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelections.resolveJavaElementFromTypeRootInEditor(JavaElementSelections.java:164)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelections.resolveJavaElementFromEditor(JavaElementSelections.java:119)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelections.resolveJavaElementFromEditor(JavaElementSelections.java:102)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelectionService.handleSelectionInEditor(JavaElementSelectionService.java:108)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelectionService.access$1(JavaElementSelectionService.java:105)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelectionService$1.run(JavaElementSelectionService.java:82)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2018-01-05 10:23:05.593
+!MESSAGE Full project indexing required:
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\charsets.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\access-bridge-64.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\cldrdata.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\dnsns.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\jaccess.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\jfxrt.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\localedata.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\nashorn.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunec.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunjce_provider.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunmscapi.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunpkcs11.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\zipfs.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\jce.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\jfr.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\jsse.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\resources.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\rt.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:169)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+!SESSION 2018-01-06 08:42:10.202 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-01-06 08:42:15.738
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-01-06 08:42:26.315
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Edgar'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2018-01-06 09:43:42.812
+!MESSAGE Full project indexing required:
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\charsets.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\access-bridge-64.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\cldrdata.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\dnsns.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\jaccess.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\jfxrt.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\localedata.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\nashorn.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunec.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunjce_provider.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunmscapi.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunpkcs11.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\zipfs.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\jce.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\jfr.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\jsse.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\resources.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\rt.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:169)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+!SESSION 2018-01-06 17:16:17.712 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-01-06 17:16:28.114
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Edgar'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-01-07 17:46:38.207 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-01-07 19:14:52.689
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Edgar'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-01-08 05:30:07.189 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-01-08 05:30:20.513
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Edgar'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2018-01-08 05:59:48.633
+!MESSAGE Full project indexing required:
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\charsets.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\access-bridge-64.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\cldrdata.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\dnsns.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\jaccess.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\jfxrt.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\localedata.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\nashorn.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunec.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunjce_provider.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunmscapi.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunpkcs11.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\zipfs.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\jce.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\jfr.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\jsse.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\resources.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\rt.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:169)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2018-01-08 17:40:44.346
+!MESSAGE Full project indexing required:
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\charsets.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\access-bridge-64.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\cldrdata.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\dnsns.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\jaccess.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\jfxrt.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\localedata.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\nashorn.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunec.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunjce_provider.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunmscapi.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunpkcs11.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\zipfs.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\jce.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\jfr.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\jsse.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\resources.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\rt.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:169)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+!SESSION 2018-01-09 07:02:55.068 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-01-09 07:03:06.388
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Edgar'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2018-01-09 22:19:01.122
+!MESSAGE Full project indexing required:
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\charsets.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\access-bridge-64.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\cldrdata.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\dnsns.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\jaccess.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\jfxrt.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\localedata.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\nashorn.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunec.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunjce_provider.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunmscapi.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\sunpkcs11.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\ext\zipfs.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\jce.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\jfr.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\jsse.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\resources.jar
+  [+] C:\Program Files\Java\jre1.8.0_151\lib\rt.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:169)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2018-01-09 22:30:11.290
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [maxPathSum(TreeNode)#2 [in Solution2 [in [Working copy] Solution2.java [in <default> [in Maximum Path Sum Binary Tree I [in Unit20]]]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:556)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:590)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.SourceMethod.getParameters(SourceMethod.java:138)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendMethodLabel(JavaElementLabelComposer.java:441)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel(JavaElementLabelComposer.java:273)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:706)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:688)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:770)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:712)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:635)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:627)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:164)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:86)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:165)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2018-01-09 22:30:11.291
+!MESSAGE maxPathSum(TreeNode)#2 [in Solution2 [in [Working copy] Solution2.java [in <default> [in Maximum Path Sum Binary Tree I [in Unit20]]]]] does not exist
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2018-01-09 22:30:11.319
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [maxPathSum(TreeNode)#2 [in Solution2 [in [Working copy] Solution2.java [in <default> [in Maximum Path Sum Binary Tree I [in Unit20]]]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:556)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:590)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.SourceRefElement.getSourceRange(SourceRefElement.java:218)
+	at org.eclipse.jdt.internal.core.Member.getJavadocRange(Member.java:291)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContentFromSource(JavadocContentAccess2.java:658)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:534)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:717)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:635)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:627)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:164)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:86)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:165)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2018-01-09 22:30:11.319
+!MESSAGE maxPathSum(TreeNode)#2 [in Solution2 [in [Working copy] Solution2.java [in <default> [in Maximum Path Sum Binary Tree I [in Unit20]]]]] does not exist

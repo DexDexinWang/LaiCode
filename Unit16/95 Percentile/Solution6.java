@@ -14,8 +14,8 @@ public class Solution6 {
 			array[len] ++;
 		}
 		int total = 0;
-		int len = 4100;
-		while (total <= 0.05 * 4100) {
+		int len = 4101;
+		while (total <= 0.05 * lengths.size()) {
 			total += array[--len];
 		}
 		return len;

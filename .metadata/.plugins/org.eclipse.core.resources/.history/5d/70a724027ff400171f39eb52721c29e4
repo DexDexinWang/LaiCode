@@ -1,0 +1,43 @@
+import generator.ListNode;
+import generator.LinkedListRandom;
+public class Solution1 {
+
+	public static void main(String[] args) {
+		ListNode input = LinkedListRandom.LLGen(5, 0, 100);
+		input.print();
+		input = reverseKGroup(input,3);
+		System.out.println("");
+		input.print();
+	}
+	
+	public static ListNode reverseKGroup(ListNode head, int k) {
+		int counter = 0;
+		ListNode dummy = new ListNode(-1);
+		dummy.next = head;
+		ListNode current = dummy; 
+		ListNode check = head;
+		while(check != null && counter < k) {
+			check = check.next;
+			counter++;
+			if (counter == k) {
+				ListNode end = current.next;
+				current.next = reverse(end, check);
+				counter =0;
+				current = end;
+			}
+		}
+		return dummy.next;
+	}
+
+	private static ListNode reverse(ListNode head, ListNode end) {
+		ListNode newHead = end;
+		while (head != end) {
+			ListNode temp = head.next;
+			head.next = newHead;
+			newHead = head;
+			head = temp;
+		}
+		return newHead;
+	}
+
+}

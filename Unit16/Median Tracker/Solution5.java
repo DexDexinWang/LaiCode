@@ -5,7 +5,6 @@ public class Solution5 {
 
 	PriorityQueue<Integer> small;
 	PriorityQueue<Integer> large;
-	Double median;
 	public Solution5(){
 		small = new PriorityQueue<Integer>(Collections.reverseOrder());
 		large = new PriorityQueue<Integer>();

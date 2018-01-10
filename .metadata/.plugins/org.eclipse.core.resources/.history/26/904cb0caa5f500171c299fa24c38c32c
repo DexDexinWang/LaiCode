@@ -1,0 +1,32 @@
+
+public class Solution11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	//approach: use an iteration to travese eles from left to right two pointers, slow and fast
+	  //slow, all eles to the left side of the slow pointer are the final result to return
+	  //fast, all eles to the right side to the fast pointer will be processed.
+	  public int[] moveZero(int[] array) {
+	    //corner case
+	    if (array.length <= 1) {
+	      return array;
+	    }
+	    //define pointers and traverse all eles
+	    int slow = 0;
+	    for (int fast = 0; fast < array.length; fast++) {
+	      if (array[fast] != 0) {
+	        array[slow++] = array[fast++];
+	      }
+	    }
+	    //fill remining eles as 0
+	    for (int i = slow; i < array.length; i++) {
+	      array[i] = 0;
+	    }
+	    return array;
+	  }
+	  //Time Complexity: O(n)
+	  //Space Complexity: O(1)
+}

@@ -1,0 +1,17 @@
+import generator.LinkedListRandom;
+import generator.ListNode;
+
+public class Solution2 {
+
+	public static void main(String[] args) {
+		ListNode input = LinkedListRandom.LLGen(7, 0, 100);
+		input.print();
+		input = removeNthFromEnd(input,3);
+		System.out.println("");
+		input.print();
+	}
+	public static ListNode removeNthFromEnd(ListNode head, int n) {
+		
+	}
+
+}

@@ -6,7 +6,7 @@ import generator.TreeRandom;
 public class Solution3 {
 
 	public static void main(String[] args) {
-		TreeNode input = TreeRandom.treeGenLeftRange(3, null, 0, 10);
+		TreeNode input = TreeRandom.treeGenLeftRange(1, null, 0, 10);
 		TreeNode input1 = TreeRandom.treeGenRange(3, null, 0, 10);
 		System.out.println(isCompleted(input));
 		System.out.println(isCompleted(input1));

@@ -1,0 +1,36 @@
+import generator.ListNode;
+public class Solution1 {
+
+	public static void main(String[] args) {
+
+	}
+	
+	public ListNode reverseKGroup(ListNode head, int k) {
+		int counter = 0;
+		ListNode dummy = new ListNode(-1);
+		dummy.next = head;
+		ListNode current = dummy; 
+		ListNode check = head;
+		while(check != null && counter < k) {
+			check = check.next;
+			counter++;
+			if (counter == k) {
+				current.next = reverse(current.next, check);
+				counter =0;
+			}
+		}
+		return dummy.next;
+	}
+
+	private ListNode reverse(ListNode head, ListNode end) {
+		ListNode newHead = null;
+		while (head != end) {
+			ListNode temp = head.next;
+			head.next = newHead;
+			newHead = head;
+			head = temp;
+		}
+		return newHead;
+	}
+
+}

@@ -1,0 +1,58 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+import generator.TreeNode;
+public class Solution5 {
+
+	public static void main(String[] args) {
+		TreeNode input = new TreeNode(1);
+		input.left = new TreeNode(3);
+		input.right = new TreeNode(6);
+		input.left.left = new TreeNode(2);
+		input.left.right = new TreeNode(4);
+		input.right.left = new TreeNode(5);
+		input.right.right = new TreeNode(0);
+		System.out.println(isCousin(input, 3, 0));
+	}
+	
+	public boolean isCousin(TreeNode root, int a, int b) {
+		if (root == null) {
+			return false;
+		}
+		Queue<TreeNode> queC = new LinkedList<TreeNode>();
+	    Queue<TreeNode> queP = new LinkedList<TreeNode>();
+	    queC.offer(root);
+	    queP.offer(root);
+	    boolean findOne = false;
+	    TreeNode findParent = null;
+	    while(!queC.isEmpty()) {
+	    	int size = queC.size();
+		    TreeNode curC = null;
+		    TreeNode curP = null;
+		    for(int i = 0 ; i < size ; i++) {
+		    	curC = queC.poll();
+		        curP = queP.poll();
+		        if (curC.key == a || curC.key == b) {
+		            if(!findOne) {
+		            	findOne = true;
+		            	findParent = curP;
+		            } else {
+		            	if (findParent == curP) {
+		            		return false;
+		            	} 
+		            	return true;
+		           }
+		       }
+		       if (curC.left != null) {
+		    	   queC.offer(curC.left);
+		           queP.offer(curC);
+		       }
+		       if (curC.right != null) {
+		    	   queC.offer(curC.right);
+		    	   queP.offer(curC);
+		       }
+		   }
+	    }
+	    return false;
+	}
+}

@@ -1,0 +1,43 @@
+import generator.TreeNode;
+public class Solution3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static TreeNode delete(TreeNode root, int key) {
+		if (root == null) {
+			return null;
+		}
+		
+		if (root.key > key) {
+			root.left = delete(root.left, key);
+		} else if (root.key < key) {
+			root.right = delete(root.right, key);
+		} else {
+			if (root.left == null) {
+				return root.right;
+			} else if (root.right == null) {
+				return root.left;
+			} else {
+				if (root.right.left == null) {
+					return root.right;
+				} else {
+					TreeNode smallest = moveSamllest(root.right);
+				}
+			}
+			
+		}
+		return root;
+	}
+	
+	private void moveSmallest(TreeNode root) {
+		TreeNode previous = null;
+		while (root.left != null) {
+			previous = root;
+			root = root.left;
+		}
+	}
+
+}

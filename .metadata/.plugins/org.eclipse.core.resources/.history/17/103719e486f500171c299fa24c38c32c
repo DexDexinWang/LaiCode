@@ -1,0 +1,8 @@
+import java.util.Arrays;
+
+public class Solution1 {
+	
+	public int[] depup(int[] array) {
+		
+	}
+}
