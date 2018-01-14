@@ -8,7 +8,13 @@ public class Solution5 {
 		root.right = new TreeNode(2);
 		System.out.println(isSymmetric(root.left, root.right));
 	}
-	//what: in each layer, to compare the left-subtree and right-subtree symmetrically
+	//approach: use a recursion to solve the problem.
+	  //levels: n levels.
+	  //branches: [0 2]
+	  //left, right: get whether the subtrees are symmetric 
+	  //current: check left node and right node are equal
+	  //return: return whether the left equals right;
+	
 	public static boolean isSymmetric(TreeNode root) {
 		//how: 1. corner case
 		if (root == null) {

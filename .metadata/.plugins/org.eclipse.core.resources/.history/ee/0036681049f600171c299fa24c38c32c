@@ -1,0 +1,10 @@
+package TreeGenerator;
+
+public class TreeNode<K> {
+	public K key;
+	public TreeNode<K> left;
+	public TreeNode<K> right;
+	public TreeNode(K key) {
+		this.key = key;
+	}
+}

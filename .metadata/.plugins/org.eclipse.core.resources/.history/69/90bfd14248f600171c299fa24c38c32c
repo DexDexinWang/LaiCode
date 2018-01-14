@@ -1,0 +1,12 @@
+package TreeGenerator;
+
+public class TreeNodeGenerator {
+	public static TreeNode treeGenRange(String[] array)
+	{
+		TreeNode<String> root;
+		if (array.length == 0) {
+			return null;
+		}
+		return root;
+	}
+}

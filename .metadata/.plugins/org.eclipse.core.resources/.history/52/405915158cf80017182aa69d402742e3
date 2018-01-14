@@ -1,0 +1,14 @@
+import java.util.List;
+public class ParkingLevel {
+	
+	private final List<ParkingSpot> spots;
+	
+	ParkingLevel(int numberOfSports) {
+		spots = new ArrayList<>(numberOfSports);
+	}
+	
+	boolean hasSport(Vehicle v) {
+		return true;
+	}
+	
+}

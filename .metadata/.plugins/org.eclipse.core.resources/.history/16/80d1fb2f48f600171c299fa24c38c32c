@@ -1,0 +1,9 @@
+package TreeGenerator;
+
+public class TreeNodeGenerator {
+	public static TreeNode treeGenRange(String[] array)
+	{
+		TreeNode<String> root;
+		return root;
+	}
+}

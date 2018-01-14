@@ -1,0 +1,12 @@
+import generator.TreeNode;
+import generator.TreeRandom;
+public class Solution888 {
+
+	public static void main(String[] args) {
+		
+		
+		String[] input = {"1","2","#","4","#","7"};
+		TreeNode root = TreeRandom.treeGen(input);
+		root.print();
+	}
+}

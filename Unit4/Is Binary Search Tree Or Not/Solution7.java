@@ -9,7 +9,13 @@ public class Solution7 {
 		System.out.println(isBST(input));
 	}
 
-	//what: follow the BST rule to check all values in the left subtree is smaller than the root, and all values in the right subtree is bigger than root.
+	  //apprach: DFS check all nodes with min and max value for each node.
+	  //heights: n
+	  //branches: [0 2]
+	  //left, right: get the subtrees are BST or not.
+	  //current: check the tree since the current level is BST
+	  //return: return whether the tree since the current level is BST
+	
 	public static boolean isBST(TreeNode root) {
 		//how: 1. corner case
 		if(root == null) {

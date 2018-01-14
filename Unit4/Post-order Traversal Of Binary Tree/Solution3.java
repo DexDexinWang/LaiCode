@@ -84,4 +84,6 @@ public class Solution3 {
 		}
  		return res;
 	}
+	//Time complexity: O(n)
+	//Space complexity: O(height) height could be n;
 }

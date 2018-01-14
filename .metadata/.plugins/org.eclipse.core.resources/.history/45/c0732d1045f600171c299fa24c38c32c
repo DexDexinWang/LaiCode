@@ -1,0 +1,28 @@
+import generator.TreeNode;
+
+public class Solution888 {
+
+	public static void main(String[] args) {
+		TreeNode root = new TreeNode(10);
+		root.left = new TreeNode(5);
+		root.left.left = new TreeNode(3);
+		root.left.right = new TreeNode(4);
+		root.right = new TreeNode(2);
+		root.right.left = new TreeNode(7);
+		root.right.right = new TreeNode(8);
+		root.print();
+		//same level, same parent
+		TreeNode c1 = root.left.right;
+		TreeNode c2 = root.left.left;
+		System.out.println(is(root,c1,c2));
+		//same level, different parent;
+		TreeNode c3 = root.left.left;
+		TreeNode c4 = root.right.right;
+		System.out.println(is(root,c3,c4));
+		//differernt level;
+		TreeNode c5 = root.left;
+		TreeNode c6 = root.right.right;
+		System.out.println(is(root,c5, c6));
+	}
+
+}

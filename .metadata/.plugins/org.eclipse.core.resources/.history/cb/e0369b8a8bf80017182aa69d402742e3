@@ -1,0 +1,15 @@
+
+public class ParkingSpot {
+	private final VehicleSize size;
+	private Vehicle currentVehicle;
+	
+	ParkingSpot(VehicleSize size) {
+		this.size = size;
+	}
+	
+	boolean fit(Vehicle v) {
+		if (currentVehicle == null) {
+			
+		}
+	}
+}

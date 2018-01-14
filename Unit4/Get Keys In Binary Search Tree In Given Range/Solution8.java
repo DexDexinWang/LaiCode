@@ -11,7 +11,14 @@ public class Solution8 {
 		input.print();
 		System.out.println(getRange(input, 0 , 10));
 	}
-	//what: in-order traverse the nodes in the tree to find all values is bigger than min and smaller than max;
+	
+	  //Approach: use a DFS and inorder recursion to find the node 
+	  //height: n;
+	  //branches: [0 2];
+	  //left right: find in next level
+	  //current: check the current node is vaild and save valid node into reslt.
+	  //return: no return;
+	
 	public static List<Integer> getRange(TreeNode root, int min, int max) {
 		//how: 1. corner case
 		List<Integer> res = new LinkedList<Integer>();

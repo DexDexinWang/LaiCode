@@ -1,0 +1,10 @@
+
+public class ParkingLevel {
+	
+	private final List<ParkingSpot> spots;
+	
+	boolean hasSport(Vehicle v) {
+		return true;
+	}
+	
+}

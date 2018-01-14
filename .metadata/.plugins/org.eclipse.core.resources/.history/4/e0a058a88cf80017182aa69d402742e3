@@ -1,0 +1,7 @@
+
+public class ParkingLot {
+	private ParkingLevel[] levels;
+	public boolean hasSport(Vehicle v) {
+		return true;
+	}
+}

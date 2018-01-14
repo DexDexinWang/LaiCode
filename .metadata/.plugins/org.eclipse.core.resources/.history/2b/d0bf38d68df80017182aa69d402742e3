@@ -1,0 +1,15 @@
+
+public class ParkingLot {
+	private final ParkingLevel[] levels;
+	
+	ParkingLot(int numLevels, int numSpotsPerLevel) {
+		levels = new ParkingLevel[numLevels];
+		for (int i = 0; i < numLevels; i++) {
+			levels[i] = new ParkingLevel(numSpotsPerLevel);
+		}
+	}
+	
+	public boolean hasSport(Vehicle v) {
+		return true;
+	}
+}

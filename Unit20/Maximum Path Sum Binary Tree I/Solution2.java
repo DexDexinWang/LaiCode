@@ -32,4 +32,6 @@ public class Solution2 {
 	    } 
 	    return root.left == null ? right + root.key: left + root.key;
 	  }
+	  //Time Complexity: O(n)
+	  //Space Complexity: O(1)
 }

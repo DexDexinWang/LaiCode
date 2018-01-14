@@ -1,0 +1,12 @@
+
+public enum VehicleSize {
+	COMPACT (0),
+	LARGE	(10);
+	private int ParkingLevel;
+	private VehicleSize(int size) {
+		ParkingLevel = size;
+	}
+	public int getVehicleSize() {
+		return vehicleSize;
+	}
+}

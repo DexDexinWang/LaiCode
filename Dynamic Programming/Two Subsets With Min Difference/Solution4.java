@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 public class Solution4 {
 
@@ -7,36 +6,33 @@ public class Solution4 {
 		System.out.println(minDifference(input));
 	}
 	
-	static int min = Integer.MAX_VALUE;
-	public static int minDifference(int[] array) {
-		if (array == null || array.length == 0) {
-			return 0;
-		}
-		Arrays.sort(array);
-		
-		minDifference(array, array.length - 1, 0,0);
-		return min;
-	}
-	
-	public static void minDifference(int[] array, int i, int sumA, int sumB) {
-		if (i == 0) {
-			int last = Math.min(diff(sumA + array[i], sumB), diff(sumA, sumB + array[i]));
-			min = Math.min(min, last);
-		} else if (i < 0) {
-			min = Math.min(min,diff(sumA, sumB));
-			System.out.println(min);
-		}else {
-			minDifference(array, i - 2, sumA + array[i], sumB +array[i - 1]);
-			minDifference(array, i - 2, sumA + array[i -1], sumB +array[i]);
-		}
-	}
-	
-	private static int diff(int i , int j) {
-		if (i >= j) {
-			return i - j;
-		} else {
-			return j - i;
-		}
-	}
-	
+	  //approach: use DFS to check all possible result;
+	  //levels: n/2 levels.
+	  //states: from (n to n/2) with incresing level.
+	  //current level: add a new number and check rest; 
+	  public static int minDifference(int[] array) {
+	    //get sum of the array;
+	    int sum = 0;
+	    for(int num: array) {
+	      sum += num;
+	    }
+	    int[] min = new int[]{Integer.MAX_VALUE};
+	    minDifference(array, min, array.length / 2, 0, 0, sum);
+	    return min[0];
+	  }
+	  
+	  private static void minDifference(int[] array, int[] min, int remaining, int index, int curSum, int total) {
+	    if (remaining == 0) {
+	      min[0] = Math.min(min[0], Math.abs(curSum - (total - curSum)));
+	    } else {
+	      for (int i = index; i <= array.length - remaining; i++) {
+	        if (curSum + array[i] - total/2 >= min[0]) {
+		    	continue;
+		    }
+	    	minDifference(array, min, remaining - 1, i + 1, curSum + array[i], total);
+	      }
+	    }
+	  }
+	  //Time complexity: O(n - n/2) !  / (n/2) !
+	  //Space complexity: O (n/2) call stack.
 }

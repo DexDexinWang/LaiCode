@@ -1,0 +1,9 @@
+
+public enum VehicleSize {
+	COMPACT (0),
+	LARGE	(10);
+	private int carSize;
+	private VehicleSize(int size) {
+		carSize = size;
+	}
+}

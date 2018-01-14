@@ -1,0 +1,6 @@
+
+public class ParkingLevel {
+	boolean hasSport(Vehicle v) {
+		return true;
+	}
+}

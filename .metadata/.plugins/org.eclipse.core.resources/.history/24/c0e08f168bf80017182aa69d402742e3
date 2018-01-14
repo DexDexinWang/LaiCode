@@ -1,0 +1,6 @@
+
+public class ParkingSpot {
+	boolean fit(Vehicle v) {
+		return true;
+	}
+}

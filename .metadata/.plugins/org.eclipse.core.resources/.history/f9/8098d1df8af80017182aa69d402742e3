@@ -1,0 +1,5 @@
+
+public abstract class Vehicle {
+	public String plate;
+	public abstract VehicleSize getSize(); 
+}

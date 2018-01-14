@@ -1,0 +1,7 @@
+
+public class ParkingLot {
+	private Level[] levels;
+	pubcli boolean hasSport(Vehicle v) {
+		
+	}
+}
