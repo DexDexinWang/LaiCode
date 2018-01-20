@@ -11,42 +11,45 @@ public class Solution4 {
 
 	}
 	
-	  //approach: use priorityQueue to order it.
+	  //approach: sort k linkedlist together with Priority Queue.
 	  public ListNode merge(List<ListNode> listOfLists) {
-		if (listOfLists == null || listOfLists.size() == 0) {
-			return null;
-		}
-	    int rows = listOfLists.size();
-	    PriorityQueue<ListNode> minHeap = new PriorityQueue<ListNode>(rows,
-	      new Comparator<ListNode>() {
-	      @Override
-	      public int compare(ListNode l1, ListNode l2) {
-	        if (l1.value == l2.value) {
-	        	return 0;
-	        }
-	        return l1.value < l2.value ? -1 : 1;
-	      }
-	    });
-	    for (int i = 0; i < rows; i++) {
-	      ListNode cur = listOfLists.get(i);
-	      if (cur != null) {
-	        minHeap.offer(cur);
-	      }
-	    }
-	    
+	    //corner case
+	    if (listOfLists == null || listOfLists.size() == 0) {
+				return null;
+			}
 	    ListNode dummy = new ListNode(-1);
-	    ListNode current = dummy;
-	    
-	    while(minHeap.size()!= 0) {
-	      current.next = minHeap.poll();
-	      current = current.next;
-	      if (current.next != null) {
-	        minHeap.offer(current.next);
+	    int k = listOfLists.size();
+	    //create minHeap to get the smallest Node each time.
+	    PriorityQueue<ListNode> minHeap = new PriorityQueue<>(k, 
+	      new Comparator<ListNode>() {
+	        @Override 
+	        public int compare(ListNode n1, ListNode n2) {
+	          if(n1.value == n2.value) {
+	            return 0;
+	          }
+	          return n1.value < n2.value ? -1 : 1;
+	        }
+	      }
+	    );
+	    //put all heads into minHeap
+	    for(int i = 0; i < k; i++) {
+	      if (listOfLists.get(i) != null) {
+	        minHeap.offer(listOfLists.get(i));
 	      }
 	    }
+	    ListNode cur = dummy;
+	    //reverse all nodes.
+	    while(!minHeap.isEmpty()) {
+	      cur.next = minHeap.poll();
+	      cur = cur.next;
+	      if (cur.next != null) {
+	        minHeap.offer(cur.next);
+	      }
+	    }
+	    
 	    return dummy.next;
 	  }
-	  //Time complexity: O(nlogk); where k is the size of listOfLists;
+	  //Time complexity: O(nlogk); where k is the size of listOfLists. n is the number of all nodes from sorted list.
 	  //space complexity: O(k);
 
 }

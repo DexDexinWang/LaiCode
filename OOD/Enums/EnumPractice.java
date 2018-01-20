@@ -69,14 +69,6 @@ public class EnumPractice {
 			this.radius = radius;
 		}
 		
-		private double mass() {
-			return mass;
-		}
-		
-		private double radius() {
-			return radius;
-		}
-		
 	    public static final double G = 6.67300E-11;
 
 	    double surfaceGravity() {

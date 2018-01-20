@@ -1,0 +1,13 @@
+import java.awt.Button;
+
+public class AbstractFactoryTest {
+	private final static GUIFacotry factory;
+	AbstractFactoryTest(GUIFacotry f) {
+		this.factory = f;
+	}
+	public static void main(String[] args) {
+		Button button = factory.createButton();
+		button.paint();
+	}
+
+}

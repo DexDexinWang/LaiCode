@@ -1,0 +1,19 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
+public class IteratorTest {
+
+	public static void main(String[] args) {
+		List<Integer> list = new LinkedList<>();
+		for (int i = 0 ; i < 10 ; i++) {
+			list.add(i+'a');
+		}
+	
+		for(Iterator<Integer> it = list.iterator(); it.hasNext()) {
+			String str= it.hasNext();
+			System.out.println(x);
+		}
+	}
+
+}

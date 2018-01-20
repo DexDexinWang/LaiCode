@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class GenericsTest {
+
+	public static void main(String[] args) {
+
+		
+	}
+	
+	public static void test1() {
+		List<Apple> list = new ArrayList<>();
+		Apple apple = list.get(0);
+		//1. cannot add other type
+		//list.add(new Orange());
+		//2. cannot add super class
+		//list.add(new Fruit());
+		
+		
+		Fruit fruit = new Fruit();
+		//3. need cast
+		//apple = fruit;
+		Orange b = new Orange();
+		fruit = b;
+		apple = (Apple) fruit; // ok at compile time, but may have ClassCastException at running time.
+		//such as adding an orange as fruit.
+		
+	}
+	
+	public static void test2() {
+		//generics cannot cast to superclass;
+		List<Apple> apples = new ArrayList<>();
+		//List<Fruit> fruits = apples; 	
+	}
+	
+	public static void test3() {
+		//generics cannot cast to subclass;
+		List<Fruit> fruits = new ArrayList<>();
+		//List<Apple> apples = fruits;
+	}
+
+}

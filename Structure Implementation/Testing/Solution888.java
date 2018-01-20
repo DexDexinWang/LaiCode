@@ -1,12 +1,21 @@
+import java.io.IOException;
+
 import generator.TreeNode;
 import generator.TreeRandom;
 public class Solution888 {
 
 	public static void main(String[] args) {
-		
-		
-		String[] input = {"1","#","2","#","3","5","4"};
-		TreeNode root = TreeRandom.treeGen(input);
-		root.print();
+			test2();
+	}
+	
+	private static void test2()  {
+			test1();
+	}
+	
+	private static void test1() {
+		System.out.println("Exe");
+		if (true) {
+			throw new NullPointerException();
+		}
 	}
 }

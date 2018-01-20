@@ -1,0 +1,10 @@
+
+public class FactoryPatternDemo {
+
+	private final static ShapeFactory shapeFactory  = new ShapeFactory();
+	public static void main(String[] args) {
+		Shape shape1 = shapeFactory.getShape("CIRCLE");
+		shape1.draw();
+	}
+
+}

@@ -1,0 +1,9 @@
+
+public class FactoryPatternDemo {
+
+	private final static ShapeFactory shapeFactory  = new ShapeFactory();
+	public static void main(String[] args) {
+		Shape shpe1 = shapeFactory.getShape();
+	}
+
+}

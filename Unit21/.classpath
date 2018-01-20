@@ -5,6 +5,10 @@
 	<classpathentry kind="src" path="Largest Number Smaller In Binary Search Tree"/>
 	<classpathentry kind="src" path="Merge K Sorted Array"/>
 	<classpathentry kind="src" path="Merge K Sorted Lists"/>
+	<classpathentry kind="src" path="Deep Copy Linked List With Random Pointer"/>
+	<classpathentry kind="src" path="Deep Copy Undirected Graph"/>
+	<classpathentry kind="src" path="Cutting Wood I"/>
+	<classpathentry kind="src" path="Merge Stones"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="input"/>
 	<classpathentry kind="output" path="bin"/>

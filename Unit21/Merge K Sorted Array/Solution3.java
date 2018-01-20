@@ -16,7 +16,6 @@ public class Solution3 {
 		      if (arrayOfArrays[i].length == 0) {
 		        continue;
 		      }
-		      minHeap.offer(new Unit(i,0,arrayOfArrays[i][0]));
 		    }
 		    
 		    int[] res = new int[total];
@@ -30,7 +29,7 @@ public class Solution3 {
 		    }
 		    return res;
 		  }
-		  
+		   
 		static class Unit implements Comparable<Unit> {
 		    int row;
 		    int col;
@@ -48,6 +47,6 @@ public class Solution3 {
 		      return this.val < other.val ? -1 : 1;
 		    }
 		  }
-		//Time complexity: O(n*logK); where k is the number of rows;
+		//Time complexity: O(n*logK); where k is the number of rows; n is all nodes of the sorted array.
 		//Space complexity: O(k);
 }

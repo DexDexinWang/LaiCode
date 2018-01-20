@@ -2,6 +2,15 @@
 <classpath>
 	<classpathentry kind="src" path="Enums"/>
 	<classpathentry kind="src" path="ParkingLot"/>
+	<classpathentry kind="src" path="NestedClassesTest"/>
+	<classpathentry kind="src" path="BuilderExample"/>
+	<classpathentry kind="src" path="FactoryPattern"/>
+	<classpathentry kind="src" path="AbstractFactory"/>
+	<classpathentry kind="src" path="SingletonExample"/>
+	<classpathentry kind="src" path="Iterator"/>
+	<classpathentry kind="src" path="Generics"/>
+	<classpathentry kind="src" path="GnericsAdvantage"/>
+	<classpathentry kind="src" path="BlackJack"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>

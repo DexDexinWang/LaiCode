@@ -1,0 +1,18 @@
+
+public class Card {
+	private int faceValue;
+	private Suit suit;
+	
+	Card(int faceValue,Suit suit) {
+		this.faceValue = faceValue;
+		this.suit = suit;
+	}
+	
+	public int getFaceValue() {
+		return faceValue;
+	}
+	
+	public int getSuit(){
+		return suit;
+	}
+}

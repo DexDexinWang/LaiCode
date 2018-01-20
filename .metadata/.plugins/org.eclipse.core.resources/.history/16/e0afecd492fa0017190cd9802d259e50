@@ -1,0 +1,48 @@
+
+public class Solution5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	  public static RandomListNode copy(RandomListNode head) {
+		    //corner case;
+		    if (head == null) {
+		      return null;
+		    }
+		    //define a hashMapt to store the mapping relations
+		    Map<RandomListNode, RandomListNode> map = new HashMap<>();
+		    RandomListNode newHead = new RandomListNode(head.value);
+		    map.put(head, newHead);
+		    //Iteratively check all nodes.
+		    while (head != null) {
+		      //connect next;
+		      if (head.next != null) {
+		        if (!map.containsKey(head.next)) {
+		          map.put(head.next, new RandomListNode(head.next.value));
+		        }
+		        newHead.next = map.get(head.next);
+		      }
+		      //connect random;
+		      if (head.random != null) {
+		        if (!map.containsKey(head.random)) {
+		          map.put(head.random, new RandomListNode(head.random.value));
+		        }
+		      }
+		      newHead.random = map.get(head.random);
+		      //move on
+		      head = head.next;
+		      newHead = newHead.next;
+		    }
+		    return newHead;
+		  }
+	  
+	  class RandomListNode {
+		  public int value;
+		  public RandomListNode next;
+		  public RandomListNode random;
+		  public RandomListNode(int value) {
+			  this.value = value;
+		  }
+	  }
+}

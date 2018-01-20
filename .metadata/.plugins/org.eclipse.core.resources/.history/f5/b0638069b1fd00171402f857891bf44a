@@ -1,0 +1,7 @@
+
+public class BlackJackHand extends Hand {
+	@Override
+	public int score() {
+		List<Integer> scores = posiibleScores();
+	}
+}

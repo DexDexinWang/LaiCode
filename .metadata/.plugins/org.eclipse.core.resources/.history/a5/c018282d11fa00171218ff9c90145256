@@ -1,0 +1,10 @@
+
+public class NestedClassTest {
+
+	public static void main(String[] args) {
+		NestedClassDefinination st = new NestedClassDefinination();
+		NestedClassDefinination.FirstLevel fl = st.new FirstLevel();
+        fl.methodInFirstLevel(23);
+	}
+
+}

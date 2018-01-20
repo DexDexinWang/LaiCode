@@ -1,0 +1,19 @@
+import java.util.List;
+import java.util.ArrayList;
+
+public class BlackJackHand extends Hand {
+	@Override
+	public int score() {
+		List<Integer> scores = possibleScore();
+	}
+	
+	private List<Integer> possibleScore() {
+		List<Integer> scores = new ArrayList<>();
+		
+	}
+	
+	private List<Integer> possibleScore(cards) {
+		List<Integer> scores = new ArrayList<>();
+		
+	}
+}

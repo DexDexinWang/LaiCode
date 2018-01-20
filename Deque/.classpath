@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="Kth Smallest With Only 2, 3 As Factors"/>
+	<classpathentry kind="src" path="Kth Smallest With Only 3, 5, 7 As Factors"/>
+	<classpathentry kind="src" path="Maximum Values Of Size K Sliding Windows"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

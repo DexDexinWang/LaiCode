@@ -1,0 +1,24 @@
+import generator.TreeNode;
+import generator.TreeRandom;
+public class Solution888 {
+
+	public static void main(String[] args) {
+			test2();
+	}
+	
+	private static void test2() throws Exception {
+		try {
+			test1();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private static void test1() throws Exception  {
+		System.out.println("Exe");
+		if (true) {
+			throw new Exception("it can be true");
+		}
+	}
+}

@@ -1,7 +1,0 @@
-
-public class Employee extends Person {
-	private String company;
-	public void setCompany(String company) {
-		this.company;
-	}
-}

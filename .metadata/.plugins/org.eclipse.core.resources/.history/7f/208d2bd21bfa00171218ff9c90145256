@@ -1,0 +1,11 @@
+
+public class AbstractFactoryTest {
+	private final GUIFacotry factory;
+	AbstractFactoryTest(GUIFacotry f) {
+		this.factory = f;
+	}
+	public static void main(String[] args) {
+		Button button = factory
+	}
+
+}

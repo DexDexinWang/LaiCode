@@ -1,0 +1,14 @@
+
+public enum FaceValue {
+	A (1),
+	B (2);
+	
+	private int value;
+	FaceValue(int value) {
+		this.value = value;
+	}
+	
+	public getValue() {
+		return value;
+	}
+}

@@ -1,0 +1,19 @@
+
+public class Solution8 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	//base case:
+	//dp[0][1] = 0;
+	//dp[1][2] = 0;
+	//dp[2][3] = 0;
+	//dp[3][4] = 0;
+	//induction rule: 
+	//dp[i][j] = 
+ 	public int minCost(int[] stones) {
+		int len = stones.length;
+	}
+
+}

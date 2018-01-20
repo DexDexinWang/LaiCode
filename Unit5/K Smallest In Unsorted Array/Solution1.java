@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
@@ -12,20 +13,11 @@ public class Solution1 {
 	//what: traverse each number check whehter it is in the most k smallest result.
 	public static int[] kSmallest(int[] array, int k) {
 		//how: 1. corner case
-		if (array == null || array.length ==0) {
+		if (array == null || array.length ==0 || k == 0) {
 			return new int[0];
 		}
 		//2. create a priority queue as Max Heap to store the Kth number.
-		PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer> (k ,
-				new Comparator<Integer>() {
-			@Override
-			public int compare(Integer e1, Integer e2) {
-				if (e1.equals(e2)) {
-					return 0;
-				}
-				return e1 > e2 ? -1 : 1;
-			}
-		});
+		PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer> (k , Collections.reverseOrder());
 		//3. traverse all number from array into maxHeap
 		for (int i = 0; i < array.length ; i++) {
 			if (i < k) {
