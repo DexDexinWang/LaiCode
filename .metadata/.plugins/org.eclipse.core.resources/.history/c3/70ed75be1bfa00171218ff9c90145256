@@ -1,8 +1,0 @@
-
-public class AbstractFactoryTest {
-	private final GUIFac
-	public static void main(String[] args) {
-
-	}
-
-}

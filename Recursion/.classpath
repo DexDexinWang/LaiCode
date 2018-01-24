@@ -9,6 +9,7 @@
 	<classpathentry kind="src" path="Decode Ways"/>
 	<classpathentry kind="src" path="Minimum Depth of Binary Tree"/>
 	<classpathentry kind="src" path="Palindrome Number"/>
+	<classpathentry kind="src" path="All Valid Permutations Of Parentheses II"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="input"/>
 	<classpathentry kind="output" path="bin"/>

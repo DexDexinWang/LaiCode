@@ -1,0 +1,9 @@
+package inMemoryTest;
+
+public class FileSystem1 {
+	private Directory1 root;
+	
+	public FileSsytem1() {
+		root = new Directory1("\", null);
+	}
+}

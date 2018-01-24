@@ -1,0 +1,9 @@
+package inMemoryTest;
+
+public class File1 extends Entry1 {
+
+	public File1(String n, Directory1 p) {
+		super(n, p);
+	}
+
+}

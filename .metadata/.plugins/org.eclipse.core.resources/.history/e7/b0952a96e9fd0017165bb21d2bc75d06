@@ -1,0 +1,14 @@
+import java.util.List;
+
+public class FileSystem {
+	private final Directory root;
+	
+	public FileSystem() {
+		root = new Directory("/",null);
+	}
+	
+	private List<Entry> resolve(String path) {
+		assert path.startsWith("/");
+		String[] components = path.substring(1).split("/");
+	}
+}

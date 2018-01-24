@@ -1,7 +1,0 @@
-
-public class SingletonExample {
-	private static final SingletonExample instance = new SingletonExample();
-	public static SingletonExample getInstance() {
-		return instance;
-	}
-}

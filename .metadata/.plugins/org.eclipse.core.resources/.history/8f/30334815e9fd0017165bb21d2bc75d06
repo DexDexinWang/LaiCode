@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Directory extends Entry{
+	protected List<Entry> contents;
+	
+	public Directory(String n, Directory p) {
+		super(n, p);
+		contents = new ArrayList<Entry>();
+	}
+
+	protected ArrayList<Entry> getContents() {
+		return (ArrayList<Entry>) contents;
+	}
+	
+	@Override
+	public int size() {
+		int size = 0;
+		for (Entry e : contents) {
+			size += e.size();
+		}
+		return size;
+	}
+}

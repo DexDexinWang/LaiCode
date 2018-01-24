@@ -1,0 +1,22 @@
+package inMemoryTest;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Directory1 extends Entry1{
+	List<Entry1> contents;
+	public Directory1(String n, Directory1 p) {
+		super(n, p);
+		contents = new ArrayList<Entry1>();
+	}
+	
+	public void deleteDirectory() {
+		
+	}
+	
+	@Override
+	public int size() {
+		return contents.size();
+	}
+
+}

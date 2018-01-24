@@ -1,0 +1,9 @@
+
+public class Directory extends Entry{
+	protected List<Entry> contents;
+	
+	public Directory(String n, Direcotry p {
+		super(n, p);
+	}
+
+}

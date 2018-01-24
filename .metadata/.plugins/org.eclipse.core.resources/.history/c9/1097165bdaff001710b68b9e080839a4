@@ -1,0 +1,11 @@
+package inMemoryTest;
+
+public class Entry1 {
+	private String name;
+	private int size; 
+	private long createTime;
+	private long accessTime;
+	private long deleteTime;
+
+	protected abstract int size();
+}

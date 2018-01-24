@@ -1,7 +1,0 @@
-
-public class EnumPractice {
-	public enum Day {
-		SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
-	    THURSDAY, FRIDAY, SATURDAY 
-	}
-}

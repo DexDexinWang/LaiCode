@@ -1,0 +1,10 @@
+import java.util.List;
+
+public class Directory extends Entry{
+	protected List<Entry> contents;
+	
+	public Directory(String n, Directory p)
+		super(n, p);
+	}
+
+}

@@ -1,0 +1,16 @@
+
+public class BlackJackGameAutomator {
+
+	private Deck deck;
+	private BlackJackHand[] hands;
+	private static final int HIT_UNITL = 16;
+	
+	public BlackJackGameAutomator(int numPlayers) {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

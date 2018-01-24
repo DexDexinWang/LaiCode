@@ -1,9 +1,0 @@
-
-public class ParkingLotTest {
-
-	public static void main(String[] args) {
-		ParkingLot lot = new ParkingLot(4, 10);
-		List<Vehicle> list = new ArrayList<>();
-	}
-
-}

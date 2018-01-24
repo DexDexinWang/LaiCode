@@ -1,0 +1,10 @@
+
+public class File extends Entry {
+	private String content; //or byte[]
+	private int size;
+	
+	public File(String n, Directory p, int size) {
+		super(n,p);
+		this.size =size;
+	}
+}

@@ -13,4 +13,10 @@ public abstract class Hand {
 	public int size() {
 		return cards.size();
 	}
+	
+	public void print() {
+		for(int i = 0; i < cards.size() ; i++) {
+			System.out.print(cards.get(i).getFaceValue() + " ");
+		}
+	}
 }
