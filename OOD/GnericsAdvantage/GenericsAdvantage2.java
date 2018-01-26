@@ -6,7 +6,7 @@ import java.util.Queue;
 public class GenericsAdvantage2 {
 
 	public static void main(String[] args) {
-		test2();
+		test4();
 	}
 
 	//1. syntax;
@@ -34,12 +34,37 @@ public class GenericsAdvantage2 {
 			System.out.print(c + " ");
 		}
 	}
-	//3. use cases
+	//3. use cases 
 	public static <E> E findMiddle(E[] array) {
 		int mid = array.length / 2;
 		E midElem = array[mid];
 		return midElem;
 	}
+	
+	//"<" not make sense
+	public static <E> E getMin(E[] array) {
+		if (array == null || array.length == 0) {
+			return null;
+		}
+		E min = array[0];
+		for (int i = 1 ; i < array.length; i++) {
+			//The operator < is undefined for the argument type(s) E, E
+			//min = array[i] < min ? array[i] : min;
+		}
+		return min;
+	}
+	//should make sure that E should be comparable.
+	public static <E extends Comparable<E>> E getMin(E[] array) {
+		if (array == null || array.length == 0) {
+			return null;
+		}
+		E min = array[0];
+		for (int i = 1 ; i < array.length; i++) {
+			min = array[i].compareTo(min) < 0 ? array[i] : min;
+		}
+		return min;
+	}
+	
 	
 	public static void test2() {
 		Integer[] array = {1,2,3};
@@ -66,4 +91,16 @@ public class GenericsAdvantage2 {
 		Integer mid1 = (int) findMiddle(array1);
 		System.out.println(mid1);
 	}
+	
+	public static void test4() {
+		Integer[] intArray = {1,2,3,4,5};
+		Double[] doubleArray= {1.1, 2.2, 3.3, 4.4};
+		Character[] charArray = {'W','O','R','L','D'};
+		
+		System.out.println(getMin(intArray));
+		System.out.println(getMin(doubleArray));
+		System.out.println(getMin(charArray));
+		
+	}
+	
 }

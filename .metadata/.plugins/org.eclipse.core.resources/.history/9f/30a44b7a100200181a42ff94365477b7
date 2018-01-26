@@ -1,0 +1,12 @@
+import java.util.List;
+
+public class MyMap<K,V> {
+	K[] array1;
+	List<K> array2;
+	MyMap<K,V>[] array3;
+	List<MyMap<K,V>> array4;
+	
+	public <T> T getInstance() {
+		return new T;
+	}
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="2 Sum"/>
+	<classpathentry kind="src" path="2 Sum All Pair I"/>
+	<classpathentry kind="src" path="2 Sum All Pair II"/>
+	<classpathentry kind="src" path="3 Sum"/>
+	<classpathentry kind="src" path="4 Sum"/>
+	<classpathentry kind="src" path="All Subsets II"/>
+	<classpathentry kind="src" path="Reverse Binary Tree Upside Down"/>
+	<classpathentry kind="src" path="input"/>
+	<classpathentry kind="src" path="All Valid Permutations Of Parentheses II"/>
+	<classpathentry kind="src" path="Common Elements In Three Sorted Array"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="Maximum Path Sum Binary Tree II"/>
+	<classpathentry kind="src" path="Maximum Path Sum Binary Tree III"/>
+	<classpathentry kind="src" path="Binary Tree Path Sum To Target III"/>
+	<classpathentry kind="src" path="Reconstruct Binary Search Tree With Postorder Traversal"/>
+	<classpathentry kind="src" path="Reconstruct Binary Tree With Preorder And Inorder"/>
+	<classpathentry kind="src" path="Reconstruct Binary Tree With Levelorder And Inorder"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

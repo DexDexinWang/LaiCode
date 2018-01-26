@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy source folder &apos;input&apos; to &apos;Unit24&apos;&#x0D;&#x0A;- Original project: &apos;Structure Implementation&apos;&#x0D;&#x0A;- Destination element: &apos;Unit24&apos;&#x0D;&#x0A;- Original element: &apos;Structure Implementation/input&apos;" description="Copy source folder" element1="/input" flags="6" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyRoots" roots="1" stamp="1516949338152" target="/Unit24" version="1.0"/>
+</session>

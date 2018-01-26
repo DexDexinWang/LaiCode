@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="Kth Smallest In Two Sorted Arrays"/>
+	<classpathentry kind="src" path="Median Of Two Arrays"/>
+	<classpathentry kind="src" path="Maximum Values Of Size K Sliding Windows"/>
+	<classpathentry kind="src" path="Implement LRU Cache"/>
+	<classpathentry kind="src" path="Majority Number I"/>
+	<classpathentry kind="src" path="Interleave Strings"/>
+	<classpathentry kind="src" path="Longest Palindromic Substring"/>
+	<classpathentry kind="src" path="Median Of Two Sorted Arrays"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

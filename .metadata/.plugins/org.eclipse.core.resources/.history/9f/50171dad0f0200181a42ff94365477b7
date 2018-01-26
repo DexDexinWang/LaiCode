@@ -1,0 +1,6 @@
+
+public class MyMap<K,V> {
+	K[] array1;
+	list<K> array2;
+	MyNode<K,V>[] array3;
+}
