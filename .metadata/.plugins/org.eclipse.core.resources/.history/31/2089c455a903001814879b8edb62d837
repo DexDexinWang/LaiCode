@@ -1,0 +1,18 @@
+
+public class HashMap2 <K, V> {
+	private int size;
+	private float increaseRatio;
+	private Node<K,V>[] array;
+	private static final int SIZE = 10;
+	private static final float INCREASE_RATIO = 0.75;
+	
+	public HashMap2() {
+		this(SIZE, INCREASE_RATIO);
+	}
+	
+	public HashMap2(int size, float increaseRatio) {
+		this.size = size;
+		this.increaseRatio = increaseRatio;
+		array = (Node<K, V>[]) new Node[size];
+	}
+}

@@ -1,0 +1,20 @@
+import java.util.List;
+import java.util.ArrayList;
+
+public class HashMap2 <K, V> {
+	private int size;
+	private float increaseRatio;
+	private List<Node<K,V>> array;
+	private static final int SIZE = 10;
+	private static final float INCREASE_RATIO = 0.75f;
+	
+	public HashMap2() {
+		this(SIZE, INCREASE_RATIO);
+	}
+	
+	public HashMap2(int size, float increaseRatio) {
+		this.size = size;
+		this.increaseRatio = increaseRatio;
+		List<Node<K,V>> array =new ArrayList<Node<K, V>>();
+	}
+}

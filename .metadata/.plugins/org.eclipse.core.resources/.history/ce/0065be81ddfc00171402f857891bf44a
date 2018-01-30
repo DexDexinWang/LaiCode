@@ -1,6 +1,0 @@
-
-public class GenericsAdvantage {
-	public static <E> void printArray(E[] inputArray) {
-		
-	}
-}

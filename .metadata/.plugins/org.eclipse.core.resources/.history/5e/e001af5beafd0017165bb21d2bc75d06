@@ -1,4 +1,0 @@
-
-public class FileSystemTest {
-	private final List<String> list = new ArrayLsit<>();
-}

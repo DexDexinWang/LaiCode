@@ -1,8 +1,0 @@
-
-public class FileSystem {
-	private final Directory root;
-	
-	public FileSystem() {
-		root = new Directory("/",null);
-	}
-}

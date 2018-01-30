@@ -1,7 +1,0 @@
-
-public class Util {
-
-	public static <K, V> boolean compare (MyPair<K,V> p1 , MyPair<K,V> p2) {
-		
-	}
-}

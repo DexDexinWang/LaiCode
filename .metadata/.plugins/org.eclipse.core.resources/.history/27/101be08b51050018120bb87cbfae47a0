@@ -1,0 +1,41 @@
+import generator.TreeNode;
+public class Solution1 {
+	  //lchild: it will get the maximum path from left subtree [any node to the root];
+	  //rchild: it will get the maximum path from right subtree [any node to the roog];
+	  //current: choose the maxmum from left or right. 
+	  public int maxPathSum1(TreeNode root) {
+	    int[] max = new int[]{Integer.MIN_VALUE};
+	    maxPathSum1(root, max);
+	    return max[0];
+	  }
+	  
+	  private int maxPathSum1(TreeNode root, int[] max) {
+	    if (root == null) {
+	      return 0;
+	    }
+	    int leftChild = Math.max(maxPathSum1(root.left, max), 0);
+	    int rightChild = Math.max(maxPathSum1(root.right, max), 0);
+	    int current = leftChild + rightChild+ root.key;
+	    max[0] = Math.max(max[0], current);
+	    return Math.max(leftChild, rightChild) + root.key;
+	  }
+	  
+	  public int maxPathSum(TreeNode root) {
+		    int[] max = new int[]{Integer.MIN_VALUE};
+		    maxPathSum1(root, max, 0);
+		    return max[0];
+		  }
+		  
+		  private int maxPathSum(TreeNode root, int[] max) {
+		    if (root == null) {
+		      return 0;
+		    }
+		    int leftChild = Math.max(maxPathSum1(root.left, max), 0);
+		    int rightChild = Math.max(maxPathSum1(root.right, max), 0);
+		    int current = leftChild + rightChild+ root.key;
+		    max[0] = Math.max(max[0], current);
+		    return Math.max(leftChild, rightChild) + root.key;
+		  }
+		
+
+}
