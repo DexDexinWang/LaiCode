@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.PriorityQueue;
+
+public class Solultion5 {
+
+	  public List<Integer> closest(int[] a, int[] b, int[] c, int k) {
+		    PriorityQueue<Unit> minHeap = new PriorityQueue<Unit>(2*k);
+		    minHeap.offer(new Unit(0, 0, 0, getTotal(a, b, c, 0, 0, 0)));
+		    for(int i = 1; i < k; i++) {
+		      Unit unit = minHeap.poll();
+		      if (unit.x + 1 < a.length) {
+		        minHeap.offer(new Unit (unit.x + 1, unit.y, unit.z, getTotal(a, b, c, unit.x + 1, unit.y, unit.z)));
+		      }
+		      if (unit.y + 1 < a.length) {
+		        minHeap.offer(new Unit (unit.x, unit.y + 1, unit.z, getTotal(a, b, c, unit.x, unit.y + 1, unit.z)));
+		      }
+		      if (unit.z + 1 < a.length) {
+		        minHeap.offer(new Unit (unit.x, unit.y, unit.z + 1, getTotal(a, b, c, unit.x, unit.y, unit.z + 1)));
+		      }
+		    }
+		    List<Integer> res = new ArrayList<>();
+		    res.add(0, minHeap.peek().x);
+		    res.add(0, minHeap.peek().y);
+		    res.add(0, minHeap.peek().z);
+		    return res;
+		  }
+		  
+		  private long getTotal(int[] a, int[] b, int[] c, int x, int y, int z) {
+		    return a[x]*a[x] + b[y]*b[y]+c[z]*c[z];
+		  }
+
+		  class Unit implements Comparable<Unit> {
+		    int x; 
+		    int y;
+		    int z;
+		    long value;
+		    public Unit(int x, int y, int z, long value) {
+		      this.x = x;
+		      this.y = y;
+		      this.z = z;
+		      this.value = value;
+		    }
+		    @Override
+		    public int compareTo(Unit other) {
+		      if (this.value == other.value) {
+		        return 0;
+		      }
+		      return this.value < other.value ? -1 : 1;
+		    }
+		  }
+}

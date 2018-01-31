@@ -1,0 +1,23 @@
+
+public class Solultion5 {
+
+	  class Unit implements Comparable<Unit> {
+		    int x; 
+		    int y;
+		    int z;
+		    float value;
+		    public Unit(int x, int y, int z, float value) {
+		      this.x = x;
+		      this.y = y;
+		      this.z = z;
+		      this.value = value;
+		    }
+		    @Override
+		    public int compareTo(Unit other) {
+		    	if (this.value == other.value) {
+		    		return 0;
+		    	}
+		      return this.value < other.value ? -1 : 1;
+		    }
+		  }
+}

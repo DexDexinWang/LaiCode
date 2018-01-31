@@ -1,0 +1,9 @@
+
+public class Solution6 {
+	public static void main(String[] args) {
+		int[] input1  = new int[]{1};
+		int[] input2 = new int[]{1};
+		Solution6 s = new Solution6();
+		s.reconstruct(input1, input2);
+	}
+}

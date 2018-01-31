@@ -1,5 +1,0 @@
-package inMemoryTest;
-
-public class File1 extends Entry1 {
-
-}

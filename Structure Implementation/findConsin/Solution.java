@@ -6,28 +6,55 @@ import generator.TreeNode;
 public class Solution {
 
 	public static void main(String[] args) {
-		TreeNode root = new TreeNode(10);
-		root.left = new TreeNode(5);
-		root.left.left = new TreeNode(3);
+		TreeNode root = new TreeNode(1);
+		root.left = new TreeNode(3);
+		root.left.left = new TreeNode(2);
 		root.left.right = new TreeNode(4);
-		root.right = new TreeNode(2);
-		root.right.left = new TreeNode(7);
-		root.right.right = new TreeNode(8);
+		root.right = new TreeNode(6);
+		root.right.left = new TreeNode(5);
+		root.right.right = new TreeNode(0);
 		root.print();
 		//same level, same parent
-		TreeNode c1 = root.left.right;
-		TreeNode c2 = root.left.left;
-		System.out.println(is(root,c1,c2));
+//		TreeNode c1 = root.left.right;
+//		TreeNode c2 = root.left.left;
+//		System.out.println(isCousin(root,c1.key,c2.key));
 		//same level, different parent;
-		TreeNode c3 = root.left.left;
-		TreeNode c4 = root.right.right;
-		System.out.println(is(root,c3,c4));
-		//differernt level;
-		TreeNode c5 = root.left;
-		TreeNode c6 = root.right.right;
-		System.out.println(is(root,c5, c6));
+
+		System.out.println(isCousin(root,9,6));
+
 
 	}
+
+	  public static boolean isCousin(TreeNode root, int a, int b) {
+	      	boolean[] findall = new boolean[]{false};
+			  	return isCusion(root, a, b, 0, findall) != -1 && findall[0] == true;
+			  }
+			  
+			  private static int isCusion(TreeNode root, int a, int b, int level, boolean[] findall) {
+			    if (root == null) {
+			      	return -1;
+			    }
+			    if (root.key == a || root.key == b) {
+	          if (level == 0) {
+	            return -1;
+	          } 
+			      return level;
+			    }
+			    
+			    int leftChild = isCusion(root.left, a, b, level + 1,findall);
+			    int rightChild = isCusion(root.right, a, b, level + 1,findall);
+			    if (leftChild!= -1 && rightChild!= -1) {
+			      if (leftChild != rightChild) {
+			        return -1;
+			      } else if (leftChild - level != 1) {
+			    	findall[0] = true;
+			        return level;
+			      } else {
+			        return -1;
+			      }
+			    } 
+			    return leftChild != -1 ? leftChild : rightChild;
+			  }
 	
 	public static boolean findConsin (TreeNode root, TreeNode c1, TreeNode c2) {
 		if (root == null) {
@@ -164,5 +191,6 @@ public class Solution {
 			}// end of outer while 
 			return false;
 		}
+
 
 }

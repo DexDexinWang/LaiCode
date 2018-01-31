@@ -3,13 +3,15 @@ import java.util.Arrays;
 public class Solution999 {
 
 	public static void main(String[] args) {
+		String test = "abcd";
+		System.out.print(test.substring(1, 3));
+	}
+	
+	
+	public static void printBinary(int value) {
 		Integer i = 127;
 		Integer j = 127;
 		System.out.println(i == j);
-	}
-	
-	public static void printBinary(int value) {
-
 	}
 	
 	public static void testMinHeap() {
