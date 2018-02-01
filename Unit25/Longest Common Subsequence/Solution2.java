@@ -18,7 +18,7 @@ public class Solution2 {
 	  //dp[j][0] = 0;
 	  //production rule:
 	  //dp[i][j] represent the longest common subsequence of the s and t from 0 to ith and 0 to jth.
-	  //dp[i][j] = dp[i - 1][j - 1]                 where s[i -1] == t[j-1]
+	  //dp[i][j] = dp[i - 1][j - 1] + 1                 where s[i -1] == t[j-1]
 	  //dp[i][j] = max(dp[i][j - 1], dp[i - 1][j])  
 	  public int longest(String s, String t) {
 	    int len1 = s.length();

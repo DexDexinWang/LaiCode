@@ -1,9 +1,11 @@
 import java.io.*;
+import java.util.Scanner;
+
 public class StreamTest {
 
 	public static void main(String[] args) {
 		try {
-			test3();
+			test4();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -74,5 +76,15 @@ public class StreamTest {
 				out.close();
 			}
 		}
+	}
+	
+	public static void test4() throws IOException {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Type some data for the program:");
+		String input = scan.nextLine();
+		String[] position = input.split(",");
+		int x = Integer.parseInt(position[0]);
+		int y = Integer.parseInt(position[1]);
+		System.out.println("X:" + x + "\tY:" + y);
 	}
 }

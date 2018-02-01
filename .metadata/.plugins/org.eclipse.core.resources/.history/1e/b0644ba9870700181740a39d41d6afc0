@@ -1,0 +1,13 @@
+
+public class PlatForm {
+	private final static int DEFAULT_SIZE = 10;
+	private final static int DEFAUTL_BOMBS = 10;
+	private int[][] platForm;
+	private boolean[][] visited;
+	private int bombs;
+	public PlatForm (int size) {
+		platForm = new int[size][size];
+		
+	}
+	
+}

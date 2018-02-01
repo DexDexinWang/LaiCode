@@ -1,0 +1,23 @@
+
+public class PlatForm {
+	private final static int DEFAULT_SIZE = 10;
+	private final static int DEFAUTL_BOMBS = 10;
+	private int[][] platForm;
+	private boolean[][] visited;
+	private int size;
+	private int bombs;
+	
+	public PlatForm (int size, int bombs) {
+		this.size = size;
+		this.bombs = bombs;
+		platForm = new int[size][size];
+		visited = new boolean[size][size];
+		setBooms();
+	}
+	
+	private void setBooms() {
+		for (int i = 0; i < bombs) {
+			for (int i = 0)
+		}
+	}
+}

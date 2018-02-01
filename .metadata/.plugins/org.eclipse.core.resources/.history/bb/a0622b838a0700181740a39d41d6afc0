@@ -1,0 +1,63 @@
+
+public class PlatForm {
+	private final static int DEFAULT_SIZE = 10;
+	private final static int DEFAUTL_BOMBS = 10;
+	private int[][] counter;
+	private boolean[][] platForm;
+	private boolean[][] visited;
+	private int size;
+	private int bombs;
+	
+	public PlatForm (int size, int bombs) {
+		this.size = size;
+		this.bombs = bombs;
+		counter = new int[size][size];
+		platForm = new boolean[size][size];
+		visited = new boolean[size][size];
+		setBooms();
+	}
+	
+	//randomly set the bombs.
+	private void setBooms() {
+		for (int i = 0; i < bombs;) {
+			int row = (int)Math.random() * (size);
+			int col = (int)Math.random() * (size);
+			if (!platForm[row][col]) {
+				platForm[row][col] = true;
+				i++;
+			}
+		}
+		countBombs();
+	}
+	
+	//count the bombs for each position.
+	private void countBombs() {
+		for(int i = 0; i < size; i++) {
+			for (int j = 0; j < size; j++) {
+				int count = 0;
+				for (int x = i - 1 ; x <= i + 1; x++) {
+					for (int y = j - 1; y <= j + 1; y++) {
+						if (x >= 0 && x < size && y > 0 && y < size && platForm[x][y]) {
+							count++;
+						}
+					}
+				}
+				counter[i][j] = count;
+			}
+		}
+	}
+	
+	public void click(int row, int col) {
+		
+	}
+	
+	public void print() {
+		System.out.println("============PlatForm==========");
+		for (int i = 0; i < size ; i++) {
+			for (int j = 0; j < size; j++) {
+				System.out.print(counter[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
+}
