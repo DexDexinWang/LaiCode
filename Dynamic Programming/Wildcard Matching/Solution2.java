@@ -2,7 +2,6 @@
 public class Solution2 {
 
 	public static void main(String[] args) {
-		System.out.println(match1("abbbccd","?*?d"));
 
 	}
 	/*
@@ -20,55 +19,39 @@ public class Solution2 {
 	 */
 	
 	//what: find whether the pattern and input are comparable.
-	public static boolean match(String input, String pattern) {
-		//how: 1. corner case
-		if (input.length() == 0) {
-			if (pattern.length() == 0 || pattern.charAt(0) == '?' || pattern.charAt(0) == '*' ) {
-				return true;
-			} else {
-				return false;
-			}
-		} else if (pattern.length() == 0) {
-			return false;
-		}
-		//2. check both first character
-		//2.1. same character or ?, do recursion.
-		//2.2. *, return true beucase the corner case solv the problem.
-		//2.3. different characters, return false;
-		if (pattern.charAt(0) == input.charAt(0) || pattern.charAt(0) == '?') {
-			return match(input.substring(1), pattern.substring(1));
-		} else if (pattern.charAt(0) == '*'){
-			return match(input.substring(1), pattern.substring(0));
-		} else {
-			return false;
-		}
-	}
-	//Time complexity: O(n)
-	//Space complexity: O(n)
-	
-	  public static boolean match1(String input, String pattern) { // input = "abbbccd" patern = "?*?*b"
-		    // Write your solution here.
-		    int m = input.length();
-		    int n = pattern.length();
-		    boolean[][] dp = new boolean[m+1][n+1]; //dp[i][j] means whether input and pattern match at index i-1 and j-1 respectively
-		    dp[0][0] = true;
-			for(int j=1; j<=n; j++) {
-				if(pattern.charAt(j-1)=='*'){
-					dp[0][j] = true;
-				} else {
-					break;
-				}
-			}
-			
-			for(int i=1; i<=m; i++) {
-				for(int j=1; j<=n; j++) {
-					if (pattern.charAt(j-1)  != '*') {
-						dp[i][j] = dp[i-1][j-1] && (input.charAt(i-1)==pattern.charAt(j-1) || pattern.charAt(j-1)=='?');
-					} else {
-						dp[i][j] = dp[i-1][j] || dp[i][j-1];
-					}
-				}
-			}
-			return dp[m][n];
-		  }
+
+	  //DP
+	  //base case: dp[0][0] = true; dp[0][j] = dp[0][j - 1] while pattern[j] = '*';
+	  //dp[i][j] represents whether the first i chars in input matches the first j chars in pattern.
+	  //dp[i][j] = dp[i - 1][j - 1] while input[i - 1] = pattern[j - 1] || pattern[j - 1] = '?'
+	  //dp[i][j] = dp[i - 1][j] || dp[i][j - 1] where pattern[j] = '*'
+	  //dp[i][j] = false  otherwise
+	  public boolean match(String input, String pattern) {
+	    //define 2D array for DP
+	    int len1 = input.length();
+	    int len2 = pattern.length();
+	    boolean[][] dp = new boolean[len1 + 1][len2 + 1];
+	    //base case
+	    dp[0][0] = true;
+			for(int j = 1; j <= len2; j++) {
+	      if (pattern.charAt(j - 1) == '*') {
+	        dp[0][j] = dp[0][j - 1];
+	      }
+	    }
+	    //induction rule
+	    for(int i = 1; i <= len1; i++) {
+	      for (int j = 1; j <= len2; j++) {
+	        if (input.charAt(i - 1) == pattern.charAt(j - 1) || pattern.charAt(j - 1) =='?') {
+	          dp[i][j] = dp[i - 1][j - 1];
+	        } else if (pattern.charAt(j - 1) =='*') {
+	          dp[i][j] = dp[i - 1][j] || dp[i][j - 1];
+	        } else {
+	          dp[i][j] = false;
+	        }
+	      }
+	    }
+	    return dp[len1][len2];
+	  }
+	  //Time Complexity: O(n^2)
+	  //Space Complexity: O(n^2)
 }

@@ -1,0 +1,34 @@
+
+public class Solution2 {
+
+	public static void main(String[] args) {
+		System.out.println(maxProduct(5));
+	}
+
+	  //Approach: solve it as DP
+	  //base case: dp[0] = 0;  dp[1] = 0;
+	  //induction rule: dp[i] represents the max product for i length rope.
+	  //dp[2] = max ( case 1: max(dp[2 - 1], 2 - 1) * 1;
+	  //dp[3] = max ( case 1: max(dp[3 - 1], 3 - 1) * 1, 
+	  //  						case 2: max(dp[3 - 2], 3 - 2) * 2);
+	  // ...
+	  //dp[i] = max (all cases) 
+	  //dp[i] = max (max (dp[i - k], i - k)  * k);
+	  public int maxProduct(int length) {
+	    //create an array to store the values
+	    int[] dp = new int[length + 1];
+	    dp[0] = 0;
+	    dp[1] = 1;
+	    //trverse all numbers
+	    for (int i = 2; i <= length; i++) {
+	      for (int j = 1; j < i; j++) { //j = 1 because it should cut at least once.
+	        dp[i] = Math.max(Math.max(dp[j], j) * (i - j), dp[i]);
+	      }
+	    }
+	    return dp[length];
+	  }
+	  
+	//Time complexity: O(n^2);
+	//Space complexity: O(n);
+	
+}

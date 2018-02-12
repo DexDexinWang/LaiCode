@@ -14,24 +14,22 @@ public class Solution1 {
 	 * @param array
 	 * @return
 	 */
-	public static int largestSum(int[] array) {
-		if (array.length == 0) {
-			return 0;
-		}
-		//the subset should be at least one size;
-		int prev = array[0];
-		int max = array[0];
-		for(int i = 1 ; i < array.length ; i++) {
-			if(prev >= 0) {
-				prev += array[i];
-			} else {
-				prev = array[i];
-			}
-			//[-5,-2,1,5] it should be updated each time.
-			max = Math.max(max, prev);
-		}
-		return max;
-	}
-
+	 public static int largestSum(int[] array) {
+		    //use two variables to save the current max and global max;
+		    int cur = array[0];
+		    int max = array[0];
+		    //traverse all values for induction rule.
+		    for(int i = 1 ; i < array.length; i++) {
+		      if (cur < 0) {
+		        cur = array[i];
+		      } else {
+		        cur += array[i];
+		      }
+		      max = Math.max(cur, max);
+		    }
+		    return max;
+		  }
+		  //time complexit:O(n);
+		  //space: O(1);
 
 }

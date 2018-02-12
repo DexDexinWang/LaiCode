@@ -5,33 +5,36 @@ public class Solution8 {
 		// TODO Auto-generated method stub
 
 	}
-	//base case:
-	//dp[0][1] = 0;
-	//dp[1][2] = 0;
-	//dp[2][3] = 0;
-	//dp[3][4] = 0;
-	//induction rule: 
-	//dp[i][j] = 
+	//approach: DP
+	//base case: dp[i][i] = 0;
+	//induction rule: dp[i][j] represents the minimum cost to move stone i to j;
+	//dp[i][j] = dp[i][k] + dp[k][j] + weights[i to j]
  	public int minCost(int[] stones) {
+		if (stones.length == 1) {
+			return 0;
+		}
+		//define 2D array to store cost
 		int len = stones.length;
 		int[][] cost = new int[len][len];
-		int[][] subSum = new int[len][len];
-		for(int i = 0; i < len ; i++) {
-			for(int j = i; j >= 0; j--) {
+		//define 2D array to store value for DP
+		int[][] dp = new int[len][len];
+		for(int i = len - 1; i >= 0; i--) {
+			for(int j = i; j < len; j++) {
 				if (i == j) {
-					cost[j][i] =0;
-					subSum[j][i] = stones[i];
-				} else {
-					subSum[j][i] = subSum[j][i-1] + stones[i];
-					cost[j][i] = Integer.MAX_VALUE;
-					for(int k = j; k < i; k++) {
-						cost[j][i]= Math.min(cost[j][i], cost[j][k] + cost[k + 1][i] + subSum[j][i]);
-					}
+					dp[i][j] = 0;
+					cost[i][j] = stones[i];
+					continue;
 				}
+				cost[i][j] = cost[i][j - 1] + stones[j]; 
+				dp[i][j] = Integer.MAX_VALUE;
+				for(int k = i; k < j; k++) {
+					dp[i][j] = Math.min(dp[i][j], dp[i][k] + dp[k + 1][j]);
+				}
+				dp[i][j] += cost[i][j];
 			}
-			
 		}
-		return cost[0][len - 1];
+		return dp[0][len - 1];
 	}
-
+ 	//Time complexity: O(n^2);
+ 	//Space complexity: O(n^2);
 }

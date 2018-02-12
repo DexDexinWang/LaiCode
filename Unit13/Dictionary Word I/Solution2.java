@@ -34,6 +34,6 @@ public class Solution2 {
 		}
 		return array[array.length - 1];
 	}
-	//Time complexity: O(n)
-	//Space complexity: O(1)
+	//Time complexity: O(n^3)
+	//Space complexity: O(n)
 }

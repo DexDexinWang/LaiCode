@@ -44,23 +44,31 @@ public class Solution3 {
 	//time complexity: O(n^k) where k is the largest valeu in A[n]
 	//space complexity: O(n)
 	
-	public static boolean canJump1(int[] array) {
+	  //approach: solve the problem as DP
+	  //base case: dp[i] = true; if it starts to jump from the last one. it should be ture;
+	  //induction rule: dp[i] = true			where dp[i + (0 to dp[i])] = true
+	  //								dp[i] = flase			other wise
+	  public static boolean canJump1(int[] array) {
 	    if (array.length == 1) {
-	        return true;
-	      }
-	      int len = array.length;
-	      boolean[] dp = new boolean[len];
-	      dp[len - 1] = true;
-	      for (int i = len - 2; i >= 0; i--) {
-	        for (int j = i + 1 ; j < len && j <= array[i] + i; j++) {
-	          if(dp[j]) {
-	            dp[i] = true;
-	            break;
-	          }
+	      return true;
+	    }
+	    //define an array to store boolean values.
+	    boolean[] dp = new boolean[array.length];
+	    //base case;
+	    dp[array.length - 1] = true;
+	    //traverse all values for indocution rule
+	    for (int i = array.length - 2; i >= 0; i--) {
+	      for (int j = i + 1; j < array.length && j <= array[i] + i; j++) {
+	        if (dp[j]) {
+	          dp[i] = true;
+	          break;
 	        }
 	      }
-	      return dp[0];
-	}
+	    }
+	    return dp[0];
+	  }
+	  //Time complexity: O(n^2); 
+	  //Space compleixty: O(n);
 	
 	 public boolean canJump2(int[] array) {
 		    if(array.length == 1) {

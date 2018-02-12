@@ -19,7 +19,7 @@ public class Solution1 {
 		int[][] matrix = new int[m][n];
 		for (int i = 0 ; i < m ; i++) {
 			for (int j = 0 ; j < n ; j++) {
-				if (i == 0 || j == 0) {
+				if (i == 0 && j == 0) {
 					matrix[i][j] = 1;
 				} else {
 					matrix[i][j] = matrix[i][j - 1] + matrix[i - 1][j];
@@ -30,4 +30,6 @@ public class Solution1 {
 		return matrix[m - 1][n - 1];
 	}
 
+	//Time complexity:O(n^2);
+	//Space complexity:O(n^2);
 }

@@ -1,0 +1,12 @@
+import generator.TreeNode;
+public class PrintAllPathes {
+
+	public static void main(String[] args) {
+
+	}
+	
+	private static void printAllPathes(root) {
+		
+	}
+	
+}

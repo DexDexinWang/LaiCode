@@ -5,6 +5,11 @@
 	<classpathentry kind="src" path="Wildcard Matching"/>
 	<classpathentry kind="src" path="Longest Palindromic Substring"/>
 	<classpathentry kind="src" path="Two Subsets With Min Difference"/>
+	<classpathentry kind="src" path="Minimum Path Sum"/>
+	<classpathentry kind="src" path="Possible Paths with Obstacles"/>
+	<classpathentry kind="src" path="Longest Valid Parentheses"/>
+	<classpathentry kind="src" path="Decode Ways"/>
+	<classpathentry kind="src" path="Regular Expression Matching"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

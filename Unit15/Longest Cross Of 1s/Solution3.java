@@ -108,4 +108,111 @@ public class Solution3 {
 		return max;
 	}
 	
+	
+	
+	
+	
+	
+	  //DP
+	  //Base case: 
+	  //upLeft[0][j] = matrix[0][j]
+	  //upLeft[i][0] = matrix[i][0]
+	  //upRight[0][j] = matrix[0][j]
+	  //..
+	  //downLeft[n - 1][j] = matrix[n - 1][j]
+	  //..
+	  //upLeft[n - 1][j] = matrix[n -1][j]
+	  //..
+	  //Induction Rule: 
+	  //upLeft[i][j] = upLeft[i - 1][j - 1] + 1 where upLeft[i][j] = 1;
+	  //upLeft[i][j] = 0 where upLeft[i][j] = 0;
+	  //..
+	  public int largest1(int[][] matrix) {
+	    int len1 = matrix.length;
+	    if (len1 == 0) {
+	      return 0;
+	    }
+	    int len2 = matrix.length;
+	    if (len2 == 0) {
+	      return 0;
+	    }
+	    int[][] upLeft = upLeft(matrix,len1,len2);
+	    int[][] upRight = upRight(matrix,len1,len2);
+	    int[][] downLeft = downLeft(matrix,len1,len2);
+	    int[][] downRight = downRight(matrix,len1,len2);
+	    int globalMax = 0;
+	    for(int i = 0; i < len1; i++) {
+	      for(int j = 0; j < len2; j++) {
+	        upLeft[i][j] = Math.min(upLeft[i][j], upRight[i][j]);
+	        upLeft[i][j] = Math.min(upLeft[i][j], downLeft[i][j]);
+	        upLeft[i][j] = Math.min(upLeft[i][j], downRight[i][j]);
+	        globalMax = Math.max(globalMax, upLeft[i][j]);
+	      }
+	    }
+	    return globalMax;
+	  }
+	  private int[][] upLeft(int[][] matrix, int len1, int len2) {
+	    int[][] dp = new int[len1][len2];
+	    for(int i = 0; i < len1; i++) {
+	      for(int j = 0; j < len2; j++) {
+	        if (i == 0 || j == 0) {
+	          dp[i][j] = matrix[i][j];
+	        } else if (matrix[i][j] == 1) {
+	          dp[i][j] = dp[i - 1][j - 1] + 1;
+	        } else {
+	          dp[i][j] = 0;
+	        }
+	      }
+	    }
+	    return dp;
+	  }
+	  
+	  private int[][] upRight(int[][] matrix, int len1, int len2) {
+	    int[][] dp = new int[len1][len2];
+	    for(int i = 0; i < len1; i++) {
+	      for(int j = len2 - 1; j >= 0; j--) {
+	        if (i == 0 || j == len2 - 1) {
+	          dp[i][j] = matrix[i][j];
+	        } else if (matrix[i][j] == 1) {
+	          dp[i][j] = dp[i - 1][j + 1] + 1;
+	        } else {
+	          dp[i][j] = 0;
+	        }
+	      }
+	    }
+	    return dp;
+	  }
+	  
+	  private int[][] downLeft(int[][] matrix, int len1, int len2) {
+	    int[][] dp = new int[len1][len2];
+	    for(int i = len1 - 1; i >= 0; i--) {
+	      for(int j = 0; j < len2; j++) {
+	        if (i == len1 - 1 || j == 0) {
+	          dp[i][j] = matrix[i][j];
+	        } else if (matrix[i][j] == 1) {
+	          dp[i][j] = dp[i + 1][j - 1] + 1;
+	        } else {
+	          dp[i][j] = 0;
+	        }
+	      }
+	    }
+	    return dp;
+	  }
+	  
+	  private int[][] downRight(int[][] matrix, int len1, int len2) {
+	    int[][] dp = new int[len1][len2];
+	    for(int i = len1 - 1; i >= 0; i--) {
+	      for(int j = len2 - 1; j >= 0; j--) {
+	        if (i == len1 - 1 || j == len2 - 1) {
+	          dp[i][j] = matrix[i][j];
+	        } else if (matrix[i][j] == 1) {
+	          dp[i][j] = dp[i + 1][j + 1] + 1;
+	        } else {
+	          dp[i][j] = 0;
+	        }
+	      }
+	    }
+	    return dp;
+	  }
+	
 }

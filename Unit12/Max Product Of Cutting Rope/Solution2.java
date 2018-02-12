@@ -5,30 +5,26 @@ public class Solution2 {
 		System.out.println(maxProduct(5));
 	}
 
-	/**
-	 * Base case: M[1] = 0;  that is invalid, because one meter could not be cut
-	 * Induction rule:
-	 * 1. M[i] = presents that the max number from multiple cases in one cut.
-	 * 2. M[i] = max(case1, case2, case .... case[i-1]);
-	 * @param length
-	 * @return
-	 */
-	public static int maxProduct(int length) {
-		if (length <= 1) {
-			return 0;
-		}
-		int[] M =new int[length + 1];
-		M[0] = 0;
-		M[1] = 0;
-		for(int i = 1 ; i <= length ; i++) {
-			int curMax = 0;
-			for (int j = 1; j < i ; j++) {
-				curMax = Math.max(curMax, Math.max(M[j], j) * (i - j));
-			}
-			M[i] = curMax;
-		}
-		return M[length];
-	}
+	  //approach: solve it as a dp 
+	  //base case: dp[0] = 0; dp[1] = 1
+	  //induction rule: dp[i] represents the max product for i length rope;
+	  // len = 2 ====> case 1: dp[2] = max(dp[2 - 1],2) * 1 
+	 	// len = 3 ====> max (case 1: dp[3] = max(dp[3 - 1],2) * 1  case 2: dp[3] = max(dp[3 - 2], 1) * 2))
+	  // dp[i] = max(dp[j],j) * (i-j) where 0 < j < i
+	  public static int maxProduct(int length) {
+	    //define an array to store values 
+	    int[] dp = new int[length + 1];
+	    dp[0] = 0;
+	    dp[1] = 0; 
+	    //traverse all value for induction rule;
+	    for (int i = 2; i <= length; i++) {
+	      for (int j = 1; j < i; j++) {
+	        dp[i] = Math.max(Math.max(dp[j],j) * (i-j),dp[i]);
+	      }
+	    }
+	    return dp[length];
+	  }
+	  
 	//Time complexity: O(n^2);
 	//Space complexity: O(n);
 	

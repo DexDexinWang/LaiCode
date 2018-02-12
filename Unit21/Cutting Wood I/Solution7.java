@@ -1,9 +1,11 @@
+import java.util.Arrays;
 
 public class Solution7 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Solution7 s = new Solution7();
+		int[] input1 = new int[]{1,3,7,9,13};
+		System.out.println(s.minCost2(input1, 16));
 	}
 
 	  //Assumption: all numbers in cuts are smaller than length.
@@ -39,7 +41,34 @@ public class Solution7 {
 				}
 			}
 		}
+	    System.out.println(Arrays.toString(helper));
 		return dp[0][helper.length - 1];
 	}
 
+	  public int minCost2(int[] cuts, int length) {
+		    int len = cuts.length;
+		    //define one dimensional array to store weight for each wood piece; 
+		    int[] weights = new int[len + 2];
+		    weights[0] = 0;
+		    for(int i = 0; i < len; i++) {  
+		      weights[i + 1] = cuts[i];
+		    }
+		    weights[len + 1] = length;
+		    //define an two dimensional array to store values. 
+		    int[][] dp = new int[len + 2][len + 2];
+		    for (int i = len; i >= 0; i--) {
+		      for (int j = i + 1; j <= len + 1; j++) {
+		        if (i + 1 == j) {
+		          dp[i][j] = 0;
+		        } else {
+			        dp[i][j] = Integer.MAX_VALUE;
+			        for(int k = i + 1 ; k < j; k++) {
+			          dp[i][j] = Math.min(dp[i][j], dp[i][k] + dp[k][j]);
+			        }
+			        dp[i][j] += weights[j] - weights[i];
+		        }
+		      }
+		    }
+		    return dp[0][len + 1];
+		  }
 }

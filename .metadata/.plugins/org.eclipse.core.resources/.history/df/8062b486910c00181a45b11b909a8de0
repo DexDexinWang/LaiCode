@@ -1,0 +1,43 @@
+import java.io.IOException;
+import java.util.List;
+import java.util.ArrayList;
+
+import generator.TreeNode;
+import generator.TreeRandom;
+public class Solution888 {
+
+	public static void main(String[] args) {
+		
+	}
+	//base case: dp[0] = array[0];
+	//Induction Rule: 
+	//dp[i] represents the maximum sum from 0th to ith element included ith;
+	//dp[i] = dp[i - 1] + array[i]		dp[i - 1] >= 0;
+	//dp[i] = array[i]					dp[i - 1] < 0;
+	
+	public int getMax(int[] array) {
+		if (array == null || array.length == 0) {
+			return 0;
+		}
+		int begin = 0;
+		int globalBegin = 0;
+		int globalEnd = 0;
+		int globalMax = array[0];
+		int cur = array[0];
+		
+		for (int i = 1 ; i < array.length ; i++) {
+			if (cur >= 0) {
+				cur += array[i];
+			} else {
+				cur = array[i];
+			}
+			if (cur > globalMax) {
+				globalMax = cur;
+				globalBegin = begin;
+				globalEnd = end;
+			}
+			
+			}
+		}
+	}
+}

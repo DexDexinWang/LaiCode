@@ -1,0 +1,42 @@
+import java.io.IOException;
+
+import generator.TreeNode;
+import generator.TreeRandom;
+public class Solution888 {
+
+	public static void main(String[] args) {
+			test2();
+	}
+	
+	private static void test2()  {
+			test1();
+	}
+	
+	private static void test1() {
+		System.out.println("Exe");
+		if (true) {
+			throw new NullPointerException();
+		}
+	}
+	
+	public static List<Integer> factors(int n) {
+		List res = new ArrayList<>();
+		factor(n, new ArrayList<>(), res);
+			return res;
+		}
+		public static void factor(int n, List tmp, List> res) {
+		if (n == 1) {
+		Collections.sort(tmp);
+		if (!res.contains(tmp)) {
+		res.add(new ArrayList<>(tmp));
+		}
+		return;
+		} for (int i = 2; i <= n; i++) {
+		if (n % i == 0) {
+		tmp.add(i);
+		factor(n / i, tmp, res);
+		tmp.remove(tmp.size() - 1);
+		}
+		} 
+	}
+}

@@ -37,5 +37,33 @@ public class Solution1 {
 		return M[0];
 	}
 
-
+	
+	  //approach: solve the problem as DP
+	  //base case: dp[0] = 0;
+	  //induction rule: dp[i] represents the minimum steps to jump from 0th to ith include i;
+	  //dp[i] = min (dp[k]) where dp[k] is reachable from k to dp[i];
+	  //dp[i] =  -1 not reachable.
+	  public int minJump1(int[] array) {
+	    if (array.length == 1) {
+	      return 0;
+	    }
+	    //define an array to store value for DP
+	    int[] dp = new int[array.length];
+	    //base case;
+	    dp[0] = 0;
+	    //for loop for induction rule 
+	    for(int i = 1; i < array.length; i++) {
+	      dp[i] = -1; // means unreachable 
+	      for (int j = i - 1; j >=0; j--) {
+	        if (array[j] + j >= i && dp[j]!= -1) {
+	          if (dp[i] == -1 || dp[i] > dp[j] + 1) {
+	            dp[i] = dp[j] + 1;
+	          }
+	        }
+	      }
+	    }
+	    return dp[array.length - 1];
+	  }
+	  //Time complexity: O(n^2);
+	  //Spcae complexity: O(n);
 }

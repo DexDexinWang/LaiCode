@@ -1,0 +1,27 @@
+import java.util.Deque;
+import java.util.LinkedList;
+
+import generator.TreeNode;
+public class PrintAllPathes {
+
+	public static void main(String[] args) {
+
+	}
+	//solve the problem by post order traversal with previous node and current node. 
+	//1. prev = null, root, go down.
+	//2. prev = parent, go down.
+	//3. prev = left or right, go up.
+	private static void printAllPathes(TreeNode root) {
+		if (root == null) {
+			return;
+		}
+		TreeNode prev = null;
+		TreeNode current = root;
+		Deque<TreeNode> stack = new LinkedList<TreeNode>();
+		stack.offer(root);
+		while(!stack.isEmpty()) {
+			if ()
+		}
+	}
+	
+}

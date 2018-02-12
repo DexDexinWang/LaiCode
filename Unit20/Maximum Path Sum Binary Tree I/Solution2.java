@@ -16,7 +16,7 @@ public class Solution2 {
 	  public static int maxPathSum(TreeNode root) {
 		  int[] max = new int[] {Integer.MIN_VALUE};
 		  maxPathSumHelper(root, max);
-		  return max[0] == Integer.MIN_VALUE ? 0 : max[0];
+		  return max[0];
 	  }
 	  
 	  public static int maxPathSumHelper(TreeNode root, int[] max) {

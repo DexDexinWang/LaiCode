@@ -1,6 +1,0 @@
-
-public class MyMap<K,V> {
-	K[] array;
-	list<K> array;
-	MyNode<K,V>[] array;
-}
