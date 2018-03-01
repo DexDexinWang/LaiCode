@@ -2,28 +2,31 @@
 public class Solution7 {
 
 	public static void main(String[] args) {
-		int[] input = {4,2,1,3,0,0};
-		System.out.println(minJump(input,2));
+		int[] input = {6,0,2,0,1,0,4};
+		Solution7 s = new Solution7();
+		System.out.println(s.minJump(input,2));
 	}
 
-	public static int minJump(int[] array, int index) {
-		int len = array.length;
-		int[] dp = new int[len];
-		dp[len - 1] = 0;
-		for (int i = len - 2; i >= index ; i--) {
+	
+	public int minJump(int[] array, int index) {
+		int[] minStepsToEnd = minJump(array);
+	}
+	
+	//Solve the problem with DP and 1D array;
+	//dp[i] represents the minimum jumps from 0 to ith;
+	//dp[end] = 0;
+	//dp[i] = min(dp[k] + 1)    
+	private int[] minJump(int[] array) {
+		int[] dp = new int[array.length];
+		dp[array.length - 1] = 0;
+		for(int i = array.length - 2; i >= 0; i--) {
 			dp[i] = -1;
-			for(int j = i + 1 ; j < len && j <= array[i] + i ; j++) {
-				if (dp[i] == -1) {
-					dp[i] = dp[j];
-				} else if (dp[j] != -1 && dp[j] < dp[i]) {
-					dp[i] = dp[j];
+			for(int j = 1; j <= array[i] && i + j <= array.length - 1 ; j++) {
+				if (dp[i + j] != -1) {
+					dp[i] = Math.min(dp[i], dp[i + j] + 1);
 				}
 			}
-			if(dp[i] != -1) {
-				dp[i]++;
-			}
 		}
-		return dp[index];
+		return dp;
 	}
-
 }

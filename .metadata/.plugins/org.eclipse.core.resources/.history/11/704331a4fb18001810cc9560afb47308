@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Solution4 {
+
+	public static void main(String[] args) {
+		Solution4 s = new Solution4();
+		s.printCounter("i love computer science and data science do they love me");
+	}
+	
+	public void printCounter(String string) {
+		if (string == null || string.length() == 0) {
+			return;
+		}
+		//get all words.
+		String[] str = string.split(" ");
+		//count for each word
+		Map<String, Integer> counter = new HashMap<String, Integer>();
+		for(String st: str) {
+			counter.put(st, counter.getOrDefault(st, 0) + 1);
+		}
+		//continue sort
+		ArrayList<String>[] array = (ArrayList<String>[])new ArrayList[str.length];
+		for(Map.Entry<String, Integer> entry: counter.entrySet()) {
+			int index = entry.getValue();
+			if (array[index] == null) {
+				array[index] = new ArrayList<String>();
+			}
+			array[index].add(entry.getKey());
+		}
+		
+		for(int i = str.length - 1; i >=0 ; i++) {
+			if (array[i] != null) {
+				for(String printString: array[i]) {
+					
+				}
+			}
+		}
+		
+	} 
+}

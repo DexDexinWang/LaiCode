@@ -6,8 +6,8 @@ import java.util.Map;
 public class Solution9 {
 
 	public static void main(String[] args) {
-		String input2 = "aaa";
-		String input1 = "a";
+		String input2 = "bacbabc";
+		String input1 = "abc";
 		System.out.println(allAnagrams2(input1,input2));
 	}
 	//what: find each string permutation in s that is equal to l and get the index of the begining of the permutation.	
@@ -63,43 +63,42 @@ public class Solution9 {
 	//Space Complexity: O(m)
 	
  	public static List<Integer> allAnagrams2(String s, String l) {
- 	 	  List<Integer> res = new ArrayList<Integer>();
- 	 	  if (s.length() > l.length()) {
- 	 	    return res;
- 	 	  }
- 	 	  Map<Character, Integer> map = new HashMap<Character, Integer>();
- 	 	  for(Character c : l.toCharArray()) {
- 	 	    map.put(c, map.getOrDefault(c,0) + 1);
- 	 	  }
- 	 	  int counter = 0;
- 	 	  //loop
- 	 	  for (int i = 0 ; i < l.length() ; i ++) {
- 	 	    Character temp = l.charAt(i);
- 	 	    Integer num = map.get(temp);
- 	 	    if (num != null) {
- 	 	      map.put(temp, num - 1);
- 	 	      if (num == 1) {
- 	 	        counter++;
- 	 	      }
- 	 	    }
- 	 	    
- 	 	    if (i >= s.length()) {
- 	 	      temp = l.charAt(i - s.length());
- 	 	      num = map.get(temp);
- 	 	      if (num != null) {
- 	 	        map.put(temp, num + 1);
- 	 	        if(num == 0) {
- 	 	          counter--;
- 	 	        }
- 	 	      }
- 	 	    }
- 	 	    
- 	 	    if (counter == map.size()) {
- 	 	      res.add(i-s.length() + 1);
- 	 	    }
- 	 	  }
- 	 	  return res;
- 	 	}
+ 	    List<Integer> res = new ArrayList<>();
+ 	    Map<Character, Integer> map = new HashMap<>();
+ 	    for(Character ch: s.toCharArray()) {
+ 	      map.put(ch,map.getOrDefault(ch, 0) + 1);
+ 	    }
+ 	    int counter = map.size();
+ 	    for(int i = 0; i < l.length(); i++) {
+ 	      Integer nums = map.get(l.charAt(i));
+ 	      if (nums != null) {
+ 	      	if (nums == 1) {
+ 				counter--;
+ 	        } else if (nums == 0) {
+ 	        	counter++;
+ 	        }
+ 	      	
+ 	        map.put(l.charAt(i), --nums);
+ 	      }
+ 	      int old = i - s.length();
+ 	      if (old >= 0) {
+ 	        nums = map.get(l.charAt(old));
+ 	        if (nums != null) {
+ 	          if (nums == -1) {
+ 	            counter--;
+ 	          } else if (nums == 0) {
+ 	        	  counter++;
+ 	          }
+ 	          map.put(l.charAt(old), ++nums);
+ 	        }
+ 	      }
+	      if (counter == 0) {
+	 	     res.add(i - s.length() + 1);
+	 	  }
+ 	        
+ 	      }
+ 	    return res;
+ 	}
 
 
 }

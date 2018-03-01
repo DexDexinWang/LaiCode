@@ -1,0 +1,41 @@
+import java.util.Deque;
+import java.util.LinkedList;
+
+public class Solution4 {
+
+	public static void main(String[] args) {
+
+	}
+	
+	 public int evalRPN(String[] tokens) {
+		    if (tokens == null || tokens.length == 0) {
+		      return 0;
+		    }
+		    Deque<Integer> stack = new LinkedList<>();
+		    for(String str: tokens) {
+		      if (str == "+") {
+		        Integer x = stack.pollFirst();
+		        Integer y = stack.pollFirst();
+		        stack.offerFirst(y + x);
+		      } else if (str == "-") {
+		        Integer x = stack.pollFirst();
+		        Integer y = stack.pollFirst();
+		        stack.offerFirst(y - x);
+		      } else if (str == "/") {
+		        Integer x = stack.pollFirst();
+		        Integer y = stack.pollFirst();
+		        stack.offerFirst(y/x);
+		      } else if (str == "*") {
+		        Integer x = stack.pollFirst();
+		        Integer y = stack.pollFirst();
+		        stack.offerFirst(y * x);
+		      } else {
+		        stack.offerFirst(Integer.valueOf(str));
+		      }
+		    }
+		    return stack.peekFirst();
+		  }
+	 //Time complexity: O(n)
+	 //Space complexity: O(n);
+
+}

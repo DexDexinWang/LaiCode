@@ -1,0 +1,31 @@
+
+public class Solution14 {
+
+	public static void main(String[] args) {
+		Solution14 s = new Solution14();
+		int[] input1 = new int[]{1,2,5};
+		System.out.println(s.ways(input1, 5));
+	}
+	  //solve the problem with DP and 2D Array;
+	  //dp[i][j] represents how many ways of combinations with coins[0] to coins[i] that is equal to j
+	  //dp[i][0] = 1;
+	  //dp[i][j] = 1 where coins[i] >= j;
+	  //dp[i][j] = dp[i - 1][j] + dp[i][j - coins[i]] otherwise
+	  public int ways(int[] coins, int amount) {
+	    int[][] dp = new int[coins.length][amount + 1];
+	    for(int i = 0; i < coins.length; i++) {
+	      for(int j = 0; j <= amount; j++) {
+	        if (j == 0) {
+	          dp[i][j] = 1;
+	        } else if (i == 0) {
+	          dp[i][j] = dp[i][j - 1];
+	        } else if (coins[i] >= j) {
+	          dp[i][j] = 1;
+	        } else {
+	          dp[i][j] = dp[i -1][j] + dp[i][j - coins[i]];
+	        }
+	      }
+	    }
+	    return dp[coins.length - 1][amount];
+	  }
+}

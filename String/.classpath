@@ -4,6 +4,10 @@
 	<classpathentry kind="src" path="One Edit Distance"/>
 	<classpathentry kind="src" path="Least Insertions To Form A Palindrome"/>
 	<classpathentry kind="src" path="Smallest Substring Containing All Characters Of Another String"/>
+	<classpathentry kind="src" path="Word Count"/>
+	<classpathentry kind="src" path="SameKLenghtSubString"/>
+	<classpathentry kind="src" path="Test"/>
+	<classpathentry kind="src" path="SubStringWIthOnlyOneRepeatedChar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

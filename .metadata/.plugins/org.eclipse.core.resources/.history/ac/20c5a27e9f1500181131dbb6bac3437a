@@ -1,0 +1,15 @@
+
+public class Solution5 {
+
+	public static void main(String[] args) {
+
+	}
+	
+	public int[] getTriangle(int[] input) {
+		if (input == null || input.length == 0) {
+			return input;
+		}
+		
+	}
+
+}

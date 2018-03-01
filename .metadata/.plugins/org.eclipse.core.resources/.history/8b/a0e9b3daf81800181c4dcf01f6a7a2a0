@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Solution4 {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	public void printCounter(String string) {
+		if (string == null || string.length() == 0) {
+			return;
+		}
+		//get all words.
+		String[] str = string.split(" ");
+		//count for each word
+		Map<String, Integer> counter = new HashMap<String, Integer>();
+		for(String st: str) {
+			counter.put(st, counter.getOrDefault(st, 0) + 1);
+		}
+		//continue sort
+		List<String>[] res = new ArrayList<String>[10];
+		
+	} 
+}

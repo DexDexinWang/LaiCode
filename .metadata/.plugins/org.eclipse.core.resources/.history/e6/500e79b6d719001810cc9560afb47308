@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Testing999 {
+
+	public static void main(String[] args) {
+		Testing999 t = new Testing999();
+	}
+
+	
+		public List<List<Integer>> combinations(int target, int[] coins) {
+		int moneyLeft = target;
+		List<List<Integer>> result = new ArrayList<>();
+		int level = 0;
+		List<Integer> sol = new ArrayList<>();
+		DFS(coins, result, moneyLeft, level, sol);
+		return null;
+		}
+
+		public void DFS(int[] coins, List<List<Integer>> result, int moneyLeft, int level, List<Integer> sol){
+		if(level == coins.length ){
+		if(moneyLeft == 0){
+		result.add(new ArrayList<Integer>(sol));
+		return;
+		}
+		return;
+		} 
+		int i = 0;
+		sol.set(level, i);
+		DFS(coins, result, moneyLeft, level + 1, sol);
+		while(moneyLeft >= coins[level]){
+		moneyLeft = moneyLeft - coins[level];
+		i++;
+		sol.set(level, i);
+		DFS(coins, result, moneyLeft, level + 1, sol);
+		}
+		}
+		
+}

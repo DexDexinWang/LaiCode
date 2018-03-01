@@ -1,14 +1,18 @@
 import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
 
 import generator.TreeNode;
 import generator.TreeRandom;
 public class Solution888 {
 
 	public static void main(String[] args) {
-		int[] input = new int[]{-10,-2,-3,-4,-1,-3,-2};
-		System.out.println(getMax(input));
+		Deque<Integer> test = new LinkedList<>();
+		System.out.println(test.peekFirst());
+//		int[] input = new int[]{-10,-2,-3,-4,-1,-3,-2};
+//		System.out.println(getMax(input));
 	}
 	//base case: dp[0] = array[0];
 	//Induction Rule: 

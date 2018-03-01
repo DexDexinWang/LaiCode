@@ -1,0 +1,22 @@
+
+public class Solution7 {
+
+	public static void main(String[] args) {
+		int[] input = {6,0,2,0,1,0,4};
+		Solution7 s = new Solution7();
+		System.out.println(s.minJump(input,2));
+	}
+
+	
+	public int minJump(int[] array, int index) {
+		int[] minStepsToEnd = minJump(array);
+	}
+	
+	//Solve the problem with DP and 1D array;
+	//dp[i] represents the minimum jumps from 0 to ith;
+	//dp[end] = 0;
+	//dp[i] = dp[i - 2] 
+	private int[] minJump(int[] array) {
+		int[] dp = new int[array.length];
+	}
+}

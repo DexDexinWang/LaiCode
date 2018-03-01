@@ -46,10 +46,11 @@ public class Solution4 {
 				if(!visited.containsKey(nei)) {
 					visited.put(nei, groupNei);
 					que.offer(nei);
-				} else if (visited.containsKey(nei))
+				} else if (visited.get(nei)!= groupNei){
 					return false;
 				}
 			}
+		}
 		return true;
 	}
 	//Time Complexity: O(n);

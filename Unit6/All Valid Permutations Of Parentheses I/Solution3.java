@@ -10,7 +10,8 @@ public class Solution3 {
 	public static void main(String[] args) {
 		System.out.println(validParentheses(3));
 	}
-	//what: find all possible pairs where the the number of left parentheses is more then the number of right parenthese 
+	////2*n, it make decision to choose '(' or ')' for the ith position. 
+	  //2 branches, add '(' or ')'; 
 	public static List<String> validParentheses(int n) {
 		List<String> res = new LinkedList<String>();
 		//2. create temporary space to save pair values;

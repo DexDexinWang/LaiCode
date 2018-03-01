@@ -1,0 +1,10 @@
+
+public class Testing999 {
+
+	public static void main(String[] args) {
+		String s3 = null;
+		String s4 = s3 + 2;
+		System.out.println(s4);
+	}
+
+}

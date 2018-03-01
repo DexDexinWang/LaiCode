@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.PriorityQueue;
+
+import PQwithCollectionTest.Cell;
+
+public class PQwithCollectionInteger {
+	
+	public static void main(String[] args) {		
+		List<IntegerMax> list = new ArrayList<>();
+		list.add(new Cell(1));
+		list.add(new Cell(2));
+		PriorityQueue<Cell> heap = new PriorityQueue<>(list);
+		System.out.println(heap.poll().value);
+	}
+	
+	class IntegerMax extends Integer {
+		
+	}
+}

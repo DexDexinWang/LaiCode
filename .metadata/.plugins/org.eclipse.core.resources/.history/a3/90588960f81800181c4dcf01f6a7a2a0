@@ -1,0 +1,20 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class Solution4 {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	public void printCounter(String string) {
+		if (string == null || string.length() == 0) {
+			return;
+		}
+		String[] str = string.split(" ");
+		Map<String, Integer> counter = new HashMap<String, Integer>();
+		for(String st: str) {
+			counter.put(st, counter.getOrDefault(st, 0) + 1);
+		}
+	} 
+}

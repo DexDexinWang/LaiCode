@@ -1,0 +1,29 @@
+import java.util.List;
+import java.util.PriorityQueue;
+
+public class PQwithCollectionTest {
+
+
+	public class HeapTest {
+		public static void main(String[] args) {		
+			List<Cell> list = new ArrayList<>();
+			list.add(new Cell(1));
+			list.add(new Cell(2));
+			PriorityQueue<Cell> heap = new PriorityQueue<>(list);
+			System.out.println(heap.poll().value);
+		}
+	}
+	class Cell implements Comparable<Cell>{
+		int value;
+		public Cell(int value) {
+			this.value = value;
+		}
+		@Override
+		public int compareTo(Cell c1) {
+			if (this.value == c1.value) {
+				return 0;
+			}
+			return this.value > c1.value? -1:1;  //for max heap
+		}
+	}
+}

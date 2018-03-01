@@ -1,0 +1,53 @@
+
+public class Solution1 {
+	Class TreeNode {
+		TreeNode left;
+		TreeNode right;
+		int key;
+		TreeNode(int key) {
+			this.key = key;
+		}
+	}
+
+	public  TreeNode getSecondLargest(TreeNode root) {
+		TreeNode largest = getParentLargest(root);
+		if (largest == null) {
+			return null;
+	}
+	if (largest.right != null) {
+		if (largest.right.left != null) {
+	return findLargestSmaller(largest.right);
+		} else {
+			return largest;
+	}
+	} else if (largest.left != null) {
+			return findLargestSmaller(root);
+	} else {
+		return largest;
+	}
+
+	}
+
+	}
+
+	private TreeNode getParentLargest(TreeNode root) {
+		if (root == null) {
+			return null;
+	}
+	TreeNode res = root;
+	while(root.right != null){
+		res = root;
+			root = root.right;
+	}
+	return res;
+	}
+
+	private TreeNode findLargestSmaller(TreeNode root) {
+		while (root.right != null) {
+			root = root.right;
+	}
+	return root;
+	}
+
+
+}

@@ -9,7 +9,9 @@ public class Solution1 {
 		String input = "aba";
 		System.out.println(permutations(input));
 	}
-	//what: 1. change each unique character`s position to get the different permucation. 
+	  //DFS
+	  //N levels, it should consider to choose one character to be added for final result
+	  //N` branches, it means the remining characters.
 	public static List<String> permutations(String set) {
 		List<String> res = new ArrayList<String>();
 		//how: 1. corner case
@@ -26,6 +28,7 @@ public class Solution1 {
 		//3.1. base case
 		if (index == array.length) {
 			res.add(new String(array));
+			return;
 		}
 		Set<Character> unique = new HashSet<Character>();
 		//3.2 check each character after the current character
@@ -45,5 +48,5 @@ public class Solution1 {
 		array[j] = temp;
 	}
 	//Time complexity: O(n!)
-	//Space complexity: O(1) in-place
+	//Space complexity: O(n) call stack
 }

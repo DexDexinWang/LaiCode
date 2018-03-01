@@ -1,0 +1,13 @@
+
+public class Solution7 {
+
+	public static void main(String[] args) {
+		int[] input = {6,0,2,0,1,0,4};
+		System.out.println(minJump(input,2));
+	}
+
+	public static int minJump(int[] array, int index) {
+		
+	}
+
+}

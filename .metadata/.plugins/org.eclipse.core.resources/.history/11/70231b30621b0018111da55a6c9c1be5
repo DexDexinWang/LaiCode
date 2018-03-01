@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public List<String> SubStringWIthOnlyOneRepeatedChar(String s, int k) {
+		List<String> result= new ArrayList<String>();
+		if(s==null||s.length()==0||s.length()<k){
+			return result;
+		}
+		int charCount[]= new int[26];
+		int len=s.length();
+		int count=0;
+		for(int i=0;i<len;i++){
+		if(charCount[s.charAt(i)-'a']==0) {
+			count++;
+		}
+		charCount[s.charAt(i)-'a']++;
+		if(i>=k-1){
+		int startIndex=i-k+1;
+		if(count==k-1)
+		result.add(s.substring(startIndex,i+1));
+		charCount[s.charAt(startIndex)-'a']--;
+		if(charCount[s.charAt(startIndex)-'a']==0)
+		count--;
+		}	
+		}
+		return result;
+	}
+}

@@ -1,0 +1,16 @@
+import java.util.Deque;
+import java.util.LinkedList;
+
+import generator.TreeNode;
+import generator.TreeRandom;
+
+public class Solution2 {
+
+	public static void main(String[] args) {
+		TreeNode root = TreeRandom.treeGen(5, null); 
+	}
+
+	public Deque<Integer> getNodesInColumns(TreeNode root) {
+		Deque<Integer> res = new LinkedList<Integer>(); 
+	}
+}

@@ -10,7 +10,10 @@ public class Solution2 {
 		String input = "abc";
 		System.out.println(permutations(input));
 	}
-	//what: find each possible permutations 
+	
+	  //N leves, choose one character to be connected as final value.
+	  //N` statics, it means the length of the remaining characters.
+	
 	public static List<String> permutations(String set) {
 		List<String> res = new LinkedList<String>();
 		//how: 1.corner case
@@ -26,7 +29,7 @@ public class Solution2 {
 	private static void helper(char[] array, int index, List<String> res) {
 		//3.1 base case
 		if (index == array.length) {
-			res.add(array.toString());
+			res.add(new String(array));
 			return;
 		}
 		for (int i = index; i < array.length ; i++) {
@@ -44,5 +47,5 @@ public class Solution2 {
 		array[j] = temp;
 	}
 	//Time Complexity: O(n!);
-	//Time Complexity: O(n^2) in-place;
+	//Time Complexity: O(n) call stack 
 }

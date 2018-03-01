@@ -1,0 +1,13 @@
+
+public class Solution4 {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	public void printCounter(String string) {
+		if (string == null && string.length() == 0) {
+			
+		}
+	}
+}

@@ -46,7 +46,7 @@ public class Solution4<K, V> {
 	      return null;
 	    } else {
 		  updateHead(target);
-	      return target.value;
+	      return (V) target.value;
 	    }
 	  }
 	  

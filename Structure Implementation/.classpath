@@ -7,7 +7,6 @@
 	<classpathentry kind="src" path="Testing"/>
 	<classpathentry kind="src" path="LinkedList Operations"/>
 	<classpathentry kind="src" path="BoundedQueue By Array"/>
-	<classpathentry kind="src" path="findConsin"/>
 	<classpathentry kind="src" path="ArrayList by Array"/>
 	<classpathentry kind="src" path="Deque By Stacks"/>
 	<classpathentry kind="src" path="Stack By LinkedNode"/>
@@ -17,5 +16,6 @@
 	<classpathentry kind="src" path="Stack With min()"/>
 	<classpathentry kind="src" path="MyHashMap"/>
 	<classpathentry kind="src" path="Class20"/>
+	<classpathentry kind="src" path="PriorityQueueWithCollection"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

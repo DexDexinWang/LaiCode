@@ -13,7 +13,8 @@ public class Solution4 {
 		System.out.println(combinations(input1,input2));
 	}
 
-	//what: find each combination from 25 cent to 1 cent
+	//# of conins levels, how many cents will be added as total result for one value of coin.
+	  //remaining / the value of coin.
 	public static List<List<Integer>> combinations(int target, int[] coins) {
 		List<List<Integer>> res = new ArrayList<List<Integer>>();
 		//how: 1. create temp space to store the combination for target
@@ -43,6 +44,6 @@ public class Solution4 {
 	}
 	
 	//Time Complexity: O(number of coins ^ (target / min(coins))) = O(4^99);
-	//Space Complexity: O(99);
+	//Space Complexity: O(n) call stack;
 
 }

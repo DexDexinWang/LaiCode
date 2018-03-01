@@ -1,0 +1,25 @@
+
+public class Solution5 {
+
+	public static void main(String[] args) {
+
+	}
+	
+	public int[] getTriangle(int[] input) {
+		if (input == null || input.length == 0) {
+			return input;
+		}
+		
+		return input;
+	}
+	
+	private void getTriangle(int[] input, int index) {
+		if (index == input.length) {
+			return;
+		}
+		for(int i = index; i < input.length; i++) {
+			
+		}
+	}
+
+}

@@ -4,7 +4,7 @@ import java.util.List;
 public class Solution7 {
 
 	public static void main(String[] args) {
-		System.out.println(nqueens(4));
+		System.out.println(nqueens(1));
 	}
 
 	//what: find all possible permutation for n queens where they are not valid.

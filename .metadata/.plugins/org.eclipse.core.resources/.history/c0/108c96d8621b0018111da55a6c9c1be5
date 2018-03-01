@@ -1,0 +1,30 @@
+
+public class Solution6 {
+	public static void main(String[] args) {
+		String c = "acab";
+		String b = "ab";
+		String a = "ac";
+		Solution6 s = new Solution6();
+		System.out.println(s.canMerge(a, b, c));
+	}
+	  public boolean canMerge(String a, String b, String c) {
+		    if (c.length() != b.length() + a.length()) {
+		      return false;
+		    }
+		    int i = 0;
+		    int j = 0;
+		    int k = 0; 
+		    while (k < c.length()) {
+		      if (i < a.length() && a.charAt(i) == c.charAt(k)) {
+		        k++;
+		        i++;
+		      } else if (j < b.length() && b.charAt(j) == c.charAt(k)) {
+		        k++;
+		        j++;
+		      } else {
+		        return false;
+		      }
+		    }
+		    return true;
+		  }
+}

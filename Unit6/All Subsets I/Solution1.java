@@ -11,6 +11,12 @@ public class Solution1 {
 		String input = "abc";
 		System.out.println(subSets(input));
 	}
+	
+	//what does it store on each level?
+	//N levels, each level makes decision on whether the character should be inserted to the final result.
+	//how many different states should we try to put on this level?
+	//two states, select or not selected.
+	
 	//what: find each non-repeated subset of input string by checking each character
 	public static List<String> subSets(String set) {
 		List<String> res= new ArrayList<String>();
@@ -41,5 +47,5 @@ public class Solution1 {
 	}
 
 	//Time Complexity: O(1) + O(2) + O(4)+ ... + O(2^n) = O(2^n)
-	//Space Complexity: O(n) 
+	//Space Complexity: O(n) call stack
 }

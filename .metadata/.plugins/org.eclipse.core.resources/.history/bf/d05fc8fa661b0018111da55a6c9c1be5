@@ -1,0 +1,43 @@
+
+public class Solution6 {
+	public static void main(String[] args) {
+		String c = "acab";
+		String b = "ac";
+		String a = "ab";
+		Solution6 s = new Solution6();
+		System.out.println(s.canMerge(a, b, c));
+	}
+	//solve the problem with a 2D array the DP
+	//dp[i][j] == the first ith elements of a and the first jth elements of b could be combined as part of c
+	//base case:
+	//dp[i][0] = true;
+	//dp[0][j] = true;
+	//induction rule:
+	//dp[i][j] = dp[i][j - 1] where b[j] == c[i+j];
+	//dp[i][j] = dp[i - 1][j] where a[i] == c[i+j];
+	public boolean canMerge(String a, String b, String c) {
+		int lenA = a.length();
+		int lenB = b.length();
+		int lenC = c.length();
+		if(lenC != lenA + lenB) {
+			return false;
+		}
+		//create a 2D array;
+		boolean[][] dp = new boolean[lenA + 1][lenB + 1];
+		for(int i = 0; i <= lenA; i++) {
+			for(int j = 0; j <= lenB; j++) {
+				if (i == 0 || j == 0) {
+					dp[i][j] = true;
+				} else {
+					if (a.charAt(i - 1) == c.charAt(i + j - 1)) {
+						dp[i][j] |= dp[i - 1][j];
+					}
+					if (b.charAt(j - 1) == c.charAt(i + j - 1)) {
+						dp[i][j] |= dp[i][j - 1];
+					}
+				}
+			}
+		}
+		return dp[lenA][lenB];
+	}
+}

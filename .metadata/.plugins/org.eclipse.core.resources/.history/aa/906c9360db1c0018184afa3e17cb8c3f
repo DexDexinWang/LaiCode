@@ -1,0 +1,81 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+public class Solution13 {
+
+	public static void main(String[] args) {
+		int[][] input = new int[][]{{5,4,3,2},{1,4,5,6},{7,8,9,10},{10,8,17,1}};
+		Solution13 s = new Solution13();
+		System.out.println(s.longest(input));
+	}
+	
+	public int longest(int[][] matrix) {
+		List<Unit> starts = findSmallests(matrix);
+		int res = 0;
+		for(Unit start : starts){
+			res= Math.max(res, dfsSearch(start, matrix));
+		}
+		return res;
+	}
+	
+	private int dfsSearch(Unit start, int[][] matrix) {
+		boolean[][] visited = new boolean[matrix.length][matrix[0].length];
+		int[] pathNum = new int[]{0}; 
+		dfsHelper(start, matrix, visited, 0, pathNum);
+		return pathNum[0];
+	}
+	
+	private void dfsHelper(Unit start, int[][] matrix, boolean[][] visited, int curMax, int[] gloMax) {
+		curMax++;
+		gloMax[0] = Math.max(gloMax[0], curMax);
+		int row = start.row;
+		int col = start.col;
+		visited[row][col] = true;
+		if(row + 1 < matrix.length && !visited[row + 1][col] && matrix[row + 1][col] < start.val){
+			Unit next = new Unit(row + 1, col, matrix[row + 1][col]);
+			dfsHelper(next, matrix, visited, curMax, gloMax);
+		}
+		if(row - 1 >= 0 && !visited[row - 1][col] && matrix[row - 1][col] < start.val){
+			Unit next = new Unit(row - 1, col, matrix[row - 1][col]);
+			dfsHelper(next, matrix, visited, curMax, gloMax);
+		}
+		if(col + 1 < matrix[0].length && !visited[row][col + 1] && matrix[row][col + 1] < start.val){
+			Unit next = new Unit(row, col + 1, matrix[row][col + 1]);
+			dfsHelper(next, matrix, visited, curMax, gloMax);
+		}
+		if(col - 1 >= 0 && !visited[row][col - 1] && matrix[row][col - 1] < start.val){
+			Unit next = new Unit(row, col - 1, matrix[row][col - 1]);
+			dfsHelper(next, matrix, visited, curMax, gloMax);
+		}
+		visited[row][col] = false;
+	}
+	
+	private List<Unit> findSmallests(int[][] matrix) {
+		List<Unit> smallests = new ArrayList<Unit>();
+		for(int i = 0; i < matrix.length; i++) {
+			for(int j = 0; j < matrix[0].length; j++) {
+				if (smallests.size() == 0 || smallests.get(0).val == matrix[i][j]) {
+					smallests.add(new Unit(i,j,matrix[i][j]));
+				} else if (matrix[i][j] <  smallests.get(0).val) {
+					smallests.clear();
+					smallests.add(new Unit(i,j,matrix[i][j]));
+				}
+			}
+		}
+		return smallests;
+	}
+	
+	class Unit{
+		int row;
+		int col;
+		int val;
+		Unit(int row, int col, int val) {
+			this.row = row;
+			this.col = col;
+			this.val = val;
+		}
+	}
+	}
+}

@@ -1,0 +1,43 @@
+
+public class Solution5 {
+
+	public static void main(String[] args) {
+
+	}
+	
+	public int[] getTriangle(int[] input) {
+		if (input == null || input.length == 0) {
+			return input;
+		}
+		getTriangle(int[] input, int index);
+		return input;
+	}
+	
+	private void getTriangle(int[] input, int index) {
+		if (index == input.length) {
+			return;
+		}
+		for(int i = index; i < input.length; i++) {
+			swap(input, i, index);
+			if (valid(input, index)) {
+				getTriangle(input, index);
+			}
+			swap(input, i, index);
+		}
+	}
+	
+	private void swap(int[] input, int i, int j) {
+		int temp = input[i];
+		input[i] = input[j];
+		input[j] = temp;
+	}
+	
+	private boolean valid(int[] input, int index) {
+		if (index == 0) {
+			return true;
+		} else {
+			i
+		}
+	}
+
+}
